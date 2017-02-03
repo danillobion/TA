@@ -22,4 +22,4 @@ https://github.com/pauloborba/TA
 
 Desenvolvedores em 2016.2:
 
-1. 
+1. Danillo Bion
