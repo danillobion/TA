@@ -1,85 +1,84 @@
-<!DOCTYPE html><html xmlns:lxslt="http://xml.apache.org/xslt" xmlns:stringutils="xalan://org.apache.tools.ant.util.StringUtils">
+<!DOCTYPE html>
+<html xmlns:lxslt="http://xml.apache.org/xslt"
+	xmlns:stringutils="xalan://org.apache.tools.ant.util.StringUtils">
 <head>
 <META http-equiv="Content-Type" content="text/html; charset=utf-8">
-<title>
-                    Test - AddEvaluation</title>
-<link rel="shortcut icon" href="http://grails.org/images/favicon.ico" type="image/x-icon">
-<link rel="stylesheet" type="text/css" title="Style" href="stylesheet.css">
+<title>Test - AddEvaluation</title>
+<link rel="shortcut icon" href="http://grails.org/images/favicon.ico"
+	type="image/x-icon">
+<link rel="stylesheet" type="text/css" title="Style"
+	href="stylesheet.css">
 </head>
 <body>
-<div class="container container_8" id="report">
-<div class="grid_6">
-<a title="Home" href="index.html">
-<div class="grailslogo"></div>
-</a>
-<h1>AddEvaluation</h1>
-<h2>Package: </h2>
-</div>
-<div class="grid_2">
-<nav id="navigationlinks">
-<p>
-<a href="failed.html">
-                    Tests with failure and errors
-                </a>
-</p>
-<p>
-<a href="index.html">
-                    Package summary
-                </a>
-</p>
-<p>
-<a href="all.html">
-                    Show all tests
-                </a>
-</p>
-</nav>
-</div>
-<div class="clear"></div>
-<div class="testsuite success">
-<div class="header">
-<h2>AddEvaluation</h2>
-<h3>
-                        Executed
-                        3
-                        tests
-                    
-                        without a single error or failure!
-                    </h3>
-</div>
-<div class="testcase clearfix success grid_8 alpha omega" data-name="Add evaluation to a criteria">
-<div class="grid_3 alpha">
-<p>
-<span class="icon success"></span><b class="testname message success">Add evaluation to a criteria</b>
-</p>
-<p class="summary">Executed in 0.273 seconds.</p>
-</div>
-<div class="grid_5 omega outputinfo"></div>
-<div class="clear"></div>
-</div>
-<div class="testcase clearfix success grid_8 alpha omega" data-name="Add evaluations using incomplete data">
-<div class="grid_3 alpha">
-<p>
-<span class="icon success"></span><b class="testname message success">Add evaluations using incomplete data</b>
-</p>
-<p class="summary">Executed in 0.071 seconds.</p>
-</div>
-<div class="grid_5 omega outputinfo"></div>
-<div class="clear"></div>
-</div>
-<div class="testcase clearfix success grid_8 alpha omega" data-name="Add evaluation more than once with same origin">
-<div class="grid_3 alpha">
-<p>
-<span class="icon success"></span><b class="testname message success">Add evaluation more than once with same origin</b>
-</p>
-<p class="summary">Executed in 0.131 seconds.</p>
-</div>
-<div class="grid_5 omega outputinfo"></div>
-<div class="clear"></div>
-</div>
-<div class="clearfix output footer">
-<div class="sysout">
-<h2>Standard output</h2>
-<pre class="stdout">Feature: AddEvaluation
+	<div class="container container_8" id="report">
+		<div class="grid_6">
+			<a title="Home" href="index.html">
+				<div class="grailslogo"></div>
+			</a>
+			<h1>AddEvaluation</h1>
+			<h2>Package:</h2>
+		</div>
+		<div class="grid_2">
+			<nav id="navigationlinks">
+				<p>
+					<a href="failed.html"> Tests with failure and errors </a>
+				</p>
+				<p>
+					<a href="index.html"> Package summary </a>
+				</p>
+				<p>
+					<a href="all.html"> Show all tests </a>
+				</p>
+			</nav>
+		</div>
+		<div class="clear"></div>
+		<div class="testsuite success">
+			<div class="header">
+				<h2>AddEvaluation</h2>
+				<h3>Executed 3 tests without a single error or failure!</h3>
+			</div>
+			<div class="testcase clearfix success grid_8 alpha omega"
+				data-name="Add evaluation to a criteria">
+				<div class="grid_3 alpha">
+					<p>
+						<span class="icon success"></span><b
+							class="testname message success">Add evaluation to a criteria</b>
+					</p>
+					<p class="summary">Executed in 0.273 seconds.</p>
+				</div>
+				<div class="grid_5 omega outputinfo"></div>
+				<div class="clear"></div>
+			</div>
+			<div class="testcase clearfix success grid_8 alpha omega"
+				data-name="Add evaluations using incomplete data">
+				<div class="grid_3 alpha">
+					<p>
+						<span class="icon success"></span><b
+							class="testname message success">Add evaluations using
+							incomplete data</b>
+					</p>
+					<p class="summary">Executed in 0.071 seconds.</p>
+				</div>
+				<div class="grid_5 omega outputinfo"></div>
+				<div class="clear"></div>
+			</div>
+			<div class="testcase clearfix success grid_8 alpha omega"
+				data-name="Add evaluation more than once with same origin">
+				<div class="grid_3 alpha">
+					<p>
+						<span class="icon success"></span><b
+							class="testname message success">Add evaluation more than
+							once with same origin</b>
+					</p>
+					<p class="summary">Executed in 0.131 seconds.</p>
+				</div>
+				<div class="grid_5 omega outputinfo"></div>
+				<div class="clear"></div>
+			</div>
+			<div class="clearfix output footer">
+				<div class="sysout">
+					<h2>Standard output</h2>
+					<pre class="stdout">Feature: AddEvaluation
   As a teacher
   I want to evaluate each student by criteria
   to show them their progress in class
@@ -102,23 +101,23 @@
     When I want to add a mark to all students to a the "X" criteria, originated from "Test" and dated from "28/03/2016"                   # AddEvaluation.groovy:142
     Then all the marks will not be stored in on the "X" criteria's history of each student                                                # AddEvaluation.groovy:148
 </pre>
-</div>
-<div class="syserr">
-<h2>System error</h2>
-<pre class="syserr">
+				</div>
+				<div class="syserr">
+					<h2>System error</h2>
+					<pre class="syserr">
 --Output from Add evaluation to a criteria--
 --Output from Add evaluations using incomplete data--
 --Output from Add evaluation more than once with same origin--</pre>
-</div>
-</div>
-<div class="clear"></div>
-</div>
-<div class="clear"></div>
-</div>
-<!--
+				</div>
+			</div>
+			<div class="clear"></div>
+		</div>
+		<div class="clear"></div>
+	</div>
+	<!--
             Parses JUnit output and associates it with the corresponding test case
         -->
-<script language="javascript">
+	<script language="javascript">
 
 
 /**

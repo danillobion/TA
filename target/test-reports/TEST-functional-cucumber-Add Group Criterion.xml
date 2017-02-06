@@ -1,11 +1,18 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuite errors="0" failures="0" hostname="DESKTOP-N49IB15" name="Add Group Criterion" tests="4" time="5.657" timestamp="2016-10-01T18:50:26">
-  <properties />
-  <testcase classname="grails.plugin.cucumber.CucumberTest" name="Register a group of criteria that does not exist" time="0.051" />
-  <testcase classname="grails.plugin.cucumber.CucumberTest" name="Register a non-existent group of criteria" time="3.0" />
-  <testcase classname="grails.plugin.cucumber.CucumberTest" name="Register a group of criteria that some of them already exists" time="0.054" />
-  <testcase classname="grails.plugin.cucumber.CucumberTest" name="Register a group of criteria that some elements of it already exists" time="2.523" />
-  <system-out><![CDATA[#Thiago Bastos
+<testsuite errors="0" failures="0" hostname="DESKTOP-N49IB15"
+	name="Add Group Criterion" tests="4" time="5.657" timestamp="2016-10-01T18:50:26">
+	<properties />
+	<testcase classname="grails.plugin.cucumber.CucumberTest"
+		name="Register a group of criteria that does not exist" time="0.051" />
+	<testcase classname="grails.plugin.cucumber.CucumberTest"
+		name="Register a non-existent group of criteria" time="3.0" />
+	<testcase classname="grails.plugin.cucumber.CucumberTest"
+		name="Register a group of criteria that some of them already exists"
+		time="0.054" />
+	<testcase classname="grails.plugin.cucumber.CucumberTest"
+		name="Register a group of criteria that some elements of it already exists"
+		time="2.523" />
+	<system-out><![CDATA[#Thiago Bastos
 Feature: Add Group Criterion
   As the teacher
   I want to be able to register new criteria
@@ -51,7 +58,7 @@ Feature: Add Group Criterion
     Then I should see the "C6" criterion available on the criteria list              # AddGroupOfCriteriaSteps.groovy:100
     And I should see the "C7" criterion only one time available on the criteria list # AddGroupOfCriteriaSteps.groovy:173
 ]]></system-out>
-  <system-err><![CDATA[
+	<system-err><![CDATA[
 --Output from Register a group of criteria that does not exist--
 --Output from Register a non-existent group of criteria--
 --Output from Register a group of criteria that some of them already exists--
