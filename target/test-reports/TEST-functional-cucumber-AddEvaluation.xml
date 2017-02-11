@@ -1,14 +1,10 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuite errors="0" failures="0" hostname="DESKTOP-N49IB15"
-	name="AddEvaluation" tests="3" time="0.507" timestamp="2016-10-01T18:50:26">
-	<properties />
-	<testcase classname="grails.plugin.cucumber.CucumberTest"
-		name="Add evaluation to a criteria" time="0.273" />
-	<testcase classname="grails.plugin.cucumber.CucumberTest"
-		name="Add evaluations using incomplete data" time="0.071" />
-	<testcase classname="grails.plugin.cucumber.CucumberTest"
-		name="Add evaluation more than once with same origin" time="0.131" />
-	<system-out><![CDATA[Feature: AddEvaluation
+<testsuite errors="0" failures="0" hostname="DESKTOP-S5990V7" name="AddEvaluation" tests="3" time="0.978" timestamp="2017-02-11T15:01:30">
+  <properties />
+  <testcase classname="grails.plugin.cucumber.CucumberTest" name="Add evaluation to a criteria" time="0.543" />
+  <testcase classname="grails.plugin.cucumber.CucumberTest" name="Add evaluations using incomplete data" time="0.126" />
+  <testcase classname="grails.plugin.cucumber.CucumberTest" name="Add evaluation more than once with same origin" time="0.252" />
+  <system-out><![CDATA[Feature: AddEvaluation
   As a teacher
   I want to evaluate each student by criteria
   to show them their progress in class
@@ -31,7 +27,7 @@
     When I want to add a mark to all students to a the "X" criteria, originated from "Test" and dated from "28/03/2016"                   # AddEvaluation.groovy:142
     Then all the marks will not be stored in on the "X" criteria's history of each student                                                # AddEvaluation.groovy:148
 ]]></system-out>
-	<system-err><![CDATA[
+  <system-err><![CDATA[
 --Output from Add evaluation to a criteria--
 --Output from Add evaluations using incomplete data--
 --Output from Add evaluation more than once with same origin--]]></system-err>

@@ -1,71 +1,79 @@
-<!DOCTYPE html>
-<html xmlns:lxslt="http://xml.apache.org/xslt"
-	xmlns:stringutils="xalan://org.apache.tools.ant.util.StringUtils">
+<!DOCTYPE html><html xmlns:lxslt="http://xml.apache.org/xslt" xmlns:stringutils="xalan://org.apache.tools.ant.util.StringUtils">
 <head>
 <META http-equiv="Content-Type" content="text/html; charset=utf-8">
-<title>Test - Notification</title>
-<link rel="shortcut icon" href="http://grails.org/images/favicon.ico"
-	type="image/x-icon">
-<link rel="stylesheet" type="text/css" title="Style"
-	href="stylesheet.css">
+<title>
+                    Test - Notification</title>
+<link rel="shortcut icon" href="http://grails.org/images/favicon.ico" type="image/x-icon">
+<link rel="stylesheet" type="text/css" title="Style" href="stylesheet.css">
 </head>
 <body>
-	<div class="container container_8" id="report">
-		<div class="grid_6">
-			<a title="Home" href="index.html">
-				<div class="grailslogo"></div>
-			</a>
-			<h1>Notification</h1>
-			<h2>Package:</h2>
-		</div>
-		<div class="grid_2">
-			<nav id="navigationlinks">
-				<p>
-					<a href="failed.html"> Tests with failure and errors </a>
-				</p>
-				<p>
-					<a href="index.html"> Package summary </a>
-				</p>
-				<p>
-					<a href="all.html"> Show all tests </a>
-				</p>
-			</nav>
-		</div>
-		<div class="clear"></div>
-		<div class="testsuite failure">
-			<div class="header">
-				<h2>Notification</h2>
-				<h3>Executed 2 tests with one failure .</h3>
-			</div>
-			<div class="testcase clearfix success grid_8 alpha omega"
-				data-name="Update a report">
-				<div class="grid_3 alpha">
-					<p>
-						<span class="icon success"></span><b
-							class="testname message success">Update a report</b>
-					</p>
-					<p class="summary">Executed in 0.14 seconds.</p>
-				</div>
-				<div class="grid_5 omega outputinfo"></div>
-				<div class="clear"></div>
-			</div>
-			<div class="testcase clearfix failure grid_8 alpha omega"
-				data-name="Show the students list in the &quot;70% of evaluations are over the class average&quot; report">
-				<div class="grid_3 alpha">
-					<p>
-						<span class="icon failure"></span><b
-							class="testname message failure">Show the students list in
-							the "70% of evaluations are over the class average" report</b>
-					</p>
-					<p class="summary">Executed in 4.203 seconds.</p>
-				</div>
-				<div class="grid_5 omega outputinfo">
-					<div class="details">
-						<p>
-							<b class="message">title ==~/Report List/ | | | false Show
-								Report</b>
-						</p>
-						<pre>Assertion failed: 
+<div class="container container_8" id="report">
+<div class="grid_6">
+<a title="Home" href="index.html">
+<div class="grailslogo"></div>
+</a>
+<h1>Notification</h1>
+<h2>Package: </h2>
+</div>
+<div class="grid_2">
+<nav id="navigationlinks">
+<p>
+<a href="failed.html">
+                    Tests with failure and errors
+                </a>
+</p>
+<p>
+<a href="index.html">
+                    Package summary
+                </a>
+</p>
+<p>
+<a href="all.html">
+                    Show all tests
+                </a>
+</p>
+</nav>
+</div>
+<div class="clear"></div>
+<div class="testsuite failure">
+<div class="header">
+<h2>Notification</h2>
+<h3>
+                        Executed
+                        2
+                        tests
+                    
+                        with
+                        one failure
+                        .
+                    </h3>
+</div>
+<div class="testcase clearfix success grid_8 alpha omega" data-name="Update a report">
+<div class="grid_3 alpha">
+<p>
+<span class="icon success"></span><b class="testname message success">Update a report</b>
+</p>
+<p class="summary">Executed in 0.329 seconds.</p>
+</div>
+<div class="grid_5 omega outputinfo"></div>
+<div class="clear"></div>
+</div>
+<div class="testcase clearfix failure grid_8 alpha omega" data-name="Show the students list in the &quot;70% of evaluations are over the class average&quot; report">
+<div class="grid_3 alpha">
+<p>
+<span class="icon failure"></span><b class="testname message failure">Show the students list in the "70% of evaluations are over the class average" report</b>
+</p>
+<p class="summary">Executed in 10.664 seconds.</p>
+</div>
+<div class="grid_5 omega outputinfo">
+<div class="details">
+<p>
+<b class="message">title ==~/Report List/
+|     |
+|     false
+Show Report</b>
+</p>
+<pre>Assertion failed: 
 
 title ==~/Report List/
 |     |
@@ -81,14 +89,14 @@ Show Report
 	at steps.StepDefReport$_run_closure8.doCall(StepDefReport.groovy:74)
 	at ✽.Then I should see the details related to the "70% of evaluations are over the class average" report(Notificacao.feature:33)
 </pre>
-					</div>
-				</div>
-				<div class="clear"></div>
-			</div>
-			<div class="clearfix output footer">
-				<div class="sysout">
-					<h2>Standard output</h2>
-					<pre class="stdout">Feature: Notification
+</div>
+</div>
+<div class="clear"></div>
+</div>
+<div class="clearfix output footer">
+<div class="sysout">
+<h2>Standard output</h2>
+<pre class="stdout">Feature: Notification
     As an administrator
     I want to be notified about the students issues without searching for their historic
     So I can know who has its performance under the class evaluations average quickly
@@ -143,22 +151,22 @@ Show Report
       	at &acirc;œ&frac12;.Then I should see the details related to the "70% of evaluations are over the class average" report(Notificacao.feature:33)
 
 </pre>
-				</div>
-				<div class="syserr">
-					<h2>System error</h2>
-					<pre class="syserr">
+</div>
+<div class="syserr">
+<h2>System error</h2>
+<pre class="syserr">
 --Output from Update a report--
 --Output from Show the students list in the "70% of evaluations are over the class average" report--</pre>
-				</div>
-			</div>
-			<div class="clear"></div>
-		</div>
-		<div class="clear"></div>
-	</div>
-	<!--
+</div>
+</div>
+<div class="clear"></div>
+</div>
+<div class="clear"></div>
+</div>
+<!--
             Parses JUnit output and associates it with the corresponding test case
         -->
-	<script language="javascript">
+<script language="javascript">
 
 
 /**

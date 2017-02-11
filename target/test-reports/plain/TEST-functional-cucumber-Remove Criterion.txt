@@ -1,5 +1,5 @@
 Testsuite: Remove Criterion
-Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 7.077 sec
+Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 19,111 sec
 ------------- Standard Output ---------------
 #Arthur Lapprand
 Feature: Remove Criterion
@@ -28,5 +28,5 @@ Feature: Remove Criterion
 --Output from Remove a criterion with students and evaluations using it--
 --Output from Remove a criterion from the system--------------- ---------------- ---------------
 
-Testcase: Remove a criterion with students and evaluations using it took 6.99 sec
-Testcase: Remove a criterion from the system took 0.062 sec
+Testcase: Remove a criterion with students and evaluations using it took 18,924 sec
+Testcase: Remove a criterion from the system took 0,127 sec

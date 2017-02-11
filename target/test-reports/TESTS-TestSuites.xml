@@ -1,20 +1,15 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <testsuites>
-	<testsuite errors="0" failures="0" hostname="DESKTOP-N49IB15"
-		id="0" name="Add Criterion" package="" tests="3" time="10.493"
-		timestamp="2016-10-01T18:50:15">
-		<properties />
+  <testsuite errors="0" failures="0" hostname="DESKTOP-S5990V7" id="0" name="Add Criterion" package="" tests="3" time="30.746" timestamp="2017-02-11T15:00:59">
+      <properties />
 
-		<testcase classname="grails.plugin.cucumber.CucumberTest"
-			name="Register a criterion that does not exist" time="0.669" />
+      <testcase classname="grails.plugin.cucumber.CucumberTest" name="Register a criterion that does not exist" time="1.813" />
 
-		<testcase classname="grails.plugin.cucumber.CucumberTest"
-			name="Register a criterion that already exists" time="0.052" />
+      <testcase classname="grails.plugin.cucumber.CucumberTest" name="Register a criterion that already exists" time="0.097" />
 
-		<testcase classname="grails.plugin.cucumber.CucumberTest"
-			name="Error when registering a criterion that already exists" time="5.736" />
+      <testcase classname="grails.plugin.cucumber.CucumberTest" name="Error when registering a criterion that already exists" time="14.111" />
 
-		<system-out><![CDATA[#Esta feature Ã© a feature inicial, idealizada antes da iteraÃ§Ã£o de imlementar features.
+      <system-out><![CDATA[#Esta feature Ã© a feature inicial, idealizada antes da iteraÃ§Ã£o de imlementar features.
 #Portanto, serÃ¡ descartada dos testes finais visto que nÃ£o faz uso de mÃ©todos de controlador que nÃ£o sejam
 #Gerados automaticamente.
 #Arthur Lapprand
@@ -46,32 +41,24 @@ Feature: Add Criterion
     Then I should see a message related to the criterion registration failure # AddCriterionSteps.groovy:101
 ]]></system-out>
 
-		<system-err><![CDATA[
+      <system-err><![CDATA[
 --Output from Register a criterion that does not exist--
 --Output from Register a criterion that already exists--
 --Output from Error when registering a criterion that already exists--]]></system-err>
 
-	</testsuite>
-	<testsuite errors="0" failures="0" hostname="DESKTOP-N49IB15"
-		id="1" name="Add Group Criterion" package="" tests="4" time="5.657"
-		timestamp="2016-10-01T18:50:26">
-		<properties />
+  </testsuite>
+  <testsuite errors="0" failures="0" hostname="DESKTOP-S5990V7" id="1" name="Add Group Criterion" package="" tests="4" time="17.724" timestamp="2017-02-11T15:01:31">
+      <properties />
 
-		<testcase classname="grails.plugin.cucumber.CucumberTest"
-			name="Register a group of criteria that does not exist" time="0.051" />
+      <testcase classname="grails.plugin.cucumber.CucumberTest" name="Register a group of criteria that does not exist" time="0.091" />
 
-		<testcase classname="grails.plugin.cucumber.CucumberTest"
-			name="Register a non-existent group of criteria" time="3.0" />
+      <testcase classname="grails.plugin.cucumber.CucumberTest" name="Register a non-existent group of criteria" time="10.933" />
 
-		<testcase classname="grails.plugin.cucumber.CucumberTest"
-			name="Register a group of criteria that some of them already exists"
-			time="0.054" />
+      <testcase classname="grails.plugin.cucumber.CucumberTest" name="Register a group of criteria that some of them already exists" time="0.09" />
 
-		<testcase classname="grails.plugin.cucumber.CucumberTest"
-			name="Register a group of criteria that some elements of it already exists"
-			time="2.523" />
+      <testcase classname="grails.plugin.cucumber.CucumberTest" name="Register a group of criteria that some elements of it already exists" time="6.557" />
 
-		<system-out><![CDATA[#Thiago Bastos
+      <system-out><![CDATA[#Thiago Bastos
 Feature: Add Group Criterion
   As the teacher
   I want to be able to register new criteria
@@ -118,28 +105,23 @@ Feature: Add Group Criterion
     And I should see the "C7" criterion only one time available on the criteria list # AddGroupOfCriteriaSteps.groovy:173
 ]]></system-out>
 
-		<system-err><![CDATA[
+      <system-err><![CDATA[
 --Output from Register a group of criteria that does not exist--
 --Output from Register a non-existent group of criteria--
 --Output from Register a group of criteria that some of them already exists--
 --Output from Register a group of criteria that some elements of it already exists--]]></system-err>
 
-	</testsuite>
-	<testsuite errors="0" failures="0" hostname="DESKTOP-N49IB15"
-		id="2" name="AddEvaluation" package="" tests="3" time="0.507"
-		timestamp="2016-10-01T18:50:26">
-		<properties />
+  </testsuite>
+  <testsuite errors="0" failures="0" hostname="DESKTOP-S5990V7" id="2" name="AddEvaluation" package="" tests="3" time="0.978" timestamp="2017-02-11T15:01:30">
+      <properties />
 
-		<testcase classname="grails.plugin.cucumber.CucumberTest"
-			name="Add evaluation to a criteria" time="0.273" />
+      <testcase classname="grails.plugin.cucumber.CucumberTest" name="Add evaluation to a criteria" time="0.543" />
 
-		<testcase classname="grails.plugin.cucumber.CucumberTest"
-			name="Add evaluations using incomplete data" time="0.071" />
+      <testcase classname="grails.plugin.cucumber.CucumberTest" name="Add evaluations using incomplete data" time="0.126" />
 
-		<testcase classname="grails.plugin.cucumber.CucumberTest"
-			name="Add evaluation more than once with same origin" time="0.131" />
+      <testcase classname="grails.plugin.cucumber.CucumberTest" name="Add evaluation more than once with same origin" time="0.252" />
 
-		<system-out><![CDATA[Feature: AddEvaluation
+      <system-out><![CDATA[Feature: AddEvaluation
   As a teacher
   I want to evaluate each student by criteria
   to show them their progress in class
@@ -163,49 +145,38 @@ Feature: Add Group Criterion
     Then all the marks will not be stored in on the "X" criteria's history of each student                                                # AddEvaluation.groovy:148
 ]]></system-out>
 
-		<system-err><![CDATA[
+      <system-err><![CDATA[
 --Output from Add evaluation to a criteria--
 --Output from Add evaluations using incomplete data--
 --Output from Add evaluation more than once with same origin--]]></system-err>
 
-	</testsuite>
-	<testsuite errors="0" failures="1" hostname="DESKTOP-N49IB15"
-		id="3" name="Notification" package="" tests="2" time="4.37"
-		timestamp="2016-10-01T18:50:32">
-		<properties />
+  </testsuite>
+  <testsuite errors="0" failures="1" hostname="DESKTOP-S5990V7" id="3" name="Notification" package="" tests="2" time="11.053" timestamp="2017-02-11T15:01:49">
+      <properties />
 
-		<testcase classname="grails.plugin.cucumber.CucumberTest"
-			name="Update a report" time="0.14" />
+      <testcase classname="grails.plugin.cucumber.CucumberTest" name="Update a report" time="0.329" />
 
-		<testcase classname="grails.plugin.cucumber.CucumberTest"
-			name="Show the students list in the &quot;70% of evaluations are over the class average&quot; report"
-			time="4.203">
-			<failure
-				message="title ==~/Report List/&#xa;|     |&#xa;|     false&#xa;Show Report"
-				type="grails.plugin.cucumber.FakeAssertionFailedError">Assertion failed:
+      <testcase classname="grails.plugin.cucumber.CucumberTest" name="Show the students list in the &quot;70% of evaluations are over the class average&quot; report" time="10.664">
+          <failure message="title ==~/Report List/&#xa;|     |&#xa;|     false&#xa;Show Report" type="grails.plugin.cucumber.FakeAssertionFailedError">Assertion failed: 
 
-				title ==~/Report List/
-				| |
-				| false
-				Show Report
+title ==~/Report List/
+|     |
+|     false
+Show Report
 
-				at
-				pages.ReportsPages.ShowReportsPage$__clinit__closure1.doCall(ShowReportsPage.groovy:11)
-				at geb.Page.verifyThisPageAtOnly(Page.groovy:228)
-				at geb.Page.verifyAt(Page.groovy:182)
-				at geb.Browser.doAt(Browser.groovy:454)
-				at geb.Browser.at(Browser.groovy:336)
-				at
-				geb.binding.BindingUpdater$InvocationForwarding.doCall(BindingUpdater.groovy:73)
-				at steps.StepDefReport$_run_closure8.doCall(StepDefReport.groovy:74)
-				at ✽.Then I should see the details related to the &quot;70% of
-				evaluations are over the class average&quot;
-				report(Notificacao.feature:33)
-			</failure>
+	at pages.ReportsPages.ShowReportsPage$__clinit__closure1.doCall(ShowReportsPage.groovy:11)
+	at geb.Page.verifyThisPageAtOnly(Page.groovy:228)
+	at geb.Page.verifyAt(Page.groovy:182)
+	at geb.Browser.doAt(Browser.groovy:454)
+	at geb.Browser.at(Browser.groovy:336)
+	at geb.binding.BindingUpdater$InvocationForwarding.doCall(BindingUpdater.groovy:73)
+	at steps.StepDefReport$_run_closure8.doCall(StepDefReport.groovy:74)
+	at ✽.Then I should see the details related to the &quot;70% of evaluations are over the class average&quot; report(Notificacao.feature:33)
+</failure>
 
-		</testcase>
+      </testcase>
 
-		<system-out><![CDATA[Feature: Notification
+      <system-out><![CDATA[Feature: Notification
     As an administrator
     I want to be notified about the students issues without searching for their historic
     So I can know who has its performance under the class evaluations average quickly
@@ -261,24 +232,19 @@ Feature: Add Group Criterion
 
 ]]></system-out>
 
-		<system-err><![CDATA[
+      <system-err><![CDATA[
 --Output from Update a report--
 --Output from Show the students list in the "70% of evaluations are over the class average" report--]]></system-err>
 
-	</testsuite>
-	<testsuite errors="0" failures="0" hostname="DESKTOP-N49IB15"
-		id="4" name="Remove Criterion" package="" tests="2" time="7.077"
-		timestamp="2016-10-01T18:50:36">
-		<properties />
+  </testsuite>
+  <testsuite errors="0" failures="0" hostname="DESKTOP-S5990V7" id="4" name="Remove Criterion" package="" tests="2" time="19.111" timestamp="2017-02-11T15:02:00">
+      <properties />
 
-		<testcase classname="grails.plugin.cucumber.CucumberTest"
-			name="Remove a criterion with students and evaluations using it"
-			time="6.99" />
+      <testcase classname="grails.plugin.cucumber.CucumberTest" name="Remove a criterion with students and evaluations using it" time="18.924" />
 
-		<testcase classname="grails.plugin.cucumber.CucumberTest"
-			name="Remove a criterion from the system" time="0.062" />
+      <testcase classname="grails.plugin.cucumber.CucumberTest" name="Remove a criterion from the system" time="0.126" />
 
-		<system-out><![CDATA[#Arthur Lapprand
+      <system-out><![CDATA[#Arthur Lapprand
 Feature: Remove Criterion
   As the teacher
   I want to remove a Criterion from the system
@@ -301,47 +267,37 @@ Feature: Remove Criterion
     Then the system correctly removes the criterion                                                               # RemoveCriterionSteps.groovy:88
 ]]></system-out>
 
-		<system-err><![CDATA[
+      <system-err><![CDATA[
 --Output from Remove a criterion with students and evaluations using it--
 --Output from Remove a criterion from the system--]]></system-err>
 
-	</testsuite>
-	<testsuite errors="0" failures="1" hostname="DESKTOP-N49IB15"
-		id="5" name="Remove Evaluation" package="" tests="2" time="4.435"
-		timestamp="2016-10-01T18:50:43">
-		<properties />
+  </testsuite>
+  <testsuite errors="0" failures="1" hostname="DESKTOP-S5990V7" id="5" name="Remove Evaluation" package="" tests="2" time="13.378" timestamp="2017-02-11T15:02:19">
+      <properties />
 
-		<testcase classname="grails.plugin.cucumber.CucumberTest"
-			name="Remove evaluations in different criterion from a student" time="4.323">
-			<failure
-				message="title ==~ /Show EvaluationsByCriterion/&#xa;|     |&#xa;|     false&#xa;Show Student"
-				type="grails.plugin.cucumber.FakeAssertionFailedError">Assertion failed:
+      <testcase classname="grails.plugin.cucumber.CucumberTest" name="Remove evaluations in different criterion from a student" time="12.961">
+          <failure message="title ==~ /Show EvaluationsByCriterion/&#xa;|     |&#xa;|     false&#xa;Show Student" type="grails.plugin.cucumber.FakeAssertionFailedError">Assertion failed: 
 
-				title ==~ /Show EvaluationsByCriterion/
-				| |
-				| false
-				Show Student
+title ==~ /Show EvaluationsByCriterion/
+|     |
+|     false
+Show Student
 
-				at
-				pages.ShowEvaluationByCriterionPage$__clinit__closure1.doCall(ShowEvaluationByCriterionPage.groovy:12)
-				at geb.Page.verifyThisPageAtOnly(Page.groovy:228)
-				at geb.Page.verifyAt(Page.groovy:182)
-				at geb.Browser.doAt(Browser.groovy:454)
-				at geb.Browser.at(Browser.groovy:336)
-				at
-				geb.binding.BindingUpdater$InvocationForwarding.doCall(BindingUpdater.groovy:73)
-				at
-				steps.RemoveEvaluationSteps$_run_closure4.doCall(RemoveEvaluationSteps.groovy:75)
-				at ✽.When I remove the evaluation
-				&quot;MA&quot;(RemoveEvaluation.feature:13)
-			</failure>
+	at pages.ShowEvaluationByCriterionPage$__clinit__closure1.doCall(ShowEvaluationByCriterionPage.groovy:12)
+	at geb.Page.verifyThisPageAtOnly(Page.groovy:228)
+	at geb.Page.verifyAt(Page.groovy:182)
+	at geb.Browser.doAt(Browser.groovy:454)
+	at geb.Browser.at(Browser.groovy:336)
+	at geb.binding.BindingUpdater$InvocationForwarding.doCall(BindingUpdater.groovy:73)
+	at steps.RemoveEvaluationSteps$_run_closure4.doCall(RemoveEvaluationSteps.groovy:75)
+	at ✽.When I remove the evaluation &quot;MA&quot;(RemoveEvaluation.feature:13)
+</failure>
 
-		</testcase>
+      </testcase>
 
-		<testcase classname="grails.plugin.cucumber.CucumberTest"
-			name="Remove an Evaluation from a Student" time="0.082" />
+      <testcase classname="grails.plugin.cucumber.CucumberTest" name="Remove an Evaluation from a Student" time="0.361" />
 
-		<system-out><![CDATA[#Arthur Lapprand
+      <system-out><![CDATA[#Arthur Lapprand
 Feature: Remove Evaluation
   As the teacher
   I want to remove an Evaluation from a Student
@@ -384,9 +340,9 @@ Feature: Remove Evaluation
     Then the system correctly removes the evaluation                                                                                                         # RemoveEvaluationSteps.groovy:135
 ]]></system-out>
 
-		<system-err><![CDATA[
+      <system-err><![CDATA[
 --Output from Remove evaluations in different criterion from a student--
 --Output from Remove an Evaluation from a Student--]]></system-err>
 
-	</testsuite>
+  </testsuite>
 </testsuites>

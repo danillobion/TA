@@ -1,4 +1,3 @@
-/uglifyjs/
 /asset/
 /dbdoc/
 /grails/
@@ -7,3 +6,5 @@
 /org/
 /spring/
 /ta/
+/uglifyjs/
+/hibernate/

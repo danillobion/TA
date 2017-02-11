@@ -1,66 +1,87 @@
-<!DOCTYPE html>
-<html xmlns:lxslt="http://xml.apache.org/xslt"
-	xmlns:stringutils="xalan://org.apache.tools.ant.util.StringUtils">
+<!DOCTYPE html><html xmlns:lxslt="http://xml.apache.org/xslt" xmlns:stringutils="xalan://org.apache.tools.ant.util.StringUtils">
 <head>
 <META http-equiv="Content-Type" content="text/html; charset=utf-8">
-<title>Unit Test Results - All tests</title>
+<title>
+        Unit Test Results
+     - All tests</title>
 <link href="stylesheet.css" rel="stylesheet" type="text/css">
 </head>
 <body>
-	<div id="report" class="container container_8">
-		<div class="grid_6 alpha">
-			<div class="grailslogo"></div>
-			<h1>Unit Test Results - All tests</h1>
-			<p class="intro">Executed 16 tests with 2 failures .</p>
-		</div>
-		<div class="grid_2 omega">
-			<nav id="navigationlinks">
-				<p>
-					<a href="failed.html"> Tests with failure and errors </a>
-				</p>
-				<p>
-					<a href="index.html"> Package summary </a>
-				</p>
-				<p>
-					<a href="all.html"> Show all tests </a>
-				</p>
-			</nav>
-		</div>
-		<div class="clear"></div>
-		<div class="testsuite failure">
-			<div class="header">
-				<h2>Notification</h2>
-				<h3>Executed 2 tests with one failure .</h3>
-			</div>
-			<div class="testcase clearfix success grid_8 alpha omega"
-				data-name="Update a report">
-				<div class="grid_3 alpha">
-					<p>
-						<span class="icon success"></span><b
-							class="testname message success">Update a report</b>
-					</p>
-					<p class="summary">Executed in 0.14 seconds.</p>
-				</div>
-				<div class="grid_5 omega outputinfo"></div>
-				<div class="clear"></div>
-			</div>
-			<div class="testcase clearfix failure grid_8 alpha omega"
-				data-name="Show the students list in the &quot;70% of evaluations are over the class average&quot; report">
-				<div class="grid_3 alpha">
-					<p>
-						<span class="icon failure"></span><b
-							class="testname message failure">Show the students list in
-							the "70% of evaluations are over the class average" report</b>
-					</p>
-					<p class="summary">Executed in 4.203 seconds.</p>
-				</div>
-				<div class="grid_5 omega outputinfo">
-					<div class="details">
-						<p>
-							<b class="message">title ==~/Report List/ | | | false Show
-								Report</b>
-						</p>
-						<pre>Assertion failed: 
+<div id="report" class="container container_8">
+<div class="grid_6 alpha">
+<div class="grailslogo"></div>
+<h1>
+        Unit Test Results
+     - All tests </h1>
+<p class="intro">
+                        Executed
+                        16
+                        tests
+                    
+                        with
+                        2 failures
+                        .
+                    </p>
+</div>
+<div class="grid_2 omega">
+<nav id="navigationlinks">
+<p>
+<a href="failed.html">
+                    Tests with failure and errors
+                </a>
+</p>
+<p>
+<a href="index.html">
+                    Package summary
+                </a>
+</p>
+<p>
+<a href="all.html">
+                    Show all tests
+                </a>
+</p>
+</nav>
+</div>
+<div class="clear"></div>
+<div class="testsuite failure">
+<div class="header">
+<h2>Notification</h2>
+<h3>
+                        Executed
+                        2
+                        tests
+                    
+                        with
+                        one failure
+                        .
+                    </h3>
+</div>
+<div class="testcase clearfix success grid_8 alpha omega" data-name="Update a report">
+<div class="grid_3 alpha">
+<p>
+<span class="icon success"></span><b class="testname message success">Update a report</b>
+</p>
+<p class="summary">Executed in 0.329 seconds.</p>
+</div>
+<div class="grid_5 omega outputinfo"></div>
+<div class="clear"></div>
+</div>
+<div class="testcase clearfix failure grid_8 alpha omega" data-name="Show the students list in the &quot;70% of evaluations are over the class average&quot; report">
+<div class="grid_3 alpha">
+<p>
+<span class="icon failure"></span><b class="testname message failure">Show the students list in the "70% of evaluations are over the class average" report</b>
+</p>
+<p class="summary">Executed in 10.664 seconds.</p>
+</div>
+<div class="grid_5 omega outputinfo">
+<div class="details">
+<p>
+<b class="message">title ==~/Report List/
+|     |
+|     false
+Show Report</b>
+</p>
+<pre>Assertion failed: 
 
 title ==~/Report List/
 |     |
@@ -76,14 +97,14 @@ Show Report
 	at steps.StepDefReport$_run_closure8.doCall(StepDefReport.groovy:74)
 	at ✽.Then I should see the details related to the "70% of evaluations are over the class average" report(Notificacao.feature:33)
 </pre>
-					</div>
-				</div>
-				<div class="clear"></div>
-			</div>
-			<div class="clearfix output footer">
-				<div class="sysout">
-					<h2>Standard output</h2>
-					<pre class="stdout">Feature: Notification
+</div>
+</div>
+<div class="clear"></div>
+</div>
+<div class="clearfix output footer">
+<div class="sysout">
+<h2>Standard output</h2>
+<pre class="stdout">Feature: Notification
     As an administrator
     I want to be notified about the students issues without searching for their historic
     So I can know who has its performance under the class evaluations average quickly
@@ -138,38 +159,45 @@ Show Report
       	at &acirc;œ&frac12;.Then I should see the details related to the "70% of evaluations are over the class average" report(Notificacao.feature:33)
 
 </pre>
-				</div>
-				<div class="syserr">
-					<h2>System error</h2>
-					<pre class="syserr">
+</div>
+<div class="syserr">
+<h2>System error</h2>
+<pre class="syserr">
 --Output from Update a report--
 --Output from Show the students list in the "70% of evaluations are over the class average" report--</pre>
-				</div>
-			</div>
-			<div class="clear"></div>
-		</div>
-		<div class="testsuite failure">
-			<div class="header">
-				<h2>Remove Evaluation</h2>
-				<h3>Executed 2 tests with one failure .</h3>
-			</div>
-			<div class="testcase clearfix failure grid_8 alpha omega"
-				data-name="Remove evaluations in different criterion from a student">
-				<div class="grid_3 alpha">
-					<p>
-						<span class="icon failure"></span><b
-							class="testname message failure">Remove evaluations in
-							different criterion from a student</b>
-					</p>
-					<p class="summary">Executed in 4.323 seconds.</p>
-				</div>
-				<div class="grid_5 omega outputinfo">
-					<div class="details">
-						<p>
-							<b class="message">title ==~ /Show EvaluationsByCriterion/ |
-								| | false Show Student</b>
-						</p>
-						<pre>Assertion failed: 
+</div>
+</div>
+<div class="clear"></div>
+</div>
+<div class="testsuite failure">
+<div class="header">
+<h2>Remove Evaluation</h2>
+<h3>
+                        Executed
+                        2
+                        tests
+                    
+                        with
+                        one failure
+                        .
+                    </h3>
+</div>
+<div class="testcase clearfix failure grid_8 alpha omega" data-name="Remove evaluations in different criterion from a student">
+<div class="grid_3 alpha">
+<p>
+<span class="icon failure"></span><b class="testname message failure">Remove evaluations in different criterion from a student</b>
+</p>
+<p class="summary">Executed in 12.961 seconds.</p>
+</div>
+<div class="grid_5 omega outputinfo">
+<div class="details">
+<p>
+<b class="message">title ==~ /Show EvaluationsByCriterion/
+|     |
+|     false
+Show Student</b>
+</p>
+<pre>Assertion failed: 
 
 title ==~ /Show EvaluationsByCriterion/
 |     |
@@ -185,27 +213,24 @@ Show Student
 	at steps.RemoveEvaluationSteps$_run_closure4.doCall(RemoveEvaluationSteps.groovy:75)
 	at ✽.When I remove the evaluation "MA"(RemoveEvaluation.feature:13)
 </pre>
-					</div>
-				</div>
-				<div class="clear"></div>
-			</div>
-			<div class="testcase clearfix success grid_8 alpha omega"
-				data-name="Remove an Evaluation from a Student">
-				<div class="grid_3 alpha">
-					<p>
-						<span class="icon success"></span><b
-							class="testname message success">Remove an Evaluation from a
-							Student</b>
-					</p>
-					<p class="summary">Executed in 0.082 seconds.</p>
-				</div>
-				<div class="grid_5 omega outputinfo"></div>
-				<div class="clear"></div>
-			</div>
-			<div class="clearfix output footer">
-				<div class="sysout">
-					<h2>Standard output</h2>
-					<pre class="stdout">#Arthur Lapprand
+</div>
+</div>
+<div class="clear"></div>
+</div>
+<div class="testcase clearfix success grid_8 alpha omega" data-name="Remove an Evaluation from a Student">
+<div class="grid_3 alpha">
+<p>
+<span class="icon success"></span><b class="testname message success">Remove an Evaluation from a Student</b>
+</p>
+<p class="summary">Executed in 0.361 seconds.</p>
+</div>
+<div class="grid_5 omega outputinfo"></div>
+<div class="clear"></div>
+</div>
+<div class="clearfix output footer">
+<div class="sysout">
+<h2>Standard output</h2>
+<pre class="stdout">#Arthur Lapprand
 Feature: Remove Evaluation
   As the teacher
   I want to remove an Evaluation from a Student
@@ -247,64 +272,61 @@ Feature: Remove Evaluation
     When I remove the evaluation "MA" in criterion "ESS" with origin "Test" and applicationDate "21/12/1992" from the student "Fulano Detal" with login "fd" # RemoveEvaluationSteps.groovy:109
     Then the system correctly removes the evaluation                                                                                                         # RemoveEvaluationSteps.groovy:135
 </pre>
-				</div>
-				<div class="syserr">
-					<h2>System error</h2>
-					<pre class="syserr">
+</div>
+<div class="syserr">
+<h2>System error</h2>
+<pre class="syserr">
 --Output from Remove evaluations in different criterion from a student--
 --Output from Remove an Evaluation from a Student--</pre>
-				</div>
-			</div>
-			<div class="clear"></div>
-		</div>
-		<div class="testsuite success">
-			<div class="header">
-				<h2>Add Criterion</h2>
-				<h3>Executed 3 tests without a single error or failure!</h3>
-			</div>
-			<div class="testcase clearfix success grid_8 alpha omega"
-				data-name="Register a criterion that does not exist">
-				<div class="grid_3 alpha">
-					<p>
-						<span class="icon success"></span><b
-							class="testname message success">Register a criterion that
-							does not exist</b>
-					</p>
-					<p class="summary">Executed in 0.669 seconds.</p>
-				</div>
-				<div class="grid_5 omega outputinfo"></div>
-				<div class="clear"></div>
-			</div>
-			<div class="testcase clearfix success grid_8 alpha omega"
-				data-name="Register a criterion that already exists">
-				<div class="grid_3 alpha">
-					<p>
-						<span class="icon success"></span><b
-							class="testname message success">Register a criterion that
-							already exists</b>
-					</p>
-					<p class="summary">Executed in 0.052 seconds.</p>
-				</div>
-				<div class="grid_5 omega outputinfo"></div>
-				<div class="clear"></div>
-			</div>
-			<div class="testcase clearfix success grid_8 alpha omega"
-				data-name="Error when registering a criterion that already exists">
-				<div class="grid_3 alpha">
-					<p>
-						<span class="icon success"></span><b
-							class="testname message success">Error when registering a
-							criterion that already exists</b>
-					</p>
-					<p class="summary">Executed in 5.736 seconds.</p>
-				</div>
-				<div class="grid_5 omega outputinfo"></div>
-				<div class="clear"></div>
-			</div>
-			<div class="clearfix output footer">
-				<div class="sysout">
-					<h2>Standard output</h2>
-					<pre class="stdout">#Esta feature &Atilde;&copy; a feature inicial, idealizada antes da itera&Atilde;&sect;&Atilde;&pound;o de imlementar features.
+</div>
+</div>
+<div class="clear"></div>
+</div>
+<div class="testsuite success">
+<div class="header">
+<h2>Add Criterion</h2>
+<h3>
+                        Executed
+                        3
+                        tests
+                    
+                        without a single error or failure!
+                    </h3>
+</div>
+<div class="testcase clearfix success grid_8 alpha omega" data-name="Register a criterion that does not exist">
+<div class="grid_3 alpha">
+<p>
+<span class="icon success"></span><b class="testname message success">Register a criterion that does not exist</b>
+</p>
+<p class="summary">Executed in 1.813 seconds.</p>
+</div>
+<div class="grid_5 omega outputinfo"></div>
+<div class="clear"></div>
+</div>
+<div class="testcase clearfix success grid_8 alpha omega" data-name="Register a criterion that already exists">
+<div class="grid_3 alpha">
+<p>
+<span class="icon success"></span><b class="testname message success">Register a criterion that already exists</b>
+</p>
+<p class="summary">Executed in 0.097 seconds.</p>
+</div>
+<div class="grid_5 omega outputinfo"></div>
+<div class="clear"></div>
+</div>
+<div class="testcase clearfix success grid_8 alpha omega" data-name="Error when registering a criterion that already exists">
+<div class="grid_3 alpha">
+<p>
+<span class="icon success"></span><b class="testname message success">Error when registering a criterion that already exists</b>
+</p>
+<p class="summary">Executed in 14.111 seconds.</p>
+</div>
+<div class="grid_5 omega outputinfo"></div>
+<div class="clear"></div>
+</div>
+<div class="clearfix output footer">
+<div class="sysout">
+<h2>Standard output</h2>
+<pre class="stdout">#Esta feature &Atilde;&copy; a feature inicial, idealizada antes da itera&Atilde;&sect;&Atilde;&pound;o de imlementar features.
 #Portanto, ser&Atilde;&iexcl; descartada dos testes finais visto que n&Atilde;&pound;o faz uso de m&Atilde;&copy;todos de controlador que n&Atilde;&pound;o sejam
 #Gerados automaticamente.
 #Arthur Lapprand
@@ -335,64 +357,62 @@ Feature: Add Criterion
     When I add the criterion "P3"                                             # AddCriterionSteps.groovy:95
     Then I should see a message related to the criterion registration failure # AddCriterionSteps.groovy:101
 </pre>
-				</div>
-				<div class="syserr">
-					<h2>System error</h2>
-					<pre class="syserr">
+</div>
+<div class="syserr">
+<h2>System error</h2>
+<pre class="syserr">
 --Output from Register a criterion that does not exist--
 --Output from Register a criterion that already exists--
 --Output from Error when registering a criterion that already exists--</pre>
-				</div>
-			</div>
-			<div class="clear"></div>
-		</div>
-		<div class="testsuite success">
-			<div class="header">
-				<h2>AddEvaluation</h2>
-				<h3>Executed 3 tests without a single error or failure!</h3>
-			</div>
-			<div class="testcase clearfix success grid_8 alpha omega"
-				data-name="Add evaluation to a criteria">
-				<div class="grid_3 alpha">
-					<p>
-						<span class="icon success"></span><b
-							class="testname message success">Add evaluation to a criteria</b>
-					</p>
-					<p class="summary">Executed in 0.273 seconds.</p>
-				</div>
-				<div class="grid_5 omega outputinfo"></div>
-				<div class="clear"></div>
-			</div>
-			<div class="testcase clearfix success grid_8 alpha omega"
-				data-name="Add evaluations using incomplete data">
-				<div class="grid_3 alpha">
-					<p>
-						<span class="icon success"></span><b
-							class="testname message success">Add evaluations using
-							incomplete data</b>
-					</p>
-					<p class="summary">Executed in 0.071 seconds.</p>
-				</div>
-				<div class="grid_5 omega outputinfo"></div>
-				<div class="clear"></div>
-			</div>
-			<div class="testcase clearfix success grid_8 alpha omega"
-				data-name="Add evaluation more than once with same origin">
-				<div class="grid_3 alpha">
-					<p>
-						<span class="icon success"></span><b
-							class="testname message success">Add evaluation more than
-							once with same origin</b>
-					</p>
-					<p class="summary">Executed in 0.131 seconds.</p>
-				</div>
-				<div class="grid_5 omega outputinfo"></div>
-				<div class="clear"></div>
-			</div>
-			<div class="clearfix output footer">
-				<div class="sysout">
-					<h2>Standard output</h2>
-					<pre class="stdout">Feature: AddEvaluation
+</div>
+</div>
+<div class="clear"></div>
+</div>
+<div class="testsuite success">
+<div class="header">
+<h2>AddEvaluation</h2>
+<h3>
+                        Executed
+                        3
+                        tests
+                    
+                        without a single error or failure!
+                    </h3>
+</div>
+<div class="testcase clearfix success grid_8 alpha omega" data-name="Add evaluation to a criteria">
+<div class="grid_3 alpha">
+<p>
+<span class="icon success"></span><b class="testname message success">Add evaluation to a criteria</b>
+</p>
+<p class="summary">Executed in 0.543 seconds.</p>
+</div>
+<div class="grid_5 omega outputinfo"></div>
+<div class="clear"></div>
+</div>
+<div class="testcase clearfix success grid_8 alpha omega" data-name="Add evaluations using incomplete data">
+<div class="grid_3 alpha">
+<p>
+<span class="icon success"></span><b class="testname message success">Add evaluations using incomplete data</b>
+</p>
+<p class="summary">Executed in 0.126 seconds.</p>
+</div>
+<div class="grid_5 omega outputinfo"></div>
+<div class="clear"></div>
+</div>
+<div class="testcase clearfix success grid_8 alpha omega" data-name="Add evaluation more than once with same origin">
+<div class="grid_3 alpha">
+<p>
+<span class="icon success"></span><b class="testname message success">Add evaluation more than once with same origin</b>
+</p>
+<p class="summary">Executed in 0.252 seconds.</p>
+</div>
+<div class="grid_5 omega outputinfo"></div>
+<div class="clear"></div>
+</div>
+<div class="clearfix output footer">
+<div class="sysout">
+<h2>Standard output</h2>
+<pre class="stdout">Feature: AddEvaluation
   As a teacher
   I want to evaluate each student by criteria
   to show them their progress in class
@@ -415,78 +435,72 @@ Feature: Add Criterion
     When I want to add a mark to all students to a the "X" criteria, originated from "Test" and dated from "28/03/2016"                   # AddEvaluation.groovy:142
     Then all the marks will not be stored in on the "X" criteria's history of each student                                                # AddEvaluation.groovy:148
 </pre>
-				</div>
-				<div class="syserr">
-					<h2>System error</h2>
-					<pre class="syserr">
+</div>
+<div class="syserr">
+<h2>System error</h2>
+<pre class="syserr">
 --Output from Add evaluation to a criteria--
 --Output from Add evaluations using incomplete data--
 --Output from Add evaluation more than once with same origin--</pre>
-				</div>
-			</div>
-			<div class="clear"></div>
-		</div>
-		<div class="testsuite success">
-			<div class="header">
-				<h2>Add Group Criterion</h2>
-				<h3>Executed 4 tests without a single error or failure!</h3>
-			</div>
-			<div class="testcase clearfix success grid_8 alpha omega"
-				data-name="Register a group of criteria that does not exist">
-				<div class="grid_3 alpha">
-					<p>
-						<span class="icon success"></span><b
-							class="testname message success">Register a group of criteria
-							that does not exist</b>
-					</p>
-					<p class="summary">Executed in 0.051 seconds.</p>
-				</div>
-				<div class="grid_5 omega outputinfo"></div>
-				<div class="clear"></div>
-			</div>
-			<div class="testcase clearfix success grid_8 alpha omega"
-				data-name="Register a non-existent group of criteria">
-				<div class="grid_3 alpha">
-					<p>
-						<span class="icon success"></span><b
-							class="testname message success">Register a non-existent
-							group of criteria</b>
-					</p>
-					<p class="summary">Executed in 3.0 seconds.</p>
-				</div>
-				<div class="grid_5 omega outputinfo"></div>
-				<div class="clear"></div>
-			</div>
-			<div class="testcase clearfix success grid_8 alpha omega"
-				data-name="Register a group of criteria that some of them already exists">
-				<div class="grid_3 alpha">
-					<p>
-						<span class="icon success"></span><b
-							class="testname message success">Register a group of criteria
-							that some of them already exists</b>
-					</p>
-					<p class="summary">Executed in 0.054 seconds.</p>
-				</div>
-				<div class="grid_5 omega outputinfo"></div>
-				<div class="clear"></div>
-			</div>
-			<div class="testcase clearfix success grid_8 alpha omega"
-				data-name="Register a group of criteria that some elements of it already exists">
-				<div class="grid_3 alpha">
-					<p>
-						<span class="icon success"></span><b
-							class="testname message success">Register a group of criteria
-							that some elements of it already exists</b>
-					</p>
-					<p class="summary">Executed in 2.523 seconds.</p>
-				</div>
-				<div class="grid_5 omega outputinfo"></div>
-				<div class="clear"></div>
-			</div>
-			<div class="clearfix output footer">
-				<div class="sysout">
-					<h2>Standard output</h2>
-					<pre class="stdout">#Thiago Bastos
+</div>
+</div>
+<div class="clear"></div>
+</div>
+<div class="testsuite success">
+<div class="header">
+<h2>Add Group Criterion</h2>
+<h3>
+                        Executed
+                        4
+                        tests
+                    
+                        without a single error or failure!
+                    </h3>
+</div>
+<div class="testcase clearfix success grid_8 alpha omega" data-name="Register a group of criteria that does not exist">
+<div class="grid_3 alpha">
+<p>
+<span class="icon success"></span><b class="testname message success">Register a group of criteria that does not exist</b>
+</p>
+<p class="summary">Executed in 0.091 seconds.</p>
+</div>
+<div class="grid_5 omega outputinfo"></div>
+<div class="clear"></div>
+</div>
+<div class="testcase clearfix success grid_8 alpha omega" data-name="Register a non-existent group of criteria">
+<div class="grid_3 alpha">
+<p>
+<span class="icon success"></span><b class="testname message success">Register a non-existent group of criteria</b>
+</p>
+<p class="summary">Executed in 10.933 seconds.</p>
+</div>
+<div class="grid_5 omega outputinfo"></div>
+<div class="clear"></div>
+</div>
+<div class="testcase clearfix success grid_8 alpha omega" data-name="Register a group of criteria that some of them already exists">
+<div class="grid_3 alpha">
+<p>
+<span class="icon success"></span><b class="testname message success">Register a group of criteria that some of them already exists</b>
+</p>
+<p class="summary">Executed in 0.09 seconds.</p>
+</div>
+<div class="grid_5 omega outputinfo"></div>
+<div class="clear"></div>
+</div>
+<div class="testcase clearfix success grid_8 alpha omega" data-name="Register a group of criteria that some elements of it already exists">
+<div class="grid_3 alpha">
+<p>
+<span class="icon success"></span><b class="testname message success">Register a group of criteria that some elements of it already exists</b>
+</p>
+<p class="summary">Executed in 6.557 seconds.</p>
+</div>
+<div class="grid_5 omega outputinfo"></div>
+<div class="clear"></div>
+</div>
+<div class="clearfix output footer">
+<div class="sysout">
+<h2>Standard output</h2>
+<pre class="stdout">#Thiago Bastos
 Feature: Add Group Criterion
   As the teacher
   I want to be able to register new criteria
@@ -532,53 +546,53 @@ Feature: Add Group Criterion
     Then I should see the "C6" criterion available on the criteria list              # AddGroupOfCriteriaSteps.groovy:100
     And I should see the "C7" criterion only one time available on the criteria list # AddGroupOfCriteriaSteps.groovy:173
 </pre>
-				</div>
-				<div class="syserr">
-					<h2>System error</h2>
-					<pre class="syserr">
+</div>
+<div class="syserr">
+<h2>System error</h2>
+<pre class="syserr">
 --Output from Register a group of criteria that does not exist--
 --Output from Register a non-existent group of criteria--
 --Output from Register a group of criteria that some of them already exists--
 --Output from Register a group of criteria that some elements of it already exists--</pre>
-				</div>
-			</div>
-			<div class="clear"></div>
-		</div>
-		<div class="testsuite success">
-			<div class="header">
-				<h2>Remove Criterion</h2>
-				<h3>Executed 2 tests without a single error or failure!</h3>
-			</div>
-			<div class="testcase clearfix success grid_8 alpha omega"
-				data-name="Remove a criterion with students and evaluations using it">
-				<div class="grid_3 alpha">
-					<p>
-						<span class="icon success"></span><b
-							class="testname message success">Remove a criterion with
-							students and evaluations using it</b>
-					</p>
-					<p class="summary">Executed in 6.99 seconds.</p>
-				</div>
-				<div class="grid_5 omega outputinfo"></div>
-				<div class="clear"></div>
-			</div>
-			<div class="testcase clearfix success grid_8 alpha omega"
-				data-name="Remove a criterion from the system">
-				<div class="grid_3 alpha">
-					<p>
-						<span class="icon success"></span><b
-							class="testname message success">Remove a criterion from the
-							system</b>
-					</p>
-					<p class="summary">Executed in 0.062 seconds.</p>
-				</div>
-				<div class="grid_5 omega outputinfo"></div>
-				<div class="clear"></div>
-			</div>
-			<div class="clearfix output footer">
-				<div class="sysout">
-					<h2>Standard output</h2>
-					<pre class="stdout">#Arthur Lapprand
+</div>
+</div>
+<div class="clear"></div>
+</div>
+<div class="testsuite success">
+<div class="header">
+<h2>Remove Criterion</h2>
+<h3>
+                        Executed
+                        2
+                        tests
+                    
+                        without a single error or failure!
+                    </h3>
+</div>
+<div class="testcase clearfix success grid_8 alpha omega" data-name="Remove a criterion with students and evaluations using it">
+<div class="grid_3 alpha">
+<p>
+<span class="icon success"></span><b class="testname message success">Remove a criterion with students and evaluations using it</b>
+</p>
+<p class="summary">Executed in 18.924 seconds.</p>
+</div>
+<div class="grid_5 omega outputinfo"></div>
+<div class="clear"></div>
+</div>
+<div class="testcase clearfix success grid_8 alpha omega" data-name="Remove a criterion from the system">
+<div class="grid_3 alpha">
+<p>
+<span class="icon success"></span><b class="testname message success">Remove a criterion from the system</b>
+</p>
+<p class="summary">Executed in 0.126 seconds.</p>
+</div>
+<div class="grid_5 omega outputinfo"></div>
+<div class="clear"></div>
+</div>
+<div class="clearfix output footer">
+<div class="sysout">
+<h2>Standard output</h2>
+<pre class="stdout">#Arthur Lapprand
 Feature: Remove Criterion
   As the teacher
   I want to remove a Criterion from the system
@@ -600,22 +614,22 @@ Feature: Remove Criterion
     When I remove the criterion "GDI" from the student "Jose" with login "jj"                                     # RemoveCriterionSteps.groovy:81
     Then the system correctly removes the criterion                                                               # RemoveCriterionSteps.groovy:88
 </pre>
-				</div>
-				<div class="syserr">
-					<h2>System error</h2>
-					<pre class="syserr">
+</div>
+<div class="syserr">
+<h2>System error</h2>
+<pre class="syserr">
 --Output from Remove a criterion with students and evaluations using it--
 --Output from Remove a criterion from the system--</pre>
-				</div>
-			</div>
-			<div class="clear"></div>
-		</div>
-		<div class="clear"></div>
-	</div>
-	<!--
+</div>
+</div>
+<div class="clear"></div>
+</div>
+<div class="clear"></div>
+</div>
+<!--
             Parses JUnit output and associates it with the corresponding test case
         -->
-	<script language="javascript">
+<script language="javascript">
 
 
 /**

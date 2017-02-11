@@ -1,35 +1,26 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuite errors="0" failures="1" hostname="DESKTOP-N49IB15"
-	name="Remove Evaluation" tests="2" time="4.435" timestamp="2016-10-01T18:50:43">
-	<properties />
-	<testcase classname="grails.plugin.cucumber.CucumberTest"
-		name="Remove evaluations in different criterion from a student" time="4.323">
-		<failure
-			message="title ==~ /Show EvaluationsByCriterion/&#xa;|     |&#xa;|     false&#xa;Show Student"
-			type="grails.plugin.cucumber.FakeAssertionFailedError">Assertion failed:
+<testsuite errors="0" failures="1" hostname="DESKTOP-S5990V7" name="Remove Evaluation" tests="2" time="13.378" timestamp="2017-02-11T15:02:19">
+  <properties />
+  <testcase classname="grails.plugin.cucumber.CucumberTest" name="Remove evaluations in different criterion from a student" time="12.961">
+    <failure message="title ==~ /Show EvaluationsByCriterion/&#xa;|     |&#xa;|     false&#xa;Show Student" type="grails.plugin.cucumber.FakeAssertionFailedError">Assertion failed: 
 
-			title ==~ /Show EvaluationsByCriterion/
-			| |
-			| false
-			Show Student
+title ==~ /Show EvaluationsByCriterion/
+|     |
+|     false
+Show Student
 
-			at
-			pages.ShowEvaluationByCriterionPage$__clinit__closure1.doCall(ShowEvaluationByCriterionPage.groovy:12)
-			at geb.Page.verifyThisPageAtOnly(Page.groovy:228)
-			at geb.Page.verifyAt(Page.groovy:182)
-			at geb.Browser.doAt(Browser.groovy:454)
-			at geb.Browser.at(Browser.groovy:336)
-			at
-			geb.binding.BindingUpdater$InvocationForwarding.doCall(BindingUpdater.groovy:73)
-			at
-			steps.RemoveEvaluationSteps$_run_closure4.doCall(RemoveEvaluationSteps.groovy:75)
-			at ✽.When I remove the evaluation
-			&quot;MA&quot;(RemoveEvaluation.feature:13)
-		</failure>
-	</testcase>
-	<testcase classname="grails.plugin.cucumber.CucumberTest"
-		name="Remove an Evaluation from a Student" time="0.082" />
-	<system-out><![CDATA[#Arthur Lapprand
+	at pages.ShowEvaluationByCriterionPage$__clinit__closure1.doCall(ShowEvaluationByCriterionPage.groovy:12)
+	at geb.Page.verifyThisPageAtOnly(Page.groovy:228)
+	at geb.Page.verifyAt(Page.groovy:182)
+	at geb.Browser.doAt(Browser.groovy:454)
+	at geb.Browser.at(Browser.groovy:336)
+	at geb.binding.BindingUpdater$InvocationForwarding.doCall(BindingUpdater.groovy:73)
+	at steps.RemoveEvaluationSteps$_run_closure4.doCall(RemoveEvaluationSteps.groovy:75)
+	at ✽.When I remove the evaluation &quot;MA&quot;(RemoveEvaluation.feature:13)
+</failure>
+  </testcase>
+  <testcase classname="grails.plugin.cucumber.CucumberTest" name="Remove an Evaluation from a Student" time="0.361" />
+  <system-out><![CDATA[#Arthur Lapprand
 Feature: Remove Evaluation
   As the teacher
   I want to remove an Evaluation from a Student
@@ -71,7 +62,7 @@ Feature: Remove Evaluation
     When I remove the evaluation "MA" in criterion "ESS" with origin "Test" and applicationDate "21/12/1992" from the student "Fulano Detal" with login "fd" # RemoveEvaluationSteps.groovy:109
     Then the system correctly removes the evaluation                                                                                                         # RemoveEvaluationSteps.groovy:135
 ]]></system-out>
-	<system-err><![CDATA[
+  <system-err><![CDATA[
 --Output from Remove evaluations in different criterion from a student--
 --Output from Remove an Evaluation from a Student--]]></system-err>
 </testsuite>
