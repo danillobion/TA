@@ -26,3 +26,15 @@ Feature: Add Criterion
     And I am on the Add Criterion page
     When I add the criterion "P3"
     Then I should see a message related to the criterion registration failure
+    
+#Controller Scenario
+  Scenario: Register a criterion with null description
+    Given the criterion named " " is not on the system
+    When I create the criterion with description " "
+    Then the system does not create the criterion with description " "
+
+#GUI Scenario
+  Scenario: Error when registering a criterion with null description
+    Given I am on the Add Criterion page
+    When I add the criterion with description " "
+    Then I see a message related to the criterion registration failure

@@ -102,3 +102,38 @@ Then(~'^I should see a message related to the criterion registration failure$') 
     at CreateCriterionPage
     assert page.checkForErrors()
 }
+
+/*
+ #Controller Scenario
+  Scenario: Register a criterion with blank description
+    Given the criterion named "" is not on the system
+    When I create the criterion with description ""
+    Then the system does not create the criterion witch description ""
+ */
+ 
+Given(~/^the criterion named "(.*?)" is not on the system$/) { String desc -> 
+	assert Criterion.findByDescription(desc) == null
+}
+
+Then(~/^the system does not create the criterion witch description "(.*?)"$/) { String desc ->
+	assert Criterion.findByDescription(desc) == null
+}
+
+/*
+#GUI Scenario
+Scenario: Error when registering a criterion with blank description
+  Given I am on the Add Criterion page
+  When I add the criterion with description ""
+  Then I see a message related to the criterion registration failure
+*/
+
+When(~/^I add the criterion with description "(.*?)"$/) { String arg1 ->
+        at CreateCriterionPage
+        page.createCriterion(arg1)
+}
+
+Then(~/^I see a message related to the criterion registration failure$/) { ->
+	at CreateCriterionPage
+    assert page.checkForErrors()
+}
+ 
