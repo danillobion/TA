@@ -115,7 +115,7 @@ Given(~/^the criterion named "(.*?)" is not on the system$/) { String desc ->
 	assert Criterion.findByDescription(desc) == null
 }
 
-Then(~/^the system does not create the criterion witch description "(.*?)"$/) { String desc ->
+Then(~/^the system does not create the criterion with description "(.*?)"$/) { String desc ->
 	assert Criterion.findByDescription(desc) == null
 }
 
