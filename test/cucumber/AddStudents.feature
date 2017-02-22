@@ -1,4 +1,3 @@
-@ignore
 Feature: Add Student
   As a professor
   I want to register students in the system

@@ -15,11 +15,11 @@
      - All tests </h1>
 <p class="intro">
                         Executed
-                        16
+                        24
                         tests
                     
                         with
-                        2 failures
+                        one failure
                         .
                     </p>
 </div>
@@ -61,7 +61,7 @@
 <p>
 <span class="icon success"></span><b class="testname message success">Update a report</b>
 </p>
-<p class="summary">Executed in 0.329 seconds.</p>
+<p class="summary">Executed in 0.279 seconds.</p>
 </div>
 <div class="grid_5 omega outputinfo"></div>
 <div class="clear"></div>
@@ -71,7 +71,7 @@
 <p>
 <span class="icon failure"></span><b class="testname message failure">Show the students list in the "70% of evaluations are over the class average" report</b>
 </p>
-<p class="summary">Executed in 10.664 seconds.</p>
+<p class="summary">Executed in 11.558 seconds.</p>
 </div>
 <div class="grid_5 omega outputinfo">
 <div class="details">
@@ -169,119 +169,6 @@ Show Report
 </div>
 <div class="clear"></div>
 </div>
-<div class="testsuite failure">
-<div class="header">
-<h2>Remove Evaluation</h2>
-<h3>
-                        Executed
-                        2
-                        tests
-                    
-                        with
-                        one failure
-                        .
-                    </h3>
-</div>
-<div class="testcase clearfix failure grid_8 alpha omega" data-name="Remove evaluations in different criterion from a student">
-<div class="grid_3 alpha">
-<p>
-<span class="icon failure"></span><b class="testname message failure">Remove evaluations in different criterion from a student</b>
-</p>
-<p class="summary">Executed in 12.961 seconds.</p>
-</div>
-<div class="grid_5 omega outputinfo">
-<div class="details">
-<p>
-<b class="message">title ==~ /Show EvaluationsByCriterion/
-|     |
-|     false
-Show Student</b>
-</p>
-<pre>Assertion failed: 
-
-title ==~ /Show EvaluationsByCriterion/
-|     |
-|     false
-Show Student
-
-	at pages.ShowEvaluationByCriterionPage$__clinit__closure1.doCall(ShowEvaluationByCriterionPage.groovy:12)
-	at geb.Page.verifyThisPageAtOnly(Page.groovy:228)
-	at geb.Page.verifyAt(Page.groovy:182)
-	at geb.Browser.doAt(Browser.groovy:454)
-	at geb.Browser.at(Browser.groovy:336)
-	at geb.binding.BindingUpdater$InvocationForwarding.doCall(BindingUpdater.groovy:73)
-	at steps.RemoveEvaluationSteps$_run_closure4.doCall(RemoveEvaluationSteps.groovy:75)
-	at ✽.When I remove the evaluation "MA"(RemoveEvaluation.feature:13)
-</pre>
-</div>
-</div>
-<div class="clear"></div>
-</div>
-<div class="testcase clearfix success grid_8 alpha omega" data-name="Remove an Evaluation from a Student">
-<div class="grid_3 alpha">
-<p>
-<span class="icon success"></span><b class="testname message success">Remove an Evaluation from a Student</b>
-</p>
-<p class="summary">Executed in 0.361 seconds.</p>
-</div>
-<div class="grid_5 omega outputinfo"></div>
-<div class="clear"></div>
-</div>
-<div class="clearfix output footer">
-<div class="sysout">
-<h2>Standard output</h2>
-<pre class="stdout">#Arthur Lapprand
-Feature: Remove Evaluation
-  As the teacher
-  I want to remove an Evaluation from a Student
-  So I can correct the Student overall evaluation
-
---Output from Remove evaluations in different criterion from a student--
---Output from Remove an Evaluation from a Student--
-  #GUI Scenario
-  Scenario: Remove evaluations in different criterion from a student            # RemoveEvaluation.feature:9
-    Given the system already has a student with name "Student 1" and login "s1" # RemoveEvaluationSteps.groovy:25
-    And this student has "MA" evaluation in criterion "SI"                      # RemoveEvaluationSteps.groovy:34
-    And has a "MANA" evaluation in criterion "PLC"                              # RemoveEvaluationSteps.groovy:47
-    When I remove the evaluation "MA"                                           # RemoveEvaluationSteps.groovy:67
-      Assertion failed: 
-      
-      title ==~ /Show EvaluationsByCriterion/
-      |     |
-      |     false
-      Show Student
-      
-      	at pages.ShowEvaluationByCriterionPage$__clinit__closure1.doCall(ShowEvaluationByCriterionPage.groovy:12)
-      	at pages.ShowEvaluationByCriterionPage$__clinit__closure1.doCall(ShowEvaluationByCriterionPage.groovy)
-      	at geb.Page.verifyThisPageAtOnly(Page.groovy:228)
-      	at geb.Page.verifyAt(Page.groovy:182)
-      	at geb.Page$verifyAt$4.call(Unknown Source)
-      	at geb.Page$verifyAt$4.call(Unknown Source)
-      	at geb.Browser.doAt(Browser.groovy:454)
-      	at geb.Browser.at(Browser.groovy:336)
-      	at geb.binding.BindingUpdater$InvocationForwarding.doCall(BindingUpdater.groovy:73)
-      	at steps.RemoveEvaluationSteps$_run_closure4.doCall(RemoveEvaluationSteps.groovy:75)
-      	at &acirc;œ&frac12;.When I remove the evaluation "MA"(RemoveEvaluation.feature:13)
-
-    Then I should not see it listed in the student                              # RemoveEvaluationSteps.groovy:81
-
-  #Controller Scenario
-  Scenario: Remove an Evaluation from a Student                                                                                                              # RemoveEvaluation.feature:17
-    Given the system has a student registered with name "Fulano Detal" and login "fd"                                                                        # RemoveEvaluationSteps.groovy:94
-    And this student has a "MA" evaluation in criterion "ESS" with origin "Test" and applicationDate "21/12/1992"                                            # RemoveEvaluationSteps.groovy:101
-    When I remove the evaluation "MA" in criterion "ESS" with origin "Test" and applicationDate "21/12/1992" from the student "Fulano Detal" with login "fd" # RemoveEvaluationSteps.groovy:109
-    Then the system correctly removes the evaluation                                                                                                         # RemoveEvaluationSteps.groovy:135
-</pre>
-</div>
-<div class="syserr">
-<h2>System error</h2>
-<pre class="syserr">
---Output from Remove evaluations in different criterion from a student--
---Output from Remove an Evaluation from a Student--</pre>
-</div>
-</div>
-<div class="clear"></div>
-</div>
 <div class="testsuite success">
 <div class="header">
 <h2>Add Criterion</h2>
@@ -298,7 +185,7 @@ Feature: Remove Evaluation
 <p>
 <span class="icon success"></span><b class="testname message success">Register a criterion that does not exist</b>
 </p>
-<p class="summary">Executed in 1.813 seconds.</p>
+<p class="summary">Executed in 3.315 seconds.</p>
 </div>
 <div class="grid_5 omega outputinfo"></div>
 <div class="clear"></div>
@@ -308,7 +195,7 @@ Feature: Remove Evaluation
 <p>
 <span class="icon success"></span><b class="testname message success">Register a criterion that already exists</b>
 </p>
-<p class="summary">Executed in 0.097 seconds.</p>
+<p class="summary">Executed in 0.099 seconds.</p>
 </div>
 <div class="grid_5 omega outputinfo"></div>
 <div class="clear"></div>
@@ -318,7 +205,7 @@ Feature: Remove Evaluation
 <p>
 <span class="icon success"></span><b class="testname message success">Error when registering a criterion that already exists</b>
 </p>
-<p class="summary">Executed in 14.111 seconds.</p>
+<p class="summary">Executed in 11.462 seconds.</p>
 </div>
 <div class="grid_5 omega outputinfo"></div>
 <div class="clear"></div>
@@ -384,7 +271,7 @@ Feature: Add Criterion
 <p>
 <span class="icon success"></span><b class="testname message success">Add evaluation to a criteria</b>
 </p>
-<p class="summary">Executed in 0.543 seconds.</p>
+<p class="summary">Executed in 0.511 seconds.</p>
 </div>
 <div class="grid_5 omega outputinfo"></div>
 <div class="clear"></div>
@@ -394,7 +281,7 @@ Feature: Add Criterion
 <p>
 <span class="icon success"></span><b class="testname message success">Add evaluations using incomplete data</b>
 </p>
-<p class="summary">Executed in 0.126 seconds.</p>
+<p class="summary">Executed in 0.171 seconds.</p>
 </div>
 <div class="grid_5 omega outputinfo"></div>
 <div class="clear"></div>
@@ -404,7 +291,7 @@ Feature: Add Criterion
 <p>
 <span class="icon success"></span><b class="testname message success">Add evaluation more than once with same origin</b>
 </p>
-<p class="summary">Executed in 0.252 seconds.</p>
+<p class="summary">Executed in 0.23 seconds.</p>
 </div>
 <div class="grid_5 omega outputinfo"></div>
 <div class="clear"></div>
@@ -462,7 +349,7 @@ Feature: Add Criterion
 <p>
 <span class="icon success"></span><b class="testname message success">Register a group of criteria that does not exist</b>
 </p>
-<p class="summary">Executed in 0.091 seconds.</p>
+<p class="summary">Executed in 0.112 seconds.</p>
 </div>
 <div class="grid_5 omega outputinfo"></div>
 <div class="clear"></div>
@@ -472,7 +359,7 @@ Feature: Add Criterion
 <p>
 <span class="icon success"></span><b class="testname message success">Register a non-existent group of criteria</b>
 </p>
-<p class="summary">Executed in 10.933 seconds.</p>
+<p class="summary">Executed in 6.419 seconds.</p>
 </div>
 <div class="grid_5 omega outputinfo"></div>
 <div class="clear"></div>
@@ -482,7 +369,7 @@ Feature: Add Criterion
 <p>
 <span class="icon success"></span><b class="testname message success">Register a group of criteria that some of them already exists</b>
 </p>
-<p class="summary">Executed in 0.09 seconds.</p>
+<p class="summary">Executed in 0.08 seconds.</p>
 </div>
 <div class="grid_5 omega outputinfo"></div>
 <div class="clear"></div>
@@ -492,7 +379,7 @@ Feature: Add Criterion
 <p>
 <span class="icon success"></span><b class="testname message success">Register a group of criteria that some elements of it already exists</b>
 </p>
-<p class="summary">Executed in 6.557 seconds.</p>
+<p class="summary">Executed in 8.269 seconds.</p>
 </div>
 <div class="grid_5 omega outputinfo"></div>
 <div class="clear"></div>
@@ -560,6 +447,187 @@ Feature: Add Group Criterion
 </div>
 <div class="testsuite success">
 <div class="header">
+<h2>Add Student</h2>
+<h3>
+                        Executed
+                        8
+                        tests
+                    
+                        without a single error or failure!
+                    </h3>
+</div>
+<div class="testcase clearfix success grid_8 alpha omega" data-name="Register a new student">
+<div class="grid_3 alpha">
+<p>
+<span class="icon success"></span><b class="testname message success">Register a new student</b>
+</p>
+<p class="summary">Executed in 0.108 seconds.</p>
+</div>
+<div class="grid_5 omega outputinfo"></div>
+<div class="clear"></div>
+</div>
+<div class="testcase clearfix success grid_8 alpha omega" data-name="Message from the new student registration">
+<div class="grid_3 alpha">
+<p>
+<span class="icon success"></span><b class="testname message success">Message from the new student registration</b>
+</p>
+<p class="summary">Executed in 8.138 seconds.</p>
+</div>
+<div class="grid_5 omega outputinfo"></div>
+<div class="clear"></div>
+</div>
+<div class="testcase clearfix success grid_8 alpha omega" data-name="Register a student twice">
+<div class="grid_3 alpha">
+<p>
+<span class="icon success"></span><b class="testname message success">Register a student twice</b>
+</p>
+<p class="summary">Executed in 0.09 seconds.</p>
+</div>
+<div class="grid_5 omega outputinfo"></div>
+<div class="clear"></div>
+</div>
+<div class="testcase clearfix success grid_8 alpha omega" data-name="Error message when registering a student twice">
+<div class="grid_3 alpha">
+<p>
+<span class="icon success"></span><b class="testname message success">Error message when registering a student twice</b>
+</p>
+<p class="summary">Executed in 6.669 seconds.</p>
+</div>
+<div class="grid_5 omega outputinfo"></div>
+<div class="clear"></div>
+</div>
+<div class="testcase clearfix success grid_8 alpha omega" data-name="Register a group of student">
+<div class="grid_3 alpha">
+<p>
+<span class="icon success"></span><b class="testname message success">Register a group of student</b>
+</p>
+<p class="summary">Executed in 0.108 seconds.</p>
+</div>
+<div class="grid_5 omega outputinfo"></div>
+<div class="clear"></div>
+</div>
+<div class="testcase clearfix success grid_8 alpha omega" data-name="See the new group of students in the list">
+<div class="grid_3 alpha">
+<p>
+<span class="icon success"></span><b class="testname message success">See the new group of students in the list</b>
+</p>
+<p class="summary">Executed in 5.807 seconds.</p>
+</div>
+<div class="grid_5 omega outputinfo"></div>
+<div class="clear"></div>
+</div>
+<div class="testcase clearfix success grid_8 alpha omega" data-name="Register a student twice in a group of student">
+<div class="grid_3 alpha">
+<p>
+<span class="icon success"></span><b class="testname message success">Register a student twice in a group of student</b>
+</p>
+<p class="summary">Executed in 0.075 seconds.</p>
+</div>
+<div class="grid_5 omega outputinfo"></div>
+<div class="clear"></div>
+</div>
+<div class="testcase clearfix success grid_8 alpha omega" data-name="Register a student twice in a group of student in list">
+<div class="grid_3 alpha">
+<p>
+<span class="icon success"></span><b class="testname message success">Register a student twice in a group of student in list</b>
+</p>
+<p class="summary">Executed in 7.583 seconds.</p>
+</div>
+<div class="grid_5 omega outputinfo"></div>
+<div class="clear"></div>
+</div>
+<div class="clearfix output footer">
+<div class="sysout">
+<h2>Standard output</h2>
+<pre class="stdout">Feature: Add Student
+  As a professor
+  I want to register students in the system
+  So I can evaluate the students with respect to various criteria
+
+--Output from Register a new student--
+--Output from Message from the new student registration--
+  #Cen&Atilde;&iexcl;rio Controler
+  Scenario: Register a new student                                                    # AddStudents.feature:7
+    Given the student "Roberto Alves" with login "ra" is not registered in the system # AddStudentsSteps.groovy:19
+    When I register "Roberto Alves" with login "ra"                                   # AddStudentsSteps.groovy:23
+    Then the student "Roberto Alves" with login "ra" is saved in the system           # AddStudentsSteps.groovy:27
+
+--Output from Register a student twice--
+  #Cen&Atilde;&iexcl;rio GUI
+  Scenario: Message from the new student registration                                         # AddStudents.feature:13
+    Given I am in the "add student" page                                                      # AddStudentsSteps.groovy:72
+    When I add the "Rodrigo Calegario" with login "rc"                                        # AddStudentsSteps.groovy:33
+    Then I can see the name of "Rodrigo Calegario" and the login "rc" in the list of students # AddStudentsSteps.groovy:40
+
+--Output from Error message when registering a student twice--
+  #Cen&Atilde;&iexcl;rio Controler
+  Scenario: Register a student twice                                                  # AddStudents.feature:19
+    Given the student "Robertinho Alves" with login "raz" is registered in the system # AddStudentsSteps.groovy:45
+    When I register "Robertinho Alves" with login "raz"                               # AddStudentsSteps.groovy:23
+    Then the system does not register "Robertinho Alves" with login "raz"             # AddStudentsSteps.groovy:51
+
+--Output from Register a group of student--
+  #Cen&Atilde;&iexcl;rio GUI
+  Scenario: Error message when registering a student twice                                          # AddStudents.feature:25
+    Given I am in the "sudent list" page                                                            # AddStudentsSteps.groovy:72
+    And the name of "Roberto Alves" and the login "ra" is already in the list of student            # AddStudentsSteps.groovy:89
+    And I go to the "add student" page                                                              # AddStudentsSteps.groovy:64
+    When I add the "Roberto Alves" with login "ra"                                                  # AddStudentsSteps.groovy:33
+    Then I can see the name of "Roberto Alves" and the login "ra" in the list of students only once # AddStudentsSteps.groovy:55
+
+--Output from See the new group of students in the list--
+  #Cenario Controller
+  Scenario: Register a group of student                                                               # AddStudents.feature:33
+    Given the student "Jo&Atilde;&pound;o Adherval" with login "ja" is not registered in the system                 # AddStudentsSteps.groovy:19
+    And the student "Milena Cabral" with login "mscc" is not registered in the system                 # AddStudentsSteps.groovy:19
+    When I send a text with "Jo&Atilde;&pound;o Adherval (jacb :: joaoadherval);&Acirc;&nbsp;Milena Cabral (mscc :: Milechwan)" # AddStudentsSteps.groovy:60
+    Then the student "Jo&Atilde;&pound;o Adherval" with login "jacb" is saved in the system                         # AddStudentsSteps.groovy:27
+    And the student "Milena Cabral" with login "mscc" is saved in the system                          # AddStudentsSteps.groovy:27
+
+--Output from Register a student twice in a group of student--
+  #Cenario GUI
+  Scenario: See the new group of students in the list                                                  # AddStudents.feature:41
+    Given I am in the "create group" page                                                              # AddStudentsSteps.groovy:72
+    When I add the text "Danilo Ribeiro (dlr4 :: DLRibeiro); Arthur Lapprand (abl3 :: ArthurLapprand)" # AddStudentsSteps.groovy:82
+    Then I can see the name of "Danilo Ribeiro" and the login "dlr4" in the list of students           # AddStudentsSteps.groovy:40
+    And I can see the name of "Arthur Lapprand" and the login "abl3" in the list of students           # AddStudentsSteps.groovy:40
+
+--Output from Register a student twice in a group of student in list--
+  #Cenario Controller
+  Scenario: Register a student twice in a group of student                                   # AddStudents.feature:48
+    Given the student "Felipe Bormann" with login "fhab" is not registered in the system     # AddStudentsSteps.groovy:19
+    And the student "Arthur Jorge" with login "anew" is registered in the system             # AddStudentsSteps.groovy:45
+    When I send a text with "Felipe Bormann (fhab :: fbormann); Arthur Jorge (anew :: ajew)" # AddStudentsSteps.groovy:60
+    Then the student "Felipe Bormann" with login "fhab" is saved in the system               # AddStudentsSteps.groovy:27
+    And the system does not register "Arthur Jorge" with login "anew"                        # AddStudentsSteps.groovy:51
+
+  #Cenario GUI
+  Scenario: Register a student twice in a group of student in list                                      # AddStudents.feature:56
+    Given I am in the "sudent list" page                                                                # AddStudentsSteps.groovy:72
+    And the name of "Ot&Atilde;&iexcl;vio Vera Cruz" and the login "ovcg" is already in the list of student           # AddStudentsSteps.groovy:89
+    And I go to the "create group" page                                                                 # AddStudentsSteps.groovy:64
+    When I add the text "Milton Vasconcelos (mvgn :: miltongneto); Ot&Atilde;&iexcl;vio Vera Cruz (ovcg :: ovcg)"     # AddStudentsSteps.groovy:82
+    Then I can see the name of "Milton Vasconcelos" and the login "mvgn" in the list of students        # AddStudentsSteps.groovy:40
+    And I can see the name of "Ot&Atilde;&iexcl;vio Vera Cruz" and the login "ovcg" in the list of students only once # AddStudentsSteps.groovy:55
+</pre>
+</div>
+<div class="syserr">
+<h2>System error</h2>
+<pre class="syserr">
+--Output from Register a new student--
+--Output from Message from the new student registration--
+--Output from Register a student twice--
+--Output from Error message when registering a student twice--
+--Output from Register a group of student--
+--Output from See the new group of students in the list--
+--Output from Register a student twice in a group of student--
+--Output from Register a student twice in a group of student in list--</pre>
+</div>
+</div>
+<div class="clear"></div>
+</div>
+<div class="testsuite success">
+<div class="header">
 <h2>Remove Criterion</h2>
 <h3>
                         Executed
@@ -574,7 +642,7 @@ Feature: Add Group Criterion
 <p>
 <span class="icon success"></span><b class="testname message success">Remove a criterion with students and evaluations using it</b>
 </p>
-<p class="summary">Executed in 18.924 seconds.</p>
+<p class="summary">Executed in 12.254 seconds.</p>
 </div>
 <div class="grid_5 omega outputinfo"></div>
 <div class="clear"></div>
@@ -584,7 +652,7 @@ Feature: Add Group Criterion
 <p>
 <span class="icon success"></span><b class="testname message success">Remove a criterion from the system</b>
 </p>
-<p class="summary">Executed in 0.126 seconds.</p>
+<p class="summary">Executed in 0.12 seconds.</p>
 </div>
 <div class="grid_5 omega outputinfo"></div>
 <div class="clear"></div>
@@ -620,6 +688,73 @@ Feature: Remove Criterion
 <pre class="syserr">
 --Output from Remove a criterion with students and evaluations using it--
 --Output from Remove a criterion from the system--</pre>
+</div>
+</div>
+<div class="clear"></div>
+</div>
+<div class="testsuite success">
+<div class="header">
+<h2>Remove Evaluation</h2>
+<h3>
+                        Executed
+                        2
+                        tests
+                    
+                        without a single error or failure!
+                    </h3>
+</div>
+<div class="testcase clearfix success grid_8 alpha omega" data-name="Remove evaluations in different criterion from a student">
+<div class="grid_3 alpha">
+<p>
+<span class="icon success"></span><b class="testname message success">Remove evaluations in different criterion from a student</b>
+</p>
+<p class="summary">Executed in 21.131 seconds.</p>
+</div>
+<div class="grid_5 omega outputinfo"></div>
+<div class="clear"></div>
+</div>
+<div class="testcase clearfix success grid_8 alpha omega" data-name="Remove an Evaluation from a Student">
+<div class="grid_3 alpha">
+<p>
+<span class="icon success"></span><b class="testname message success">Remove an Evaluation from a Student</b>
+</p>
+<p class="summary">Executed in 0.089 seconds.</p>
+</div>
+<div class="grid_5 omega outputinfo"></div>
+<div class="clear"></div>
+</div>
+<div class="clearfix output footer">
+<div class="sysout">
+<h2>Standard output</h2>
+<pre class="stdout">#Arthur Lapprand
+Feature: Remove Evaluation
+  As the teacher
+  I want to remove an Evaluation from a Student
+  So I can correct the Student overall evaluation
+
+--Output from Remove evaluations in different criterion from a student--
+--Output from Remove an Evaluation from a Student--
+  #GUI Scenario
+  Scenario: Remove evaluations in different criterion from a student            # RemoveEvaluation.feature:9
+    Given the system already has a student with name "Student 1" and login "s1" # RemoveEvaluationSteps.groovy:25
+    And this student has "MA" evaluation in criterion "SI"                      # RemoveEvaluationSteps.groovy:34
+    And has a "MANA" evaluation in criterion "PLC"                              # RemoveEvaluationSteps.groovy:47
+    When I remove the evaluation "MA"                                           # RemoveEvaluationSteps.groovy:67
+    Then I should not see it listed in the student                              # RemoveEvaluationSteps.groovy:81
+
+  #Controller Scenario
+  Scenario: Remove an Evaluation from a Student                                                                                                              # RemoveEvaluation.feature:17
+    Given the system has a student registered with name "Fulano Detal" and login "fd"                                                                        # RemoveEvaluationSteps.groovy:94
+    And this student has a "MA" evaluation in criterion "ESS" with origin "Test" and applicationDate "21/12/1992"                                            # RemoveEvaluationSteps.groovy:101
+    When I remove the evaluation "MA" in criterion "ESS" with origin "Test" and applicationDate "21/12/1992" from the student "Fulano Detal" with login "fd" # RemoveEvaluationSteps.groovy:109
+    Then the system correctly removes the evaluation                                                                                                         # RemoveEvaluationSteps.groovy:135
+</pre>
+</div>
+<div class="syserr">
+<h2>System error</h2>
+<pre class="syserr">
+--Output from Remove evaluations in different criterion from a student--
+--Output from Remove an Evaluation from a Student--</pre>
 </div>
 </div>
 <div class="clear"></div>

@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<testsuite errors="0" failures="0" hostname="DESKTOP-S5990V7" name="Add Student" tests="8" time="28.659" timestamp="2017-02-22T21:00:42">
+  <properties />
+  <testcase classname="grails.plugin.cucumber.CucumberTest" name="Register a new student" time="0.108" />
+  <testcase classname="grails.plugin.cucumber.CucumberTest" name="Message from the new student registration" time="8.138" />
+  <testcase classname="grails.plugin.cucumber.CucumberTest" name="Register a student twice" time="0.09" />
+  <testcase classname="grails.plugin.cucumber.CucumberTest" name="Error message when registering a student twice" time="6.669" />
+  <testcase classname="grails.plugin.cucumber.CucumberTest" name="Register a group of student" time="0.108" />
+  <testcase classname="grails.plugin.cucumber.CucumberTest" name="See the new group of students in the list" time="5.807" />
+  <testcase classname="grails.plugin.cucumber.CucumberTest" name="Register a student twice in a group of student" time="0.075" />
+  <testcase classname="grails.plugin.cucumber.CucumberTest" name="Register a student twice in a group of student in list" time="7.583" />
+  <system-out><![CDATA[Feature: Add Student
+  As a professor
+  I want to register students in the system
+  So I can evaluate the students with respect to various criteria
+
+--Output from Register a new student--
+--Output from Message from the new student registration--
+  #CenÃ¡rio Controler
+  Scenario: Register a new student                                                    # AddStudents.feature:7
+    Given the student "Roberto Alves" with login "ra" is not registered in the system # AddStudentsSteps.groovy:19
+    When I register "Roberto Alves" with login "ra"                                   # AddStudentsSteps.groovy:23
+    Then the student "Roberto Alves" with login "ra" is saved in the system           # AddStudentsSteps.groovy:27
+
+--Output from Register a student twice--
+  #CenÃ¡rio GUI
+  Scenario: Message from the new student registration                                         # AddStudents.feature:13
+    Given I am in the "add student" page                                                      # AddStudentsSteps.groovy:72
+    When I add the "Rodrigo Calegario" with login "rc"                                        # AddStudentsSteps.groovy:33
+    Then I can see the name of "Rodrigo Calegario" and the login "rc" in the list of students # AddStudentsSteps.groovy:40
+
+--Output from Error message when registering a student twice--
+  #CenÃ¡rio Controler
+  Scenario: Register a student twice                                                  # AddStudents.feature:19
+    Given the student "Robertinho Alves" with login "raz" is registered in the system # AddStudentsSteps.groovy:45
+    When I register "Robertinho Alves" with login "raz"                               # AddStudentsSteps.groovy:23
+    Then the system does not register "Robertinho Alves" with login "raz"             # AddStudentsSteps.groovy:51
+
+--Output from Register a group of student--
+  #CenÃ¡rio GUI
+  Scenario: Error message when registering a student twice                                          # AddStudents.feature:25
+    Given I am in the "sudent list" page                                                            # AddStudentsSteps.groovy:72
+    And the name of "Roberto Alves" and the login "ra" is already in the list of student            # AddStudentsSteps.groovy:89
+    And I go to the "add student" page                                                              # AddStudentsSteps.groovy:64
+    When I add the "Roberto Alves" with login "ra"                                                  # AddStudentsSteps.groovy:33
+    Then I can see the name of "Roberto Alves" and the login "ra" in the list of students only once # AddStudentsSteps.groovy:55
+
+--Output from See the new group of students in the list--
+  #Cenario Controller
+  Scenario: Register a group of student                                                               # AddStudents.feature:33
+    Given the student "JoÃ£o Adherval" with login "ja" is not registered in the system                 # AddStudentsSteps.groovy:19
+    And the student "Milena Cabral" with login "mscc" is not registered in the system                 # AddStudentsSteps.groovy:19
+    When I send a text with "JoÃ£o Adherval (jacb :: joaoadherval);Â Milena Cabral (mscc :: Milechwan)" # AddStudentsSteps.groovy:60
+    Then the student "JoÃ£o Adherval" with login "jacb" is saved in the system                         # AddStudentsSteps.groovy:27
+    And the student "Milena Cabral" with login "mscc" is saved in the system                          # AddStudentsSteps.groovy:27
+
+--Output from Register a student twice in a group of student--
+  #Cenario GUI
+  Scenario: See the new group of students in the list                                                  # AddStudents.feature:41
+    Given I am in the "create group" page                                                              # AddStudentsSteps.groovy:72
+    When I add the text "Danilo Ribeiro (dlr4 :: DLRibeiro); Arthur Lapprand (abl3 :: ArthurLapprand)" # AddStudentsSteps.groovy:82
+    Then I can see the name of "Danilo Ribeiro" and the login "dlr4" in the list of students           # AddStudentsSteps.groovy:40
+    And I can see the name of "Arthur Lapprand" and the login "abl3" in the list of students           # AddStudentsSteps.groovy:40
+
+--Output from Register a student twice in a group of student in list--
+  #Cenario Controller
+  Scenario: Register a student twice in a group of student                                   # AddStudents.feature:48
+    Given the student "Felipe Bormann" with login "fhab" is not registered in the system     # AddStudentsSteps.groovy:19
+    And the student "Arthur Jorge" with login "anew" is registered in the system             # AddStudentsSteps.groovy:45
+    When I send a text with "Felipe Bormann (fhab :: fbormann); Arthur Jorge (anew :: ajew)" # AddStudentsSteps.groovy:60
+    Then the student "Felipe Bormann" with login "fhab" is saved in the system               # AddStudentsSteps.groovy:27
+    And the system does not register "Arthur Jorge" with login "anew"                        # AddStudentsSteps.groovy:51
+
+  #Cenario GUI
+  Scenario: Register a student twice in a group of student in list                                      # AddStudents.feature:56
+    Given I am in the "sudent list" page                                                                # AddStudentsSteps.groovy:72
+    And the name of "OtÃ¡vio Vera Cruz" and the login "ovcg" is already in the list of student           # AddStudentsSteps.groovy:89
+    And I go to the "create group" page                                                                 # AddStudentsSteps.groovy:64
+    When I add the text "Milton Vasconcelos (mvgn :: miltongneto); OtÃ¡vio Vera Cruz (ovcg :: ovcg)"     # AddStudentsSteps.groovy:82
+    Then I can see the name of "Milton Vasconcelos" and the login "mvgn" in the list of students        # AddStudentsSteps.groovy:40
+    And I can see the name of "OtÃ¡vio Vera Cruz" and the login "ovcg" in the list of students only once # AddStudentsSteps.groovy:55
+]]></system-out>
+  <system-err><![CDATA[
+--Output from Register a new student--
+--Output from Message from the new student registration--
+--Output from Register a student twice--
+--Output from Error message when registering a student twice--
+--Output from Register a group of student--
+--Output from See the new group of students in the list--
+--Output from Register a student twice in a group of student--
+--Output from Register a student twice in a group of student in list--]]></system-err>
+</testsuite>

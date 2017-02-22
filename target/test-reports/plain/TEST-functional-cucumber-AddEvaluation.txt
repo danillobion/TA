@@ -1,5 +1,5 @@
 Testsuite: AddEvaluation
-Tests run: 3, Failures: 0, Errors: 0, Time elapsed: 0,978 sec
+Tests run: 3, Failures: 0, Errors: 0, Time elapsed: 0,968 sec
 ------------- Standard Output ---------------
 Feature: AddEvaluation
   As a teacher
@@ -30,6 +30,6 @@ Feature: AddEvaluation
 --Output from Add evaluations using incomplete data--
 --Output from Add evaluation more than once with same origin--------------- ---------------- ---------------
 
-Testcase: Add evaluation to a criteria took 0,543 sec
-Testcase: Add evaluations using incomplete data took 0,126 sec
-Testcase: Add evaluation more than once with same origin took 0,252 sec
+Testcase: Add evaluation to a criteria took 0,511 sec
+Testcase: Add evaluations using incomplete data took 0,171 sec
+Testcase: Add evaluation more than once with same origin took 0,23 sec

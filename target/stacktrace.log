@@ -2749,3 +2749,204 @@ Show Student
 	at geb.binding.BindingUpdater$InvocationForwarding.doCall(BindingUpdater.groovy:73)
 	at steps.RemoveEvaluationSteps$_run_closure4.doCall(RemoveEvaluationSteps.groovy:75)
 	at ?.When I remove the evaluation "MA"(RemoveEvaluation.feature:13)
+2017-02-22 17:55:49,205 [main] ERROR StackTrace  - Full Stack Trace:
+Assertion failed: 
+
+title ==~/Report List/
+|     |
+|     false
+Show Report
+
+	at pages.ReportsPages.ShowReportsPage$__clinit__closure1.doCall(ShowReportsPage.groovy:11)
+	at pages.ReportsPages.ShowReportsPage$__clinit__closure1.doCall(ShowReportsPage.groovy)
+	at geb.Page.verifyThisPageAtOnly(Page.groovy:228)
+	at geb.Page.verifyAt(Page.groovy:182)
+	at geb.Page$verifyAt$4.call(Unknown Source)
+	at geb.Page$verifyAt$4.call(Unknown Source)
+	at geb.Browser.doAt(Browser.groovy:454)
+	at geb.Browser.at(Browser.groovy:336)
+	at geb.binding.BindingUpdater$InvocationForwarding.doCall(BindingUpdater.groovy:73)
+	at steps.StepDefReport$_run_closure8.doCall(StepDefReport.groovy:74)
+	at ?.Then I should see the details related to the "70% of evaluations are over the class average" report(Notificacao.feature:33)
+2017-02-22 17:55:49,237 [main] ERROR StackTrace  - Full Stack Trace:
+Assertion failed: 
+
+title ==~/Report List/
+|     |
+|     false
+Show Report
+
+	at pages.ReportsPages.ShowReportsPage$__clinit__closure1.doCall(ShowReportsPage.groovy:11)
+	at geb.Page.verifyThisPageAtOnly(Page.groovy:228)
+	at geb.Page.verifyAt(Page.groovy:182)
+	at geb.Browser.doAt(Browser.groovy:454)
+	at geb.Browser.at(Browser.groovy:336)
+	at geb.binding.BindingUpdater$InvocationForwarding.doCall(BindingUpdater.groovy:73)
+	at steps.StepDefReport$_run_closure8.doCall(StepDefReport.groovy:74)
+	at ?.Then I should see the details related to the "70% of evaluations are over the class average" report(Notificacao.feature:33)
+2017-02-22 17:55:49,261 [main] ERROR StackTrace  - Full Stack Trace:
+Assertion failed: 
+
+title ==~/Report List/
+|     |
+|     false
+Show Report
+
+	at pages.ReportsPages.ShowReportsPage$__clinit__closure1.doCall(ShowReportsPage.groovy:11)
+	at geb.Page.verifyThisPageAtOnly(Page.groovy:228)
+	at geb.Page.verifyAt(Page.groovy:182)
+	at geb.Browser.doAt(Browser.groovy:454)
+	at geb.Browser.at(Browser.groovy:336)
+	at geb.binding.BindingUpdater$InvocationForwarding.doCall(BindingUpdater.groovy:73)
+	at steps.StepDefReport$_run_closure8.doCall(StepDefReport.groovy:74)
+	at ?.Then I should see the details related to the "70% of evaluations are over the class average" report(Notificacao.feature:33)
+2017-02-22 17:55:49,262 [main] ERROR StackTrace  - Full Stack Trace:
+Assertion failed: 
+
+title ==~/Report List/
+|     |
+|     false
+Show Report
+
+	at pages.ReportsPages.ShowReportsPage$__clinit__closure1.doCall(ShowReportsPage.groovy:11)
+	at geb.Page.verifyThisPageAtOnly(Page.groovy:228)
+	at geb.Page.verifyAt(Page.groovy:182)
+	at geb.Browser.doAt(Browser.groovy:454)
+	at geb.Browser.at(Browser.groovy:336)
+	at geb.binding.BindingUpdater$InvocationForwarding.doCall(BindingUpdater.groovy:73)
+	at steps.StepDefReport$_run_closure8.doCall(StepDefReport.groovy:74)
+	at ?.Then I should see the details related to the "70% of evaluations are over the class average" report(Notificacao.feature:33)
+2017-02-22 17:56:19,180 [main] ERROR StackTrace  - Full Stack Trace:
+Assertion failed: 
+
+title ==~ /Show EvaluationsByCriterion/
+|     |
+|     false
+Show Student
+
+	at pages.ShowEvaluationByCriterionPage$__clinit__closure1.doCall(ShowEvaluationByCriterionPage.groovy:12)
+	at pages.ShowEvaluationByCriterionPage$__clinit__closure1.doCall(ShowEvaluationByCriterionPage.groovy)
+	at geb.Page.verifyThisPageAtOnly(Page.groovy:228)
+	at geb.Page.verifyAt(Page.groovy:182)
+	at geb.Page$verifyAt$4.call(Unknown Source)
+	at geb.Page$verifyAt$4.call(Unknown Source)
+	at geb.Browser.doAt(Browser.groovy:454)
+	at geb.Browser.at(Browser.groovy:336)
+	at geb.binding.BindingUpdater$InvocationForwarding.doCall(BindingUpdater.groovy:73)
+	at steps.RemoveEvaluationSteps$_run_closure4.doCall(RemoveEvaluationSteps.groovy:75)
+	at ?.When I remove the evaluation "MA"(RemoveEvaluation.feature:13)
+2017-02-22 17:56:19,180 [main] ERROR StackTrace  - Full Stack Trace:
+Assertion failed: 
+
+title ==~ /Show EvaluationsByCriterion/
+|     |
+|     false
+Show Student
+
+	at pages.ShowEvaluationByCriterionPage$__clinit__closure1.doCall(ShowEvaluationByCriterionPage.groovy:12)
+	at geb.Page.verifyThisPageAtOnly(Page.groovy:228)
+	at geb.Page.verifyAt(Page.groovy:182)
+	at geb.Browser.doAt(Browser.groovy:454)
+	at geb.Browser.at(Browser.groovy:336)
+	at geb.binding.BindingUpdater$InvocationForwarding.doCall(BindingUpdater.groovy:73)
+	at steps.RemoveEvaluationSteps$_run_closure4.doCall(RemoveEvaluationSteps.groovy:75)
+	at ?.When I remove the evaluation "MA"(RemoveEvaluation.feature:13)
+2017-02-22 17:56:19,181 [main] ERROR StackTrace  - Full Stack Trace:
+Assertion failed: 
+
+title ==~ /Show EvaluationsByCriterion/
+|     |
+|     false
+Show Student
+
+	at pages.ShowEvaluationByCriterionPage$__clinit__closure1.doCall(ShowEvaluationByCriterionPage.groovy:12)
+	at geb.Page.verifyThisPageAtOnly(Page.groovy:228)
+	at geb.Page.verifyAt(Page.groovy:182)
+	at geb.Browser.doAt(Browser.groovy:454)
+	at geb.Browser.at(Browser.groovy:336)
+	at geb.binding.BindingUpdater$InvocationForwarding.doCall(BindingUpdater.groovy:73)
+	at steps.RemoveEvaluationSteps$_run_closure4.doCall(RemoveEvaluationSteps.groovy:75)
+	at ?.When I remove the evaluation "MA"(RemoveEvaluation.feature:13)
+2017-02-22 17:56:19,181 [main] ERROR StackTrace  - Full Stack Trace:
+Assertion failed: 
+
+title ==~ /Show EvaluationsByCriterion/
+|     |
+|     false
+Show Student
+
+	at pages.ShowEvaluationByCriterionPage$__clinit__closure1.doCall(ShowEvaluationByCriterionPage.groovy:12)
+	at geb.Page.verifyThisPageAtOnly(Page.groovy:228)
+	at geb.Page.verifyAt(Page.groovy:182)
+	at geb.Browser.doAt(Browser.groovy:454)
+	at geb.Browser.at(Browser.groovy:336)
+	at geb.binding.BindingUpdater$InvocationForwarding.doCall(BindingUpdater.groovy:73)
+	at steps.RemoveEvaluationSteps$_run_closure4.doCall(RemoveEvaluationSteps.groovy:75)
+	at ?.When I remove the evaluation "MA"(RemoveEvaluation.feature:13)
+2017-02-22 18:01:23,221 [main] ERROR StackTrace  - Full Stack Trace:
+Assertion failed: 
+
+title ==~/Report List/
+|     |
+|     false
+Show Report
+
+	at pages.ReportsPages.ShowReportsPage$__clinit__closure1.doCall(ShowReportsPage.groovy:11)
+	at pages.ReportsPages.ShowReportsPage$__clinit__closure1.doCall(ShowReportsPage.groovy)
+	at geb.Page.verifyThisPageAtOnly(Page.groovy:228)
+	at geb.Page.verifyAt(Page.groovy:182)
+	at geb.Page$verifyAt$4.call(Unknown Source)
+	at geb.Page$verifyAt$4.call(Unknown Source)
+	at geb.Browser.doAt(Browser.groovy:454)
+	at geb.Browser.at(Browser.groovy:336)
+	at geb.binding.BindingUpdater$InvocationForwarding.doCall(BindingUpdater.groovy:73)
+	at steps.StepDefReport$_run_closure8.doCall(StepDefReport.groovy:74)
+	at ?.Then I should see the details related to the "70% of evaluations are over the class average" report(Notificacao.feature:33)
+2017-02-22 18:01:23,227 [main] ERROR StackTrace  - Full Stack Trace:
+Assertion failed: 
+
+title ==~/Report List/
+|     |
+|     false
+Show Report
+
+	at pages.ReportsPages.ShowReportsPage$__clinit__closure1.doCall(ShowReportsPage.groovy:11)
+	at geb.Page.verifyThisPageAtOnly(Page.groovy:228)
+	at geb.Page.verifyAt(Page.groovy:182)
+	at geb.Browser.doAt(Browser.groovy:454)
+	at geb.Browser.at(Browser.groovy:336)
+	at geb.binding.BindingUpdater$InvocationForwarding.doCall(BindingUpdater.groovy:73)
+	at steps.StepDefReport$_run_closure8.doCall(StepDefReport.groovy:74)
+	at ?.Then I should see the details related to the "70% of evaluations are over the class average" report(Notificacao.feature:33)
+2017-02-22 18:01:23,236 [main] ERROR StackTrace  - Full Stack Trace:
+Assertion failed: 
+
+title ==~/Report List/
+|     |
+|     false
+Show Report
+
+	at pages.ReportsPages.ShowReportsPage$__clinit__closure1.doCall(ShowReportsPage.groovy:11)
+	at geb.Page.verifyThisPageAtOnly(Page.groovy:228)
+	at geb.Page.verifyAt(Page.groovy:182)
+	at geb.Browser.doAt(Browser.groovy:454)
+	at geb.Browser.at(Browser.groovy:336)
+	at geb.binding.BindingUpdater$InvocationForwarding.doCall(BindingUpdater.groovy:73)
+	at steps.StepDefReport$_run_closure8.doCall(StepDefReport.groovy:74)
+	at ?.Then I should see the details related to the "70% of evaluations are over the class average" report(Notificacao.feature:33)
+2017-02-22 18:01:23,236 [main] ERROR StackTrace  - Full Stack Trace:
+Assertion failed: 
+
+title ==~/Report List/
+|     |
+|     false
+Show Report
+
+	at pages.ReportsPages.ShowReportsPage$__clinit__closure1.doCall(ShowReportsPage.groovy:11)
+	at geb.Page.verifyThisPageAtOnly(Page.groovy:228)
+	at geb.Page.verifyAt(Page.groovy:182)
+	at geb.Browser.doAt(Browser.groovy:454)
+	at geb.Browser.at(Browser.groovy:336)
+	at geb.binding.BindingUpdater$InvocationForwarding.doCall(BindingUpdater.groovy:73)
+	at steps.StepDefReport$_run_closure8.doCall(StepDefReport.groovy:74)
+	at ?.Then I should see the details related to the "70% of evaluations are over the class average" report(Notificacao.feature:33)

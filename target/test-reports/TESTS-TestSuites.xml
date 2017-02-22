@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <testsuites>
-  <testsuite errors="0" failures="0" hostname="DESKTOP-S5990V7" id="0" name="Add Criterion" package="" tests="3" time="30.746" timestamp="2017-02-11T15:00:59">
+  <testsuite errors="0" failures="0" hostname="DESKTOP-S5990V7" id="0" name="Add Criterion" package="" tests="3" time="25.14" timestamp="2017-02-22T21:00:01">
       <properties />
 
-      <testcase classname="grails.plugin.cucumber.CucumberTest" name="Register a criterion that does not exist" time="1.813" />
+      <testcase classname="grails.plugin.cucumber.CucumberTest" name="Register a criterion that does not exist" time="3.315" />
 
-      <testcase classname="grails.plugin.cucumber.CucumberTest" name="Register a criterion that already exists" time="0.097" />
+      <testcase classname="grails.plugin.cucumber.CucumberTest" name="Register a criterion that already exists" time="0.099" />
 
-      <testcase classname="grails.plugin.cucumber.CucumberTest" name="Error when registering a criterion that already exists" time="14.111" />
+      <testcase classname="grails.plugin.cucumber.CucumberTest" name="Error when registering a criterion that already exists" time="11.462" />
 
       <system-out><![CDATA[#Esta feature Ã© a feature inicial, idealizada antes da iteraÃ§Ã£o de imlementar features.
 #Portanto, serÃ¡ descartada dos testes finais visto que nÃ£o faz uso de mÃ©todos de controlador que nÃ£o sejam
@@ -47,16 +47,16 @@ Feature: Add Criterion
 --Output from Error when registering a criterion that already exists--]]></system-err>
 
   </testsuite>
-  <testsuite errors="0" failures="0" hostname="DESKTOP-S5990V7" id="1" name="Add Group Criterion" package="" tests="4" time="17.724" timestamp="2017-02-11T15:01:31">
+  <testsuite errors="0" failures="0" hostname="DESKTOP-S5990V7" id="1" name="Add Group Criterion" package="" tests="4" time="14.953" timestamp="2017-02-22T21:00:27">
       <properties />
 
-      <testcase classname="grails.plugin.cucumber.CucumberTest" name="Register a group of criteria that does not exist" time="0.091" />
+      <testcase classname="grails.plugin.cucumber.CucumberTest" name="Register a group of criteria that does not exist" time="0.112" />
 
-      <testcase classname="grails.plugin.cucumber.CucumberTest" name="Register a non-existent group of criteria" time="10.933" />
+      <testcase classname="grails.plugin.cucumber.CucumberTest" name="Register a non-existent group of criteria" time="6.419" />
 
-      <testcase classname="grails.plugin.cucumber.CucumberTest" name="Register a group of criteria that some of them already exists" time="0.09" />
+      <testcase classname="grails.plugin.cucumber.CucumberTest" name="Register a group of criteria that some of them already exists" time="0.08" />
 
-      <testcase classname="grails.plugin.cucumber.CucumberTest" name="Register a group of criteria that some elements of it already exists" time="6.557" />
+      <testcase classname="grails.plugin.cucumber.CucumberTest" name="Register a group of criteria that some elements of it already exists" time="8.269" />
 
       <system-out><![CDATA[#Thiago Bastos
 Feature: Add Group Criterion
@@ -112,14 +112,116 @@ Feature: Add Group Criterion
 --Output from Register a group of criteria that some elements of it already exists--]]></system-err>
 
   </testsuite>
-  <testsuite errors="0" failures="0" hostname="DESKTOP-S5990V7" id="2" name="AddEvaluation" package="" tests="3" time="0.978" timestamp="2017-02-11T15:01:30">
+  <testsuite errors="0" failures="0" hostname="DESKTOP-S5990V7" id="2" name="Add Student" package="" tests="8" time="28.659" timestamp="2017-02-22T21:00:42">
       <properties />
 
-      <testcase classname="grails.plugin.cucumber.CucumberTest" name="Add evaluation to a criteria" time="0.543" />
+      <testcase classname="grails.plugin.cucumber.CucumberTest" name="Register a new student" time="0.108" />
 
-      <testcase classname="grails.plugin.cucumber.CucumberTest" name="Add evaluations using incomplete data" time="0.126" />
+      <testcase classname="grails.plugin.cucumber.CucumberTest" name="Message from the new student registration" time="8.138" />
 
-      <testcase classname="grails.plugin.cucumber.CucumberTest" name="Add evaluation more than once with same origin" time="0.252" />
+      <testcase classname="grails.plugin.cucumber.CucumberTest" name="Register a student twice" time="0.09" />
+
+      <testcase classname="grails.plugin.cucumber.CucumberTest" name="Error message when registering a student twice" time="6.669" />
+
+      <testcase classname="grails.plugin.cucumber.CucumberTest" name="Register a group of student" time="0.108" />
+
+      <testcase classname="grails.plugin.cucumber.CucumberTest" name="See the new group of students in the list" time="5.807" />
+
+      <testcase classname="grails.plugin.cucumber.CucumberTest" name="Register a student twice in a group of student" time="0.075" />
+
+      <testcase classname="grails.plugin.cucumber.CucumberTest" name="Register a student twice in a group of student in list" time="7.583" />
+
+      <system-out><![CDATA[Feature: Add Student
+  As a professor
+  I want to register students in the system
+  So I can evaluate the students with respect to various criteria
+
+--Output from Register a new student--
+--Output from Message from the new student registration--
+  #CenÃ¡rio Controler
+  Scenario: Register a new student                                                    # AddStudents.feature:7
+    Given the student "Roberto Alves" with login "ra" is not registered in the system # AddStudentsSteps.groovy:19
+    When I register "Roberto Alves" with login "ra"                                   # AddStudentsSteps.groovy:23
+    Then the student "Roberto Alves" with login "ra" is saved in the system           # AddStudentsSteps.groovy:27
+
+--Output from Register a student twice--
+  #CenÃ¡rio GUI
+  Scenario: Message from the new student registration                                         # AddStudents.feature:13
+    Given I am in the "add student" page                                                      # AddStudentsSteps.groovy:72
+    When I add the "Rodrigo Calegario" with login "rc"                                        # AddStudentsSteps.groovy:33
+    Then I can see the name of "Rodrigo Calegario" and the login "rc" in the list of students # AddStudentsSteps.groovy:40
+
+--Output from Error message when registering a student twice--
+  #CenÃ¡rio Controler
+  Scenario: Register a student twice                                                  # AddStudents.feature:19
+    Given the student "Robertinho Alves" with login "raz" is registered in the system # AddStudentsSteps.groovy:45
+    When I register "Robertinho Alves" with login "raz"                               # AddStudentsSteps.groovy:23
+    Then the system does not register "Robertinho Alves" with login "raz"             # AddStudentsSteps.groovy:51
+
+--Output from Register a group of student--
+  #CenÃ¡rio GUI
+  Scenario: Error message when registering a student twice                                          # AddStudents.feature:25
+    Given I am in the "sudent list" page                                                            # AddStudentsSteps.groovy:72
+    And the name of "Roberto Alves" and the login "ra" is already in the list of student            # AddStudentsSteps.groovy:89
+    And I go to the "add student" page                                                              # AddStudentsSteps.groovy:64
+    When I add the "Roberto Alves" with login "ra"                                                  # AddStudentsSteps.groovy:33
+    Then I can see the name of "Roberto Alves" and the login "ra" in the list of students only once # AddStudentsSteps.groovy:55
+
+--Output from See the new group of students in the list--
+  #Cenario Controller
+  Scenario: Register a group of student                                                               # AddStudents.feature:33
+    Given the student "JoÃ£o Adherval" with login "ja" is not registered in the system                 # AddStudentsSteps.groovy:19
+    And the student "Milena Cabral" with login "mscc" is not registered in the system                 # AddStudentsSteps.groovy:19
+    When I send a text with "JoÃ£o Adherval (jacb :: joaoadherval);Â Milena Cabral (mscc :: Milechwan)" # AddStudentsSteps.groovy:60
+    Then the student "JoÃ£o Adherval" with login "jacb" is saved in the system                         # AddStudentsSteps.groovy:27
+    And the student "Milena Cabral" with login "mscc" is saved in the system                          # AddStudentsSteps.groovy:27
+
+--Output from Register a student twice in a group of student--
+  #Cenario GUI
+  Scenario: See the new group of students in the list                                                  # AddStudents.feature:41
+    Given I am in the "create group" page                                                              # AddStudentsSteps.groovy:72
+    When I add the text "Danilo Ribeiro (dlr4 :: DLRibeiro); Arthur Lapprand (abl3 :: ArthurLapprand)" # AddStudentsSteps.groovy:82
+    Then I can see the name of "Danilo Ribeiro" and the login "dlr4" in the list of students           # AddStudentsSteps.groovy:40
+    And I can see the name of "Arthur Lapprand" and the login "abl3" in the list of students           # AddStudentsSteps.groovy:40
+
+--Output from Register a student twice in a group of student in list--
+  #Cenario Controller
+  Scenario: Register a student twice in a group of student                                   # AddStudents.feature:48
+    Given the student "Felipe Bormann" with login "fhab" is not registered in the system     # AddStudentsSteps.groovy:19
+    And the student "Arthur Jorge" with login "anew" is registered in the system             # AddStudentsSteps.groovy:45
+    When I send a text with "Felipe Bormann (fhab :: fbormann); Arthur Jorge (anew :: ajew)" # AddStudentsSteps.groovy:60
+    Then the student "Felipe Bormann" with login "fhab" is saved in the system               # AddStudentsSteps.groovy:27
+    And the system does not register "Arthur Jorge" with login "anew"                        # AddStudentsSteps.groovy:51
+
+  #Cenario GUI
+  Scenario: Register a student twice in a group of student in list                                      # AddStudents.feature:56
+    Given I am in the "sudent list" page                                                                # AddStudentsSteps.groovy:72
+    And the name of "OtÃ¡vio Vera Cruz" and the login "ovcg" is already in the list of student           # AddStudentsSteps.groovy:89
+    And I go to the "create group" page                                                                 # AddStudentsSteps.groovy:64
+    When I add the text "Milton Vasconcelos (mvgn :: miltongneto); OtÃ¡vio Vera Cruz (ovcg :: ovcg)"     # AddStudentsSteps.groovy:82
+    Then I can see the name of "Milton Vasconcelos" and the login "mvgn" in the list of students        # AddStudentsSteps.groovy:40
+    And I can see the name of "OtÃ¡vio Vera Cruz" and the login "ovcg" in the list of students only once # AddStudentsSteps.groovy:55
+]]></system-out>
+
+      <system-err><![CDATA[
+--Output from Register a new student--
+--Output from Message from the new student registration--
+--Output from Register a student twice--
+--Output from Error message when registering a student twice--
+--Output from Register a group of student--
+--Output from See the new group of students in the list--
+--Output from Register a student twice in a group of student--
+--Output from Register a student twice in a group of student in list--]]></system-err>
+
+  </testsuite>
+  <testsuite errors="0" failures="0" hostname="DESKTOP-S5990V7" id="3" name="AddEvaluation" package="" tests="3" time="0.968" timestamp="2017-02-22T21:00:26">
+      <properties />
+
+      <testcase classname="grails.plugin.cucumber.CucumberTest" name="Add evaluation to a criteria" time="0.511" />
+
+      <testcase classname="grails.plugin.cucumber.CucumberTest" name="Add evaluations using incomplete data" time="0.171" />
+
+      <testcase classname="grails.plugin.cucumber.CucumberTest" name="Add evaluation more than once with same origin" time="0.23" />
 
       <system-out><![CDATA[Feature: AddEvaluation
   As a teacher
@@ -151,12 +253,12 @@ Feature: Add Group Criterion
 --Output from Add evaluation more than once with same origin--]]></system-err>
 
   </testsuite>
-  <testsuite errors="0" failures="1" hostname="DESKTOP-S5990V7" id="3" name="Notification" package="" tests="2" time="11.053" timestamp="2017-02-11T15:01:49">
+  <testsuite errors="0" failures="1" hostname="DESKTOP-S5990V7" id="4" name="Notification" package="" tests="2" time="11.9" timestamp="2017-02-22T21:01:11">
       <properties />
 
-      <testcase classname="grails.plugin.cucumber.CucumberTest" name="Update a report" time="0.329" />
+      <testcase classname="grails.plugin.cucumber.CucumberTest" name="Update a report" time="0.279" />
 
-      <testcase classname="grails.plugin.cucumber.CucumberTest" name="Show the students list in the &quot;70% of evaluations are over the class average&quot; report" time="10.664">
+      <testcase classname="grails.plugin.cucumber.CucumberTest" name="Show the students list in the &quot;70% of evaluations are over the class average&quot; report" time="11.558">
           <failure message="title ==~/Report List/&#xa;|     |&#xa;|     false&#xa;Show Report" type="grails.plugin.cucumber.FakeAssertionFailedError">Assertion failed: 
 
 title ==~/Report List/
@@ -237,12 +339,12 @@ Show Report
 --Output from Show the students list in the "70% of evaluations are over the class average" report--]]></system-err>
 
   </testsuite>
-  <testsuite errors="0" failures="0" hostname="DESKTOP-S5990V7" id="4" name="Remove Criterion" package="" tests="2" time="19.111" timestamp="2017-02-11T15:02:00">
+  <testsuite errors="0" failures="0" hostname="DESKTOP-S5990V7" id="5" name="Remove Criterion" package="" tests="2" time="12.433" timestamp="2017-02-22T21:01:23">
       <properties />
 
-      <testcase classname="grails.plugin.cucumber.CucumberTest" name="Remove a criterion with students and evaluations using it" time="18.924" />
+      <testcase classname="grails.plugin.cucumber.CucumberTest" name="Remove a criterion with students and evaluations using it" time="12.254" />
 
-      <testcase classname="grails.plugin.cucumber.CucumberTest" name="Remove a criterion from the system" time="0.126" />
+      <testcase classname="grails.plugin.cucumber.CucumberTest" name="Remove a criterion from the system" time="0.12" />
 
       <system-out><![CDATA[#Arthur Lapprand
 Feature: Remove Criterion
@@ -272,30 +374,12 @@ Feature: Remove Criterion
 --Output from Remove a criterion from the system--]]></system-err>
 
   </testsuite>
-  <testsuite errors="0" failures="1" hostname="DESKTOP-S5990V7" id="5" name="Remove Evaluation" package="" tests="2" time="13.378" timestamp="2017-02-11T15:02:19">
+  <testsuite errors="0" failures="0" hostname="DESKTOP-S5990V7" id="6" name="Remove Evaluation" package="" tests="2" time="21.274" timestamp="2017-02-22T21:01:35">
       <properties />
 
-      <testcase classname="grails.plugin.cucumber.CucumberTest" name="Remove evaluations in different criterion from a student" time="12.961">
-          <failure message="title ==~ /Show EvaluationsByCriterion/&#xa;|     |&#xa;|     false&#xa;Show Student" type="grails.plugin.cucumber.FakeAssertionFailedError">Assertion failed: 
+      <testcase classname="grails.plugin.cucumber.CucumberTest" name="Remove evaluations in different criterion from a student" time="21.131" />
 
-title ==~ /Show EvaluationsByCriterion/
-|     |
-|     false
-Show Student
-
-	at pages.ShowEvaluationByCriterionPage$__clinit__closure1.doCall(ShowEvaluationByCriterionPage.groovy:12)
-	at geb.Page.verifyThisPageAtOnly(Page.groovy:228)
-	at geb.Page.verifyAt(Page.groovy:182)
-	at geb.Browser.doAt(Browser.groovy:454)
-	at geb.Browser.at(Browser.groovy:336)
-	at geb.binding.BindingUpdater$InvocationForwarding.doCall(BindingUpdater.groovy:73)
-	at steps.RemoveEvaluationSteps$_run_closure4.doCall(RemoveEvaluationSteps.groovy:75)
-	at ✽.When I remove the evaluation &quot;MA&quot;(RemoveEvaluation.feature:13)
-</failure>
-
-      </testcase>
-
-      <testcase classname="grails.plugin.cucumber.CucumberTest" name="Remove an Evaluation from a Student" time="0.361" />
+      <testcase classname="grails.plugin.cucumber.CucumberTest" name="Remove an Evaluation from a Student" time="0.089" />
 
       <system-out><![CDATA[#Arthur Lapprand
 Feature: Remove Evaluation
@@ -311,25 +395,6 @@ Feature: Remove Evaluation
     And this student has "MA" evaluation in criterion "SI"                      # RemoveEvaluationSteps.groovy:34
     And has a "MANA" evaluation in criterion "PLC"                              # RemoveEvaluationSteps.groovy:47
     When I remove the evaluation "MA"                                           # RemoveEvaluationSteps.groovy:67
-      Assertion failed: 
-      
-      title ==~ /Show EvaluationsByCriterion/
-      |     |
-      |     false
-      Show Student
-      
-      	at pages.ShowEvaluationByCriterionPage$__clinit__closure1.doCall(ShowEvaluationByCriterionPage.groovy:12)
-      	at pages.ShowEvaluationByCriterionPage$__clinit__closure1.doCall(ShowEvaluationByCriterionPage.groovy)
-      	at geb.Page.verifyThisPageAtOnly(Page.groovy:228)
-      	at geb.Page.verifyAt(Page.groovy:182)
-      	at geb.Page$verifyAt$4.call(Unknown Source)
-      	at geb.Page$verifyAt$4.call(Unknown Source)
-      	at geb.Browser.doAt(Browser.groovy:454)
-      	at geb.Browser.at(Browser.groovy:336)
-      	at geb.binding.BindingUpdater$InvocationForwarding.doCall(BindingUpdater.groovy:73)
-      	at steps.RemoveEvaluationSteps$_run_closure4.doCall(RemoveEvaluationSteps.groovy:75)
-      	at âœ½.When I remove the evaluation "MA"(RemoveEvaluation.feature:13)
-
     Then I should not see it listed in the student                              # RemoveEvaluationSteps.groovy:81
 
   #Controller Scenario
