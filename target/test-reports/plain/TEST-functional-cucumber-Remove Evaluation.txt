@@ -1,5 +1,5 @@
 Testsuite: Remove Evaluation
-Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 21,274 sec
+Tests run: 2, Failures: 1, Errors: 0, Time elapsed: 10,1 sec
 ------------- Standard Output ---------------
 #Arthur Lapprand
 Feature: Remove Evaluation
@@ -15,6 +15,25 @@ Feature: Remove Evaluation
     And this student has "MA" evaluation in criterion "SI"                      # RemoveEvaluationSteps.groovy:34
     And has a "MANA" evaluation in criterion "PLC"                              # RemoveEvaluationSteps.groovy:47
     When I remove the evaluation "MA"                                           # RemoveEvaluationSteps.groovy:67
+      Assertion failed: 
+      
+      title ==~ /Show EvaluationsByCriterion/
+      |     |
+      |     false
+      Show Student
+      
+      	at pages.ShowEvaluationByCriterionPage$__clinit__closure1.doCall(ShowEvaluationByCriterionPage.groovy:12)
+      	at pages.ShowEvaluationByCriterionPage$__clinit__closure1.doCall(ShowEvaluationByCriterionPage.groovy)
+      	at geb.Page.verifyThisPageAtOnly(Page.groovy:228)
+      	at geb.Page.verifyAt(Page.groovy:182)
+      	at geb.Page$verifyAt$4.call(Unknown Source)
+      	at geb.Page$verifyAt$4.call(Unknown Source)
+      	at geb.Browser.doAt(Browser.groovy:454)
+      	at geb.Browser.at(Browser.groovy:336)
+      	at geb.binding.BindingUpdater$InvocationForwarding.doCall(BindingUpdater.groovy:73)
+      	at steps.RemoveEvaluationSteps$_run_closure4.doCall(RemoveEvaluationSteps.groovy:75)
+      	at ✽.When I remove the evaluation "MA"(RemoveEvaluation.feature:13)
+
     Then I should not see it listed in the student                              # RemoveEvaluationSteps.groovy:81
 
   #Controller Scenario
@@ -29,5 +48,26 @@ Feature: Remove Evaluation
 --Output from Remove evaluations in different criterion from a student--
 --Output from Remove an Evaluation from a Student--------------- ---------------- ---------------
 
-Testcase: Remove evaluations in different criterion from a student took 21,131 sec
-Testcase: Remove an Evaluation from a Student took 0,089 sec
+Testcase: Remove evaluations in different criterion from a student took 9,741 sec
+	FAILED
+title ==~ /Show EvaluationsByCriterion/
+|     |
+|     false
+Show Student
+Assertion failed: 
+
+title ==~ /Show EvaluationsByCriterion/
+|     |
+|     false
+Show Student
+
+	at pages.ShowEvaluationByCriterionPage$__clinit__closure1.doCall(ShowEvaluationByCriterionPage.groovy:12)
+	at geb.Page.verifyThisPageAtOnly(Page.groovy:228)
+	at geb.Page.verifyAt(Page.groovy:182)
+	at geb.Browser.doAt(Browser.groovy:454)
+	at geb.Browser.at(Browser.groovy:336)
+	at geb.binding.BindingUpdater$InvocationForwarding.doCall(BindingUpdater.groovy:73)
+	at steps.RemoveEvaluationSteps$_run_closure4.doCall(RemoveEvaluationSteps.groovy:75)
+	at ?.When I remove the evaluation "MA"(RemoveEvaluation.feature:13)
+
+Testcase: Remove an Evaluation from a Student took 0,242 sec

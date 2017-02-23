@@ -14,6 +14,18 @@ Feature: Add Student
     Given I am in the "add student" page
     When I add the "Rodrigo Calegario" with login "rc"
     Then I can see the name of "Rodrigo Calegario" and the login "rc" in the list of students
+    
+#Cenário Controler
+  Scenario: Register a student with a login that already exists
+    Given the student "Robertinho Alves" with login "ra" is registered in the system
+    When I register "Edilberto Braz" with login "ra"
+    Then the system does not register "Edilberto Braz" with login "ra"
+
+#Cenário GUI
+  Scenario: Error message when registering a login twice
+    Given the student "Edilberto Braz" with login "ra" is registered in the system
+    When I register "Edilberto Braz" with login "ra"
+    Then I do not can see the name of "Edilberto Braz" with login "ra" in the list of students
 
 #Cenário Controler
   Scenario: Register a student twice

@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuite errors="0" failures="0" hostname="DESKTOP-S5990V7" name="Add Criterion" tests="3" time="25.14" timestamp="2017-02-22T21:00:01">
+<testsuite errors="0" failures="0" hostname="DESKTOP-S5990V7" name="Add Criterion" tests="3" time="35.016" timestamp="2017-02-23T13:16:50">
   <properties />
-  <testcase classname="grails.plugin.cucumber.CucumberTest" name="Register a criterion that does not exist" time="3.315" />
-  <testcase classname="grails.plugin.cucumber.CucumberTest" name="Register a criterion that already exists" time="0.099" />
-  <testcase classname="grails.plugin.cucumber.CucumberTest" name="Error when registering a criterion that already exists" time="11.462" />
+  <testcase classname="grails.plugin.cucumber.CucumberTest" name="Register a criterion that does not exist" time="1.946" />
+  <testcase classname="grails.plugin.cucumber.CucumberTest" name="Register a criterion that already exists" time="0.136" />
+  <testcase classname="grails.plugin.cucumber.CucumberTest" name="Error when registering a criterion that already exists" time="14.05" />
   <system-out><![CDATA[#Esta feature Ã© a feature inicial, idealizada antes da iteraÃ§Ã£o de imlementar features.
 #Portanto, serÃ¡ descartada dos testes finais visto que nÃ£o faz uso de mÃ©todos de controlador que nÃ£o sejam
 #Gerados automaticamente.

@@ -42,6 +42,12 @@ Then(~'^I can see the name of "([^"]*)" and the login "([^"]*)" in the list of s
     assert page.confirmStudent(name, login)
 }
 
+Then(~'^I do not can see the name of "([^"]*)" and the login "([^"]*)" in the list of students$') { String name, String login ->
+	to StudentPage
+	assert AddStudentsTestDataAndOperations.alunoQtd(login) == 1
+	//assert page.qtdStudentTable(countStudent)
+}
+
 Given(~'^the student "([^"]*)" with login "([^"]*)" is registered in the system$') { String name, String login ->
     AddStudentsTestDataAndOperations.createStudent(name, login)
     countStudent = AddStudentsTestDataAndOperations.countStudent()

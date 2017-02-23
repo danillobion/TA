@@ -35,7 +35,7 @@
 </nav>
 </div>
 <div class="clear"></div>
-<div class="testsuite success">
+<div class="testsuite failure">
 <div class="header">
 <h2>Remove Evaluation</h2>
 <h3>
@@ -43,17 +43,44 @@
                         2
                         tests
                     
-                        without a single error or failure!
+                        with
+                        one failure
+                        .
                     </h3>
 </div>
-<div class="testcase clearfix success grid_8 alpha omega" data-name="Remove evaluations in different criterion from a student">
+<div class="testcase clearfix failure grid_8 alpha omega" data-name="Remove evaluations in different criterion from a student">
 <div class="grid_3 alpha">
 <p>
-<span class="icon success"></span><b class="testname message success">Remove evaluations in different criterion from a student</b>
+<span class="icon failure"></span><b class="testname message failure">Remove evaluations in different criterion from a student</b>
 </p>
-<p class="summary">Executed in 21.131 seconds.</p>
+<p class="summary">Executed in 9.803 seconds.</p>
 </div>
-<div class="grid_5 omega outputinfo"></div>
+<div class="grid_5 omega outputinfo">
+<div class="details">
+<p>
+<b class="message">title ==~ /Show EvaluationsByCriterion/
+|     |
+|     false
+Show Student</b>
+</p>
+<pre>Assertion failed: 
+
+title ==~ /Show EvaluationsByCriterion/
+|     |
+|     false
+Show Student
+
+	at pages.ShowEvaluationByCriterionPage$__clinit__closure1.doCall(ShowEvaluationByCriterionPage.groovy:12)
+	at geb.Page.verifyThisPageAtOnly(Page.groovy:228)
+	at geb.Page.verifyAt(Page.groovy:182)
+	at geb.Browser.doAt(Browser.groovy:454)
+	at geb.Browser.at(Browser.groovy:336)
+	at geb.binding.BindingUpdater$InvocationForwarding.doCall(BindingUpdater.groovy:73)
+	at steps.RemoveEvaluationSteps$_run_closure4.doCall(RemoveEvaluationSteps.groovy:75)
+	at ✽.When I remove the evaluation "MA"(RemoveEvaluation.feature:13)
+</pre>
+</div>
+</div>
 <div class="clear"></div>
 </div>
 <div class="testcase clearfix success grid_8 alpha omega" data-name="Remove an Evaluation from a Student">
@@ -61,7 +88,7 @@
 <p>
 <span class="icon success"></span><b class="testname message success">Remove an Evaluation from a Student</b>
 </p>
-<p class="summary">Executed in 0.089 seconds.</p>
+<p class="summary">Executed in 0.242 seconds.</p>
 </div>
 <div class="grid_5 omega outputinfo"></div>
 <div class="clear"></div>
@@ -83,6 +110,25 @@ Feature: Remove Evaluation
     And this student has "MA" evaluation in criterion "SI"                      # RemoveEvaluationSteps.groovy:34
     And has a "MANA" evaluation in criterion "PLC"                              # RemoveEvaluationSteps.groovy:47
     When I remove the evaluation "MA"                                           # RemoveEvaluationSteps.groovy:67
+      Assertion failed: 
+      
+      title ==~ /Show EvaluationsByCriterion/
+      |     |
+      |     false
+      Show Student
+      
+      	at pages.ShowEvaluationByCriterionPage$__clinit__closure1.doCall(ShowEvaluationByCriterionPage.groovy:12)
+      	at pages.ShowEvaluationByCriterionPage$__clinit__closure1.doCall(ShowEvaluationByCriterionPage.groovy)
+      	at geb.Page.verifyThisPageAtOnly(Page.groovy:228)
+      	at geb.Page.verifyAt(Page.groovy:182)
+      	at geb.Page$verifyAt$4.call(Unknown Source)
+      	at geb.Page$verifyAt$4.call(Unknown Source)
+      	at geb.Browser.doAt(Browser.groovy:454)
+      	at geb.Browser.at(Browser.groovy:336)
+      	at geb.binding.BindingUpdater$InvocationForwarding.doCall(BindingUpdater.groovy:73)
+      	at steps.RemoveEvaluationSteps$_run_closure4.doCall(RemoveEvaluationSteps.groovy:75)
+      	at &acirc;œ&frac12;.When I remove the evaluation "MA"(RemoveEvaluation.feature:13)
+
     Then I should not see it listed in the student                              # RemoveEvaluationSteps.groovy:81
 
   #Controller Scenario
