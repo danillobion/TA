@@ -1,0 +1,421 @@
+<!DOCTYPE html><html xmlns:lxslt="http://xml.apache.org/xslt" xmlns:stringutils="xalan://org.apache.tools.ant.util.StringUtils">
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>
+                    Test - Add Student</title>
+<link rel="shortcut icon" href="http://grails.org/images/favicon.ico" type="image/x-icon">
+<link rel="stylesheet" type="text/css" title="Style" href="stylesheet.css">
+</head>
+<body>
+<div class="container container_8" id="report">
+<div class="grid_6">
+<a title="Home" href="index.html">
+<div class="grailslogo"></div>
+</a>
+<h1>Add Student</h1>
+<h2>Package: </h2>
+</div>
+<div class="grid_2">
+<nav id="navigationlinks">
+<p>
+<a href="failed.html">
+                    Tests with failure and errors
+                </a>
+</p>
+<p>
+<a href="index.html">
+                    Package summary
+                </a>
+</p>
+<p>
+<a href="all.html">
+                    Show all tests
+                </a>
+</p>
+</nav>
+</div>
+<div class="clear"></div>
+<div class="testsuite failure">
+<div class="header">
+<h2>Add Student</h2>
+<h3>
+                        Executed
+                        10
+                        tests
+                    
+                        with
+                        one failure
+                        .
+                    </h3>
+</div>
+<div class="testcase clearfix success grid_8 alpha omega" data-name="Register a new student">
+<div class="grid_3 alpha">
+<p>
+<span class="icon success"></span><b class="testname message success">Register a new student</b>
+</p>
+<p class="summary">Executed in 0.102 seconds.</p>
+</div>
+<div class="grid_5 omega outputinfo"></div>
+<div class="clear"></div>
+</div>
+<div class="testcase clearfix success grid_8 alpha omega" data-name="Message from the new student registration">
+<div class="grid_3 alpha">
+<p>
+<span class="icon success"></span><b class="testname message success">Message from the new student registration</b>
+</p>
+<p class="summary">Executed in 9.495 seconds.</p>
+</div>
+<div class="grid_5 omega outputinfo"></div>
+<div class="clear"></div>
+</div>
+<div class="testcase clearfix success grid_8 alpha omega" data-name="Register a student with a login that already exists">
+<div class="grid_3 alpha">
+<p>
+<span class="icon success"></span><b class="testname message success">Register a student with a login that already exists</b>
+</p>
+<p class="summary">Executed in 0.068 seconds.</p>
+</div>
+<div class="grid_5 omega outputinfo"></div>
+<div class="clear"></div>
+</div>
+<div class="testcase clearfix failure grid_8 alpha omega" data-name="Error message when registering a login twice">
+<div class="grid_3 alpha">
+<p>
+<span class="icon failure"></span><b class="testname message failure">Error message when registering a login twice</b>
+</p>
+<p class="summary">Executed in 0.194 seconds.</p>
+</div>
+<div class="grid_5 omega outputinfo">
+<div class="details">
+<p>
+<b class="message">Undefined Step: Then I do not can see the name of "Edilberto Braz" with login "ra" in the list of students</b>
+</p>
+<pre>cucumber.runtime.UndefinedStepException: Undefined Step: Then I do not can see the name of "Edilberto Braz" with login "ra" in the list of students
+	at grails.plugin.cucumber.CucumberFormatter.resultUndefined(CucumberFormatter.groovy:250)
+	at grails.plugin.cucumber.CucumberFormatter.result(CucumberFormatter.groovy:215)
+	at cucumber.runtime.Utils$1.call(Utils.java:37)
+	at cucumber.runtime.Timeout.timeout(Timeout.java:13)
+	at cucumber.runtime.Utils.invoke(Utils.java:31)
+	at cucumber.runtime.RuntimeOptions$1.invoke(RuntimeOptions.java:243)
+	at cucumber.runtime.Runtime.runStep(Runtime.java:280)
+	at cucumber.runtime.model.StepContainer.runStep(StepContainer.java:44)
+	at cucumber.runtime.model.StepContainer.runSteps(StepContainer.java:39)
+	at cucumber.runtime.model.CucumberScenario.run(CucumberScenario.java:48)
+	at cucumber.runtime.model.CucumberFeature.run(CucumberFeature.java:163)
+	at grails.plugin.cucumber.Cucumber$_run_closure2.doCall(Cucumber.groovy:59)
+	at grails.plugin.cucumber.Cucumber.run(Cucumber.groovy:58)
+	at grails.plugin.cucumber.CucumberTestType.runFeatures(CucumberTestType.groovy:148)
+	at grails.plugin.cucumber.CucumberTestType.doRun(CucumberTestType.groovy:58)
+</pre>
+</div>
+</div>
+<div class="clear"></div>
+</div>
+<div class="testcase clearfix success grid_8 alpha omega" data-name="Register a student twice">
+<div class="grid_3 alpha">
+<p>
+<span class="icon success"></span><b class="testname message success">Register a student twice</b>
+</p>
+<p class="summary">Executed in 0.076 seconds.</p>
+</div>
+<div class="grid_5 omega outputinfo"></div>
+<div class="clear"></div>
+</div>
+<div class="testcase clearfix success grid_8 alpha omega" data-name="Error message when registering a student twice">
+<div class="grid_3 alpha">
+<p>
+<span class="icon success"></span><b class="testname message success">Error message when registering a student twice</b>
+</p>
+<p class="summary">Executed in 6.391 seconds.</p>
+</div>
+<div class="grid_5 omega outputinfo"></div>
+<div class="clear"></div>
+</div>
+<div class="testcase clearfix success grid_8 alpha omega" data-name="Register a group of student">
+<div class="grid_3 alpha">
+<p>
+<span class="icon success"></span><b class="testname message success">Register a group of student</b>
+</p>
+<p class="summary">Executed in 0.088 seconds.</p>
+</div>
+<div class="grid_5 omega outputinfo"></div>
+<div class="clear"></div>
+</div>
+<div class="testcase clearfix success grid_8 alpha omega" data-name="See the new group of students in the list">
+<div class="grid_3 alpha">
+<p>
+<span class="icon success"></span><b class="testname message success">See the new group of students in the list</b>
+</p>
+<p class="summary">Executed in 5.944 seconds.</p>
+</div>
+<div class="grid_5 omega outputinfo"></div>
+<div class="clear"></div>
+</div>
+<div class="testcase clearfix success grid_8 alpha omega" data-name="Register a student twice in a group of student">
+<div class="grid_3 alpha">
+<p>
+<span class="icon success"></span><b class="testname message success">Register a student twice in a group of student</b>
+</p>
+<p class="summary">Executed in 0.075 seconds.</p>
+</div>
+<div class="grid_5 omega outputinfo"></div>
+<div class="clear"></div>
+</div>
+<div class="testcase clearfix success grid_8 alpha omega" data-name="Register a student twice in a group of student in list">
+<div class="grid_3 alpha">
+<p>
+<span class="icon success"></span><b class="testname message success">Register a student twice in a group of student in list</b>
+</p>
+<p class="summary">Executed in 7.419 seconds.</p>
+</div>
+<div class="grid_5 omega outputinfo"></div>
+<div class="clear"></div>
+</div>
+<div class="clearfix output footer">
+<div class="sysout">
+<h2>Standard output</h2>
+<pre class="stdout">Feature: Add Student
+  As a professor
+  I want to register students in the system
+  So I can evaluate the students with respect to various criteria
+
+--Output from Register a new student--
+--Output from Message from the new student registration--
+  #Cen&Atilde;&iexcl;rio Controler
+  Scenario: Register a new student                                                    # AddStudents.feature:7
+    Given the student "Roberto Alves" with login "ra" is not registered in the system # AddStudentsSteps.groovy:19
+    When I register "Roberto Alves" with login "ra"                                   # AddStudentsSteps.groovy:23
+    Then the student "Roberto Alves" with login "ra" is saved in the system           # AddStudentsSteps.groovy:27
+
+--Output from Register a student with a login that already exists--
+  #Cen&Atilde;&iexcl;rio GUI
+  Scenario: Message from the new student registration                                         # AddStudents.feature:13
+    Given I am in the "add student" page                                                      # AddStudentsSteps.groovy:78
+    When I add the "Rodrigo Calegario" with login "rc"                                        # AddStudentsSteps.groovy:33
+    Then I can see the name of "Rodrigo Calegario" and the login "rc" in the list of students # AddStudentsSteps.groovy:40
+
+--Output from Error message when registering a login twice--
+  #Cen&Atilde;&iexcl;rio Controler
+  Scenario: Register a student with a login that already exists                      # AddStudents.feature:19
+    Given the student "Robertinho Alves" with login "ra" is registered in the system # AddStudentsSteps.groovy:51
+    When I register "Edilberto Braz" with login "ra"                                 # AddStudentsSteps.groovy:23
+    Then the system does not register "Edilberto Braz" with login "ra"               # AddStudentsSteps.groovy:57
+
+--Output from Register a student twice--
+  #Cen&Atilde;&iexcl;rio GUI
+  Scenario: Error message when registering a login twice                                       # AddStudents.feature:25
+    Given the student "Edilberto Braz" with login "ra" is registered in the system             # AddStudentsSteps.groovy:51
+    When I register "Edilberto Braz" with login "ra"                                           # AddStudentsSteps.groovy:23
+    Then I do not can see the name of "Edilberto Braz" with login "ra" in the list of students
+
+--Output from Error message when registering a student twice--
+  #Cen&Atilde;&iexcl;rio Controler
+  Scenario: Register a student twice                                                  # AddStudents.feature:31
+    Given the student "Robertinho Alves" with login "raz" is registered in the system # AddStudentsSteps.groovy:51
+    When I register "Robertinho Alves" with login "raz"                               # AddStudentsSteps.groovy:23
+    Then the system does not register "Robertinho Alves" with login "raz"             # AddStudentsSteps.groovy:57
+
+--Output from Register a group of student--
+  #Cen&Atilde;&iexcl;rio GUI
+  Scenario: Error message when registering a student twice                                          # AddStudents.feature:37
+    Given I am in the "sudent list" page                                                            # AddStudentsSteps.groovy:78
+    And the name of "Roberto Alves" and the login "ra" is already in the list of student            # AddStudentsSteps.groovy:95
+    And I go to the "add student" page                                                              # AddStudentsSteps.groovy:70
+    When I add the "Roberto Alves" with login "ra"                                                  # AddStudentsSteps.groovy:33
+    Then I can see the name of "Roberto Alves" and the login "ra" in the list of students only once # AddStudentsSteps.groovy:61
+
+--Output from See the new group of students in the list--
+  #Cenario Controller
+  Scenario: Register a group of student                                                               # AddStudents.feature:45
+    Given the student "Jo&Atilde;&pound;o Adherval" with login "ja" is not registered in the system                 # AddStudentsSteps.groovy:19
+    And the student "Milena Cabral" with login "mscc" is not registered in the system                 # AddStudentsSteps.groovy:19
+    When I send a text with "Jo&Atilde;&pound;o Adherval (jacb :: joaoadherval);&Acirc;&nbsp;Milena Cabral (mscc :: Milechwan)" # AddStudentsSteps.groovy:66
+    Then the student "Jo&Atilde;&pound;o Adherval" with login "jacb" is saved in the system                         # AddStudentsSteps.groovy:27
+    And the student "Milena Cabral" with login "mscc" is saved in the system                          # AddStudentsSteps.groovy:27
+
+--Output from Register a student twice in a group of student--
+  #Cenario GUI
+  Scenario: See the new group of students in the list                                                  # AddStudents.feature:53
+    Given I am in the "create group" page                                                              # AddStudentsSteps.groovy:78
+    When I add the text "Danilo Ribeiro (dlr4 :: DLRibeiro); Arthur Lapprand (abl3 :: ArthurLapprand)" # AddStudentsSteps.groovy:88
+    Then I can see the name of "Danilo Ribeiro" and the login "dlr4" in the list of students           # AddStudentsSteps.groovy:40
+    And I can see the name of "Arthur Lapprand" and the login "abl3" in the list of students           # AddStudentsSteps.groovy:40
+
+--Output from Register a student twice in a group of student in list--
+  #Cenario Controller
+  Scenario: Register a student twice in a group of student                                   # AddStudents.feature:60
+    Given the student "Felipe Bormann" with login "fhab" is not registered in the system     # AddStudentsSteps.groovy:19
+    And the student "Arthur Jorge" with login "anew" is registered in the system             # AddStudentsSteps.groovy:51
+    When I send a text with "Felipe Bormann (fhab :: fbormann); Arthur Jorge (anew :: ajew)" # AddStudentsSteps.groovy:66
+    Then the student "Felipe Bormann" with login "fhab" is saved in the system               # AddStudentsSteps.groovy:27
+    And the system does not register "Arthur Jorge" with login "anew"                        # AddStudentsSteps.groovy:57
+
+  #Cenario GUI
+  Scenario: Register a student twice in a group of student in list                                      # AddStudents.feature:68
+    Given I am in the "sudent list" page                                                                # AddStudentsSteps.groovy:78
+    And the name of "Ot&Atilde;&iexcl;vio Vera Cruz" and the login "ovcg" is already in the list of student           # AddStudentsSteps.groovy:95
+    And I go to the "create group" page                                                                 # AddStudentsSteps.groovy:70
+    When I add the text "Milton Vasconcelos (mvgn :: miltongneto); Ot&Atilde;&iexcl;vio Vera Cruz (ovcg :: ovcg)"     # AddStudentsSteps.groovy:88
+    Then I can see the name of "Milton Vasconcelos" and the login "mvgn" in the list of students        # AddStudentsSteps.groovy:40
+    And I can see the name of "Ot&Atilde;&iexcl;vio Vera Cruz" and the login "ovcg" in the list of students only once # AddStudentsSteps.groovy:61
+</pre>
+</div>
+<div class="syserr">
+<h2>System error</h2>
+<pre class="syserr">
+--Output from Register a new student--
+--Output from Message from the new student registration--
+--Output from Register a student with a login that already exists--
+--Output from Error message when registering a login twice--
+--Output from Register a student twice--
+--Output from Error message when registering a student twice--
+--Output from Register a group of student--
+--Output from See the new group of students in the list--
+--Output from Register a student twice in a group of student--
+--Output from Register a student twice in a group of student in list--</pre>
+</div>
+</div>
+<div class="clear"></div>
+</div>
+<div class="clear"></div>
+</div>
+<!--
+            Parses JUnit output and associates it with the corresponding test case
+        -->
+<script language="javascript">
+
+
+/**
+ * The JUnit report format is incredibly stuipd in the
+ * sense that it accumulates output from all test methods
+ * into a single xml node.
+ */
+(function() {
+
+    var outputElements = findOutputElements();
+    for (var i in outputElements) {
+        var outputElement = outputElements[i];
+        var textOutput = outputElement.element.firstChild.nodeValue;
+        var header = outputElement.getHeader();
+        appendTestMethodOutput(textOutput, header);
+    }
+
+    function findOutputElements() {
+        var outputElements = [];
+        var preElements = document.getElementsByTagName("pre");
+        for (var i in preElements) {
+            var preElement = preElements[i];
+            var className = preElement.className || "";
+            if (className.indexOf("stdout") >= 0) {
+                var outputElement = new OutputElement(preElement, "output");
+                outputElements.push(outputElement);
+            } else if (className.indexOf("syserr") >= 0) {
+                var outputElement = new OutputElement(preElement, "error");
+                outputElements.push(outputElement);
+            }
+        }
+
+        return outputElements;
+    }
+
+    function OutputElement(element, type) {
+        this.element = element;
+        this.type = type;
+
+        this.getHeader = function() {
+            if (type === "output") {
+                return "System output";
+            } else if ("error") {
+                return "System error";
+            }
+        }
+    }
+
+    function appendTestMethodOutput(text, header) {
+        var testOutput = new TestMethodOutput(header);
+
+        var lines = text.split(/\r\n|\r|\n/);
+        for (var i in lines) {
+            var line = lines[i];
+            var matches = line.match(/^--Output from (.*)--$/);
+            if (matches !== null && matches.length == 2) {
+                testOutput.flushToDom();
+                testOutput.testName = matches[1];
+            } else {
+                testOutput.addLine(line);
+            }
+        }
+
+        testOutput.flushToDom();
+    }
+
+    function TestMethodOutput(header) {
+        this.header = header;
+        this.testName = undefined;
+        this.buffer = "";
+
+        this.addLine = function(line) {
+            this.buffer += line + "\n";
+        }
+
+        this.flushToDom = function() {
+            if (this.testName !== undefined) {
+                var domNode = getTestcaseElementByName(this.testName);
+                if (domNode !== undefined && trimString(this.buffer).length > 0) {
+                    this.appendTo(domNode);
+                }
+
+                this.reset();
+            }
+        }
+
+        this.appendTo = function(domNode) {
+            var node = document.createElement("div");
+            node.innerHTML = '<p><b class="message">' + header + '</b></p>';
+
+            var preNode = document.createElement("pre");
+            preNode.appendChild(document.createTextNode(this.buffer));
+            node.appendChild(preNode);
+
+            var outputContainer = findElementByTagClassAndParent("div", "outputinfo", domNode);
+            outputContainer.appendChild(node);
+        }
+
+        this.reset = function() {
+            this.methodName = undefined;
+            this.buffer = "";
+        }
+    }
+
+    function getTestcaseElementByName(name) {
+        var divElements = document.getElementsByTagName("div");
+        var elementCount = divElements.length;
+        for (var i=0; i<elementCount; i++) {
+            var el = divElements[i];
+            if (el.getAttribute("data-name") === name) {
+                return el;
+            }
+        }
+    }
+
+    function findElementByTagClassAndParent(tagName, className, parentNode) {
+        var elements = parentNode.getElementsByTagName(tagName);
+        for (var i in elements) {
+            var element = elements[i];
+
+            // Not 100% correct, but good enough here
+            if (element.className !== undefined && element.className.indexOf(className) >= 0) {
+                return element;
+            }
+        }
+    }
+
+    function trimString(str) {
+        return str.replace(/^\s\s*/, '').replace(/\s\s*$/, '');
+    }
+
+})();
+
+        </script>
+</body>
+</html>

@@ -1,5 +1,5 @@
 Testsuite: Add Criterion
-Tests run: 3, Failures: 0, Errors: 0, Time elapsed: 10.493 sec
+Tests run: 3, Failures: 0, Errors: 0, Time elapsed: 35,016 sec
 ------------- Standard Output ---------------
 #Esta feature é a feature inicial, idealizada antes da iteração de imlementar features.
 #Portanto, será descartada dos testes finais visto que não faz uso de métodos de controlador que não sejam
@@ -38,6 +38,6 @@ Feature: Add Criterion
 --Output from Register a criterion that already exists--
 --Output from Error when registering a criterion that already exists--------------- ---------------- ---------------
 
-Testcase: Register a criterion that does not exist took 0.669 sec
-Testcase: Register a criterion that already exists took 0.052 sec
-Testcase: Error when registering a criterion that already exists took 5.736 sec
+Testcase: Register a criterion that does not exist took 1,946 sec
+Testcase: Register a criterion that already exists took 0,136 sec
+Testcase: Error when registering a criterion that already exists took 14,05 sec

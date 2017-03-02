@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuite errors="0" failures="1" hostname="DESKTOP-N49IB15" name="Remove Evaluation" tests="2" time="4.435" timestamp="2016-10-01T18:50:43">
+<testsuite errors="0" failures="1" hostname="DESKTOP-S5990V7" name="Remove Evaluation" tests="2" time="10.1" timestamp="2017-02-23T13:18:33">
   <properties />
-  <testcase classname="grails.plugin.cucumber.CucumberTest" name="Remove evaluations in different criterion from a student" time="4.323">
+  <testcase classname="grails.plugin.cucumber.CucumberTest" name="Remove evaluations in different criterion from a student" time="9.803">
     <failure message="title ==~ /Show EvaluationsByCriterion/&#xa;|     |&#xa;|     false&#xa;Show Student" type="grails.plugin.cucumber.FakeAssertionFailedError">Assertion failed: 
 
 title ==~ /Show EvaluationsByCriterion/
@@ -19,7 +19,7 @@ Show Student
 	at ✽.When I remove the evaluation &quot;MA&quot;(RemoveEvaluation.feature:13)
 </failure>
   </testcase>
-  <testcase classname="grails.plugin.cucumber.CucumberTest" name="Remove an Evaluation from a Student" time="0.082" />
+  <testcase classname="grails.plugin.cucumber.CucumberTest" name="Remove an Evaluation from a Student" time="0.242" />
   <system-out><![CDATA[#Arthur Lapprand
 Feature: Remove Evaluation
   As the teacher

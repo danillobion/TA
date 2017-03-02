@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuite errors="0" failures="1" hostname="DESKTOP-N49IB15" name="Notification" tests="2" time="4.37" timestamp="2016-10-01T18:50:32">
+<testsuite errors="0" failures="1" hostname="DESKTOP-S5990V7" name="Notification" tests="2" time="11.521" timestamp="2017-02-23T13:18:09">
   <properties />
-  <testcase classname="grails.plugin.cucumber.CucumberTest" name="Update a report" time="0.14" />
-  <testcase classname="grails.plugin.cucumber.CucumberTest" name="Show the students list in the &quot;70% of evaluations are over the class average&quot; report" time="4.203">
+  <testcase classname="grails.plugin.cucumber.CucumberTest" name="Update a report" time="0.298" />
+  <testcase classname="grails.plugin.cucumber.CucumberTest" name="Show the students list in the &quot;70% of evaluations are over the class average&quot; report" time="11.157">
     <failure message="title ==~/Report List/&#xa;|     |&#xa;|     false&#xa;Show Report" type="grails.plugin.cucumber.FakeAssertionFailedError">Assertion failed: 
 
 title ==~/Report List/
