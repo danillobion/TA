@@ -1,5 +1,5 @@
 Testsuite: Remove Criterion
-Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 7,52 sec
+Tests run: 2, Failures: 1, Errors: 0, Time elapsed: 10,323 sec
 ------------- Standard Output ---------------
 #Arthur Lapprand
 Feature: Remove Criterion
@@ -14,6 +14,16 @@ Feature: Remove Criterion
     Given a student with name "Zeca" and login "zc" is already on the system            # RemoveCriterionSteps.groovy:25
     And this student has an evaluation in criterion "TEORICA"                           # RemoveCriterionSteps.groovy:33
     When I remove the criterion "TEORICA"                                               # RemoveCriterionSteps.groovy:45
+      Assertion failed: 
+      
+      assert page.selectDeleteCriterion()
+             |    |
+             |    false
+             pages.ShowCriterionPage
+      
+      	at steps.RemoveCriterionSteps$_run_closure3.doCall(RemoveCriterionSteps.groovy:51)
+      	at ✽.When I remove the criterion "TEORICA"(RemoveCriterion.feature:12)
+
     Then I should not see the criterion "TEORICA" listed in the student with login "zc" # RemoveCriterionSteps.groovy:54
 
   #Controller Scenario
@@ -28,5 +38,20 @@ Feature: Remove Criterion
 --Output from Remove a criterion with students and evaluations using it--
 --Output from Remove a criterion from the system--------------- ---------------- ---------------
 
-Testcase: Remove a criterion with students and evaluations using it took 7,44 sec
-Testcase: Remove a criterion from the system took 0,05 sec
+Testcase: Remove a criterion with students and evaluations using it took 10,018 sec
+	FAILED
+assert page.selectDeleteCriterion()
+       |    |
+       |    false
+       pages.ShowCriterionPage
+Assertion failed: 
+
+assert page.selectDeleteCriterion()
+       |    |
+       |    false
+       pages.ShowCriterionPage
+
+	at steps.RemoveCriterionSteps$_run_closure3.doCall(RemoveCriterionSteps.groovy:51)
+	at ?.When I remove the criterion "TEORICA"(RemoveCriterion.feature:12)
+
+Testcase: Remove a criterion from the system took 0,132 sec

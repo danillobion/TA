@@ -1,5 +1,5 @@
 Testsuite: Add Student
-Tests run: 10, Failures: 0, Errors: 0, Time elapsed: 17,791 sec
+Tests run: 10, Failures: 0, Errors: 0, Time elapsed: 26,949 sec
 ------------- Standard Output ---------------
 Feature: Add Student
   As a professor
@@ -99,13 +99,13 @@ Feature: Add Student
 --Output from Register a student twice in a group of student--
 --Output from Register a student twice in a group of student in list--------------- ---------------- ---------------
 
-Testcase: Register a new student took 0,05 sec
-Testcase: Message from the new student registration took 5,52 sec
-Testcase: Register a student with a login that already exists took 0,03 sec
-Testcase: Error message when registering a login twice took 0,52 sec
-Testcase: Register a student twice took 0,04 sec
-Testcase: Error message when registering a student twice took 3,831 sec
-Testcase: Register a group of student took 0,06 sec
-Testcase: See the new group of students in the list took 3,47 sec
-Testcase: Register a student twice in a group of student took 0,04 sec
-Testcase: Register a student twice in a group of student in list took 4,2 sec
+Testcase: Register a new student took 0,094 sec
+Testcase: Message from the new student registration took 7,528 sec
+Testcase: Register a student with a login that already exists took 0,066 sec
+Testcase: Error message when registering a login twice took 0,618 sec
+Testcase: Register a student twice took 0,077 sec
+Testcase: Error message when registering a student twice took 5,933 sec
+Testcase: Register a group of student took 0,076 sec
+Testcase: See the new group of students in the list took 5,076 sec
+Testcase: Register a student twice in a group of student took 0,067 sec
+Testcase: Register a student twice in a group of student in list took 7,36 sec
