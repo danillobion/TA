@@ -1,5 +1,5 @@
 Testsuite: Add Student
-Tests run: 10, Failures: 1, Errors: 0, Time elapsed: 29,909 sec
+Tests run: 10, Failures: 0, Errors: 0, Time elapsed: 17,791 sec
 ------------- Standard Output ---------------
 Feature: Add Student
   As a professor
@@ -33,7 +33,7 @@ Feature: Add Student
   Scenario: Error message when registering a login twice                                       # AddStudents.feature:25
     Given the student "Edilberto Braz" with login "ra" is registered in the system             # AddStudentsSteps.groovy:51
     When I register "Edilberto Braz" with login "ra"                                           # AddStudentsSteps.groovy:23
-    Then I do not can see the name of "Edilberto Braz" with login "ra" in the list of students
+    Then I do not can see the name of "Edilberto Braz" with login "ra" in the list of students # AddStudentsSteps.groovy:45
 
 --Output from Error message when registering a student twice--
   #Cenário Controler
@@ -99,32 +99,13 @@ Feature: Add Student
 --Output from Register a student twice in a group of student--
 --Output from Register a student twice in a group of student in list--------------- ---------------- ---------------
 
-Testcase: Register a new student took 0,102 sec
-Testcase: Message from the new student registration took 9,495 sec
-Testcase: Register a student with a login that already exists took 0,068 sec
-Testcase: Error message when registering a login twice took 0,132 sec
-	FAILED
-Undefined Step: Then I do not can see the name of "Edilberto Braz" with login "ra" in the list of students
-cucumber.runtime.UndefinedStepException: Undefined Step: Then I do not can see the name of "Edilberto Braz" with login "ra" in the list of students
-	at grails.plugin.cucumber.CucumberFormatter.resultUndefined(CucumberFormatter.groovy:250)
-	at grails.plugin.cucumber.CucumberFormatter.result(CucumberFormatter.groovy:215)
-	at cucumber.runtime.Utils$1.call(Utils.java:37)
-	at cucumber.runtime.Timeout.timeout(Timeout.java:13)
-	at cucumber.runtime.Utils.invoke(Utils.java:31)
-	at cucumber.runtime.RuntimeOptions$1.invoke(RuntimeOptions.java:243)
-	at cucumber.runtime.Runtime.runStep(Runtime.java:280)
-	at cucumber.runtime.model.StepContainer.runStep(StepContainer.java:44)
-	at cucumber.runtime.model.StepContainer.runSteps(StepContainer.java:39)
-	at cucumber.runtime.model.CucumberScenario.run(CucumberScenario.java:48)
-	at cucumber.runtime.model.CucumberFeature.run(CucumberFeature.java:163)
-	at grails.plugin.cucumber.Cucumber$_run_closure2.doCall(Cucumber.groovy:59)
-	at grails.plugin.cucumber.Cucumber.run(Cucumber.groovy:58)
-	at grails.plugin.cucumber.CucumberTestType.runFeatures(CucumberTestType.groovy:148)
-	at grails.plugin.cucumber.CucumberTestType.doRun(CucumberTestType.groovy:58)
-
-Testcase: Register a student twice took 0,076 sec
-Testcase: Error message when registering a student twice took 6,391 sec
-Testcase: Register a group of student took 0,088 sec
-Testcase: See the new group of students in the list took 5,944 sec
-Testcase: Register a student twice in a group of student took 0,075 sec
-Testcase: Register a student twice in a group of student in list took 7,419 sec
+Testcase: Register a new student took 0,05 sec
+Testcase: Message from the new student registration took 5,52 sec
+Testcase: Register a student with a login that already exists took 0,03 sec
+Testcase: Error message when registering a login twice took 0,52 sec
+Testcase: Register a student twice took 0,04 sec
+Testcase: Error message when registering a student twice took 3,831 sec
+Testcase: Register a group of student took 0,06 sec
+Testcase: See the new group of students in the list took 3,47 sec
+Testcase: Register a student twice in a group of student took 0,04 sec
+Testcase: Register a student twice in a group of student in list took 4,2 sec

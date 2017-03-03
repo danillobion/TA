@@ -1,5 +1,5 @@
 Testsuite: Remove Evaluation
-Tests run: 2, Failures: 1, Errors: 0, Time elapsed: 10,1 sec
+Tests run: 2, Failures: 1, Errors: 0, Time elapsed: 5,84 sec
 ------------- Standard Output ---------------
 #Arthur Lapprand
 Feature: Remove Evaluation
@@ -48,7 +48,7 @@ Feature: Remove Evaluation
 --Output from Remove evaluations in different criterion from a student--
 --Output from Remove an Evaluation from a Student--------------- ---------------- ---------------
 
-Testcase: Remove evaluations in different criterion from a student took 9,741 sec
+Testcase: Remove evaluations in different criterion from a student took 5,7 sec
 	FAILED
 title ==~ /Show EvaluationsByCriterion/
 |     |
@@ -70,4 +70,4 @@ Show Student
 	at steps.RemoveEvaluationSteps$_run_closure4.doCall(RemoveEvaluationSteps.groovy:75)
 	at ?.When I remove the evaluation "MA"(RemoveEvaluation.feature:13)
 
-Testcase: Remove an Evaluation from a Student took 0,242 sec
+Testcase: Remove an Evaluation from a Student took 0,07 sec

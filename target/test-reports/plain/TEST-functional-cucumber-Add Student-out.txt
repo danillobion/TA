@@ -30,7 +30,7 @@ Feature: Add Student
   Scenario: Error message when registering a login twice                                       # AddStudents.feature:25
     Given the student "Edilberto Braz" with login "ra" is registered in the system             # AddStudentsSteps.groovy:51
     When I register "Edilberto Braz" with login "ra"                                           # AddStudentsSteps.groovy:23
-    Then I do not can see the name of "Edilberto Braz" with login "ra" in the list of students
+    Then I do not can see the name of "Edilberto Braz" with login "ra" in the list of students # AddStudentsSteps.groovy:45
 
 --Output from Error message when registering a student twice--
   #Cenário Controler

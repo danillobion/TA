@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuite errors="0" failures="0" hostname="DESKTOP-S5990V7" name="Remove Criterion" tests="2" time="11.831" timestamp="2017-02-23T13:18:21">
+<testsuite errors="0" failures="0" hostname="UAG-UFRPE" name="Remove Criterion" tests="2" time="7.52" timestamp="2017-03-03T00:39:33">
   <properties />
-  <testcase classname="grails.plugin.cucumber.CucumberTest" name="Remove a criterion with students and evaluations using it" time="11.648" />
-  <testcase classname="grails.plugin.cucumber.CucumberTest" name="Remove a criterion from the system" time="0.13" />
+  <testcase classname="grails.plugin.cucumber.CucumberTest" name="Remove a criterion with students and evaluations using it" time="7.44" />
+  <testcase classname="grails.plugin.cucumber.CucumberTest" name="Remove a criterion from the system" time="0.05" />
   <system-out><![CDATA[#Arthur Lapprand
 Feature: Remove Criterion
   As the teacher

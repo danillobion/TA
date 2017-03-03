@@ -1,5 +1,5 @@
 Testsuite: Notification
-Tests run: 2, Failures: 1, Errors: 0, Time elapsed: 11,521 sec
+Tests run: 2, Failures: 1, Errors: 0, Time elapsed: 5,204 sec
 ------------- Standard Output ---------------
 Feature: Notification
     As an administrator
@@ -61,8 +61,8 @@ Feature: Notification
 --Output from Update a report--
 --Output from Show the students list in the "70% of evaluations are over the class average" report--------------- ---------------- ---------------
 
-Testcase: Update a report took 0,298 sec
-Testcase: Show the students list in the "70% of evaluations are over the class average" report took 11,151 sec
+Testcase: Update a report took 0,13 sec
+Testcase: Show the students list in the "70% of evaluations are over the class average" report took 5,034 sec
 	FAILED
 title ==~/Report List/
 |     |

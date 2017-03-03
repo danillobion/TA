@@ -1,34 +1,16 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuite errors="0" failures="1" hostname="DESKTOP-S5990V7" name="Add Student" tests="10" time="29.909" timestamp="2017-02-23T13:17:39">
+<testsuite errors="0" failures="0" hostname="UAG-UFRPE" name="Add Student" tests="10" time="17.791" timestamp="2017-03-03T00:39:10">
   <properties />
-  <testcase classname="grails.plugin.cucumber.CucumberTest" name="Register a new student" time="0.102" />
-  <testcase classname="grails.plugin.cucumber.CucumberTest" name="Message from the new student registration" time="9.495" />
-  <testcase classname="grails.plugin.cucumber.CucumberTest" name="Register a student with a login that already exists" time="0.068" />
-  <testcase classname="grails.plugin.cucumber.CucumberTest" name="Error message when registering a login twice" time="0.194">
-    <failure message="Undefined Step: Then I do not can see the name of &quot;Edilberto Braz&quot; with login &quot;ra&quot; in the list of students" type="grails.plugin.cucumber.FakeAssertionFailedError">cucumber.runtime.UndefinedStepException: Undefined Step: Then I do not can see the name of &quot;Edilberto Braz&quot; with login &quot;ra&quot; in the list of students
-	at grails.plugin.cucumber.CucumberFormatter.resultUndefined(CucumberFormatter.groovy:250)
-	at grails.plugin.cucumber.CucumberFormatter.result(CucumberFormatter.groovy:215)
-	at cucumber.runtime.Utils$1.call(Utils.java:37)
-	at cucumber.runtime.Timeout.timeout(Timeout.java:13)
-	at cucumber.runtime.Utils.invoke(Utils.java:31)
-	at cucumber.runtime.RuntimeOptions$1.invoke(RuntimeOptions.java:243)
-	at cucumber.runtime.Runtime.runStep(Runtime.java:280)
-	at cucumber.runtime.model.StepContainer.runStep(StepContainer.java:44)
-	at cucumber.runtime.model.StepContainer.runSteps(StepContainer.java:39)
-	at cucumber.runtime.model.CucumberScenario.run(CucumberScenario.java:48)
-	at cucumber.runtime.model.CucumberFeature.run(CucumberFeature.java:163)
-	at grails.plugin.cucumber.Cucumber$_run_closure2.doCall(Cucumber.groovy:59)
-	at grails.plugin.cucumber.Cucumber.run(Cucumber.groovy:58)
-	at grails.plugin.cucumber.CucumberTestType.runFeatures(CucumberTestType.groovy:148)
-	at grails.plugin.cucumber.CucumberTestType.doRun(CucumberTestType.groovy:58)
-</failure>
-  </testcase>
-  <testcase classname="grails.plugin.cucumber.CucumberTest" name="Register a student twice" time="0.076" />
-  <testcase classname="grails.plugin.cucumber.CucumberTest" name="Error message when registering a student twice" time="6.391" />
-  <testcase classname="grails.plugin.cucumber.CucumberTest" name="Register a group of student" time="0.088" />
-  <testcase classname="grails.plugin.cucumber.CucumberTest" name="See the new group of students in the list" time="5.944" />
-  <testcase classname="grails.plugin.cucumber.CucumberTest" name="Register a student twice in a group of student" time="0.075" />
-  <testcase classname="grails.plugin.cucumber.CucumberTest" name="Register a student twice in a group of student in list" time="7.419" />
+  <testcase classname="grails.plugin.cucumber.CucumberTest" name="Register a new student" time="0.05" />
+  <testcase classname="grails.plugin.cucumber.CucumberTest" name="Message from the new student registration" time="5.52" />
+  <testcase classname="grails.plugin.cucumber.CucumberTest" name="Register a student with a login that already exists" time="0.03" />
+  <testcase classname="grails.plugin.cucumber.CucumberTest" name="Error message when registering a login twice" time="0.52" />
+  <testcase classname="grails.plugin.cucumber.CucumberTest" name="Register a student twice" time="0.04" />
+  <testcase classname="grails.plugin.cucumber.CucumberTest" name="Error message when registering a student twice" time="3.831" />
+  <testcase classname="grails.plugin.cucumber.CucumberTest" name="Register a group of student" time="0.06" />
+  <testcase classname="grails.plugin.cucumber.CucumberTest" name="See the new group of students in the list" time="3.47" />
+  <testcase classname="grails.plugin.cucumber.CucumberTest" name="Register a student twice in a group of student" time="0.04" />
+  <testcase classname="grails.plugin.cucumber.CucumberTest" name="Register a student twice in a group of student in list" time="4.2" />
   <system-out><![CDATA[Feature: Add Student
   As a professor
   I want to register students in the system
@@ -61,7 +43,7 @@
   Scenario: Error message when registering a login twice                                       # AddStudents.feature:25
     Given the student "Edilberto Braz" with login "ra" is registered in the system             # AddStudentsSteps.groovy:51
     When I register "Edilberto Braz" with login "ra"                                           # AddStudentsSteps.groovy:23
-    Then I do not can see the name of "Edilberto Braz" with login "ra" in the list of students
+    Then I do not can see the name of "Edilberto Braz" with login "ra" in the list of students # AddStudentsSteps.groovy:45
 
 --Output from Error message when registering a student twice--
   #CenÃ¡rio Controler

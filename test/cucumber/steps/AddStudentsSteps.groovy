@@ -42,7 +42,7 @@ Then(~'^I can see the name of "([^"]*)" and the login "([^"]*)" in the list of s
     assert page.confirmStudent(name, login)
 }
 
-Then(~'^I do not can see the name of "([^"]*)" and the login "([^"]*)" in the list of students$') { String name, String login ->
+Then(~/^I do not can see the name of "(.*?)" with login "(.*?)" in the list of students$/) { String name, String login ->
 	to StudentPage
 	assert AddStudentsTestDataAndOperations.alunoQtd(login) == 1
 	//assert page.qtdStudentTable(countStudent)
