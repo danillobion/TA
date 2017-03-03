@@ -1,4 +1,4 @@
-#Esta feature é a feature inicial, idealizada antes da iteração de imlementar features.
+﻿#Esta feature é a feature inicial, idealizada antes da iteração de imlementar features.
 #Portanto, será descartada dos testes finais visto que não faz uso de métodos de controlador que não sejam
 #Gerados automaticamente.
 
@@ -25,9 +25,6 @@ Feature: Add Criterion
     Given the criterion "P3" already exists
     And I am on the Add Criterion page
     When I add the criterion "P3"
-<<<<<<< HEAD
-    Then I should see a message related to the criterion registration failure
-=======
     Then I should see a message related to the criterion registration failure
     
 #Controller Scenario
@@ -41,4 +38,3 @@ Feature: Add Criterion
     Given I am on the Add Criterion page
     When I add the criterion with description " "
     Then I see a message related to the criterion registration failure
->>>>>>> NeiltonMelo/master

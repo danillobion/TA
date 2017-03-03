@@ -101,9 +101,6 @@ When(~'^I add the criterion "([^"]*)"$') {
 Then(~'^I should see a message related to the criterion registration failure$') { ->
     at CreateCriterionPage
     assert page.checkForErrors()
-<<<<<<< HEAD
-}
-=======
 }
 
 /*
@@ -139,5 +136,3 @@ Then(~/^I see a message related to the criterion registration failure$/) { ->
 	at CreateCriterionPage
     assert page.checkForErrors()
 }
- 
->>>>>>> NeiltonMelo/master
