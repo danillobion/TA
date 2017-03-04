@@ -11,16 +11,6 @@ Feature: Remove Criterion
     Given a student with name "Zeca" and login "zc" is already on the system            # RemoveCriterionSteps.groovy:25
     And this student has an evaluation in criterion "TEORICA"                           # RemoveCriterionSteps.groovy:33
     When I remove the criterion "TEORICA"                                               # RemoveCriterionSteps.groovy:45
-      Assertion failed: 
-      
-      assert page.selectDeleteCriterion()
-             |    |
-             |    false
-             pages.ShowCriterionPage
-      
-      	at steps.RemoveCriterionSteps$_run_closure3.doCall(RemoveCriterionSteps.groovy:51)
-      	at ✽.When I remove the criterion "TEORICA"(RemoveCriterion.feature:12)
-
     Then I should not see the criterion "TEORICA" listed in the student with login "zc" # RemoveCriterionSteps.groovy:54
 
   #Controller Scenario

@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuite errors="0" failures="1" hostname="DESKTOP-S5990V7" name="Notification" tests="2" time="11.146" timestamp="2017-03-03T02:01:03">
+<testsuite errors="0" failures="1" hostname="DESKTOP-S5990V7" name="Notification" tests="2" time="11.859" timestamp="2017-03-04T01:00:30">
   <properties />
-  <testcase classname="grails.plugin.cucumber.CucumberTest" name="Update a report" time="0.329" />
-  <testcase classname="grails.plugin.cucumber.CucumberTest" name="Show the students list in the &quot;70% of evaluations are over the class average&quot; report" time="10.721">
+  <testcase classname="grails.plugin.cucumber.CucumberTest" name="Update a report" time="0.537" />
+  <testcase classname="grails.plugin.cucumber.CucumberTest" name="Show the students list in the &quot;70% of evaluations are over the class average&quot; report" time="11.268">
     <failure message="title ==~/Report List/&#xa;|     |&#xa;|     false&#xa;Show Report" type="grails.plugin.cucumber.FakeAssertionFailedError">Assertion failed: 
 
 title ==~/Report List/
@@ -72,7 +72,7 @@ Show Report
       	at geb.Browser.at(Browser.groovy:336)
       	at geb.binding.BindingUpdater$InvocationForwarding.doCall(BindingUpdater.groovy:73)
       	at steps.StepDefReport$_run_closure8.doCall(StepDefReport.groovy:74)
-      	at âœ½.Then I should see the details related to the "70% of evaluations are over the class average" report(Notificacao.feature:33)
+      	at ✽.Then I should see the details related to the "70% of evaluations are over the class average" report(Notificacao.feature:33)
 
 ]]></system-out>
   <system-err><![CDATA[

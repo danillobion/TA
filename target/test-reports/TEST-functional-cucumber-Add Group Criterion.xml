@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuite errors="0" failures="0" hostname="DESKTOP-S5990V7" name="Add Group Criterion" tests="4" time="14.938" timestamp="2017-03-03T02:00:21">
+<testsuite errors="0" failures="0" hostname="DESKTOP-S5990V7" name="Add Group Criterion" tests="4" time="14.629" timestamp="2017-03-04T00:59:41">
   <properties />
-  <testcase classname="grails.plugin.cucumber.CucumberTest" name="Register a group of criteria that does not exist" time="0.205" />
-  <testcase classname="grails.plugin.cucumber.CucumberTest" name="Register a non-existent group of criteria" time="8.114" />
-  <testcase classname="grails.plugin.cucumber.CucumberTest" name="Register a group of criteria that some of them already exists" time="0.089" />
-  <testcase classname="grails.plugin.cucumber.CucumberTest" name="Register a group of criteria that some elements of it already exists" time="6.458" />
+  <testcase classname="grails.plugin.cucumber.CucumberTest" name="Register a group of criteria that does not exist" time="0.084" />
+  <testcase classname="grails.plugin.cucumber.CucumberTest" name="Register a non-existent group of criteria" time="8.511" />
+  <testcase classname="grails.plugin.cucumber.CucumberTest" name="Register a group of criteria that some of them already exists" time="0.086" />
+  <testcase classname="grails.plugin.cucumber.CucumberTest" name="Register a group of criteria that some elements of it already exists" time="5.892" />
   <system-out><![CDATA[#Thiago Bastos
 Feature: Add Group Criterion
   As the teacher

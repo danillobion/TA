@@ -1,5 +1,5 @@
 Testsuite: Notification
-Tests run: 2, Failures: 1, Errors: 0, Time elapsed: 11,146 sec
+Tests run: 2, Failures: 1, Errors: 0, Time elapsed: 11,859 sec
 ------------- Standard Output ---------------
 Feature: Notification
     As an administrator
@@ -61,8 +61,8 @@ Feature: Notification
 --Output from Update a report--
 --Output from Show the students list in the "70% of evaluations are over the class average" report--------------- ---------------- ---------------
 
-Testcase: Update a report took 0,329 sec
-Testcase: Show the students list in the "70% of evaluations are over the class average" report took 10,712 sec
+Testcase: Update a report took 0,537 sec
+Testcase: Show the students list in the "70% of evaluations are over the class average" report took 11,258 sec
 	FAILED
 title ==~/Report List/
 |     |
@@ -82,5 +82,5 @@ Show Report
 	at geb.Browser.at(Browser.groovy:336)
 	at geb.binding.BindingUpdater$InvocationForwarding.doCall(BindingUpdater.groovy:73)
 	at steps.StepDefReport$_run_closure8.doCall(StepDefReport.groovy:74)
-	at ?.Then I should see the details related to the "70% of evaluations are over the class average" report(Notificacao.feature:33)
+	at ✽.Then I should see the details related to the "70% of evaluations are over the class average" report(Notificacao.feature:33)
 

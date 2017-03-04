@@ -51,7 +51,7 @@
 <p>
 <span class="icon success"></span><b class="testname message success">Register a new student</b>
 </p>
-<p class="summary">Executed in 0.094 seconds.</p>
+<p class="summary">Executed in 0.083 seconds.</p>
 </div>
 <div class="grid_5 omega outputinfo"></div>
 <div class="clear"></div>
@@ -61,7 +61,7 @@
 <p>
 <span class="icon success"></span><b class="testname message success">Message from the new student registration</b>
 </p>
-<p class="summary">Executed in 7.528 seconds.</p>
+<p class="summary">Executed in 6.739 seconds.</p>
 </div>
 <div class="grid_5 omega outputinfo"></div>
 <div class="clear"></div>
@@ -71,7 +71,7 @@
 <p>
 <span class="icon success"></span><b class="testname message success">Register a student with a login that already exists</b>
 </p>
-<p class="summary">Executed in 0.066 seconds.</p>
+<p class="summary">Executed in 0.079 seconds.</p>
 </div>
 <div class="grid_5 omega outputinfo"></div>
 <div class="clear"></div>
@@ -81,7 +81,7 @@
 <p>
 <span class="icon success"></span><b class="testname message success">Error message when registering a login twice</b>
 </p>
-<p class="summary">Executed in 0.618 seconds.</p>
+<p class="summary">Executed in 0.914 seconds.</p>
 </div>
 <div class="grid_5 omega outputinfo"></div>
 <div class="clear"></div>
@@ -91,7 +91,7 @@
 <p>
 <span class="icon success"></span><b class="testname message success">Register a student twice</b>
 </p>
-<p class="summary">Executed in 0.077 seconds.</p>
+<p class="summary">Executed in 0.065 seconds.</p>
 </div>
 <div class="grid_5 omega outputinfo"></div>
 <div class="clear"></div>
@@ -101,7 +101,7 @@
 <p>
 <span class="icon success"></span><b class="testname message success">Error message when registering a student twice</b>
 </p>
-<p class="summary">Executed in 5.933 seconds.</p>
+<p class="summary">Executed in 6.442 seconds.</p>
 </div>
 <div class="grid_5 omega outputinfo"></div>
 <div class="clear"></div>
@@ -111,7 +111,7 @@
 <p>
 <span class="icon success"></span><b class="testname message success">Register a group of student</b>
 </p>
-<p class="summary">Executed in 0.076 seconds.</p>
+<p class="summary">Executed in 0.089 seconds.</p>
 </div>
 <div class="grid_5 omega outputinfo"></div>
 <div class="clear"></div>
@@ -121,7 +121,7 @@
 <p>
 <span class="icon success"></span><b class="testname message success">See the new group of students in the list</b>
 </p>
-<p class="summary">Executed in 5.076 seconds.</p>
+<p class="summary">Executed in 5.521 seconds.</p>
 </div>
 <div class="grid_5 omega outputinfo"></div>
 <div class="clear"></div>
@@ -131,7 +131,7 @@
 <p>
 <span class="icon success"></span><b class="testname message success">Register a student twice in a group of student</b>
 </p>
-<p class="summary">Executed in 0.067 seconds.</p>
+<p class="summary">Executed in 0.084 seconds.</p>
 </div>
 <div class="grid_5 omega outputinfo"></div>
 <div class="clear"></div>
@@ -141,7 +141,7 @@
 <p>
 <span class="icon success"></span><b class="testname message success">Register a student twice in a group of student in list</b>
 </p>
-<p class="summary">Executed in 7.36 seconds.</p>
+<p class="summary">Executed in 13.412 seconds.</p>
 </div>
 <div class="grid_5 omega outputinfo"></div>
 <div class="clear"></div>
@@ -156,42 +156,42 @@
 
 --Output from Register a new student--
 --Output from Message from the new student registration--
-  #Cen&Atilde;&iexcl;rio Controler
+  #Cen&aacute;rio Controler
   Scenario: Register a new student                                                    # AddStudents.feature:7
     Given the student "Roberto Alves" with login "ra" is not registered in the system # AddStudentsSteps.groovy:19
     When I register "Roberto Alves" with login "ra"                                   # AddStudentsSteps.groovy:23
     Then the student "Roberto Alves" with login "ra" is saved in the system           # AddStudentsSteps.groovy:27
 
 --Output from Register a student with a login that already exists--
-  #Cen&Atilde;&iexcl;rio GUI
+  #Cen&aacute;rio GUI
   Scenario: Message from the new student registration                                         # AddStudents.feature:13
     Given I am in the "add student" page                                                      # AddStudentsSteps.groovy:78
     When I add the "Rodrigo Calegario" with login "rc"                                        # AddStudentsSteps.groovy:33
     Then I can see the name of "Rodrigo Calegario" and the login "rc" in the list of students # AddStudentsSteps.groovy:40
 
 --Output from Error message when registering a login twice--
-  #Cen&Atilde;&iexcl;rio Controler
+  #Cen&aacute;rio Controler
   Scenario: Register a student with a login that already exists                      # AddStudents.feature:19
     Given the student "Robertinho Alves" with login "ra" is registered in the system # AddStudentsSteps.groovy:51
     When I register "Edilberto Braz" with login "ra"                                 # AddStudentsSteps.groovy:23
     Then the system does not register "Edilberto Braz" with login "ra"               # AddStudentsSteps.groovy:57
 
 --Output from Register a student twice--
-  #Cen&Atilde;&iexcl;rio GUI
+  #Cen&aacute;rio GUI
   Scenario: Error message when registering a login twice                                       # AddStudents.feature:25
     Given the student "Edilberto Braz" with login "ra" is registered in the system             # AddStudentsSteps.groovy:51
     When I register "Edilberto Braz" with login "ra"                                           # AddStudentsSteps.groovy:23
     Then I do not can see the name of "Edilberto Braz" with login "ra" in the list of students # AddStudentsSteps.groovy:45
 
 --Output from Error message when registering a student twice--
-  #Cen&Atilde;&iexcl;rio Controler
+  #Cen&aacute;rio Controler
   Scenario: Register a student twice                                                  # AddStudents.feature:31
     Given the student "Robertinho Alves" with login "raz" is registered in the system # AddStudentsSteps.groovy:51
     When I register "Robertinho Alves" with login "raz"                               # AddStudentsSteps.groovy:23
     Then the system does not register "Robertinho Alves" with login "raz"             # AddStudentsSteps.groovy:57
 
 --Output from Register a group of student--
-  #Cen&Atilde;&iexcl;rio GUI
+  #Cen&aacute;rio GUI
   Scenario: Error message when registering a student twice                                          # AddStudents.feature:37
     Given I am in the "sudent list" page                                                            # AddStudentsSteps.groovy:78
     And the name of "Roberto Alves" and the login "ra" is already in the list of student            # AddStudentsSteps.groovy:95
@@ -202,10 +202,10 @@
 --Output from See the new group of students in the list--
   #Cenario Controller
   Scenario: Register a group of student                                                               # AddStudents.feature:45
-    Given the student "Jo&Atilde;&pound;o Adherval" with login "ja" is not registered in the system                 # AddStudentsSteps.groovy:19
+    Given the student "Jo&atilde;o Adherval" with login "ja" is not registered in the system                 # AddStudentsSteps.groovy:19
     And the student "Milena Cabral" with login "mscc" is not registered in the system                 # AddStudentsSteps.groovy:19
-    When I send a text with "Jo&Atilde;&pound;o Adherval (jacb :: joaoadherval);&Acirc;&nbsp;Milena Cabral (mscc :: Milechwan)" # AddStudentsSteps.groovy:66
-    Then the student "Jo&Atilde;&pound;o Adherval" with login "jacb" is saved in the system                         # AddStudentsSteps.groovy:27
+    When I send a text with "Jo&atilde;o Adherval (jacb :: joaoadherval);&nbsp;Milena Cabral (mscc :: Milechwan)" # AddStudentsSteps.groovy:66
+    Then the student "Jo&atilde;o Adherval" with login "jacb" is saved in the system                         # AddStudentsSteps.groovy:27
     And the student "Milena Cabral" with login "mscc" is saved in the system                          # AddStudentsSteps.groovy:27
 
 --Output from Register a student twice in a group of student--
@@ -228,11 +228,11 @@
   #Cenario GUI
   Scenario: Register a student twice in a group of student in list                                      # AddStudents.feature:68
     Given I am in the "sudent list" page                                                                # AddStudentsSteps.groovy:78
-    And the name of "Ot&Atilde;&iexcl;vio Vera Cruz" and the login "ovcg" is already in the list of student           # AddStudentsSteps.groovy:95
+    And the name of "Ot&aacute;vio Vera Cruz" and the login "ovcg" is already in the list of student           # AddStudentsSteps.groovy:95
     And I go to the "create group" page                                                                 # AddStudentsSteps.groovy:70
-    When I add the text "Milton Vasconcelos (mvgn :: miltongneto); Ot&Atilde;&iexcl;vio Vera Cruz (ovcg :: ovcg)"     # AddStudentsSteps.groovy:88
+    When I add the text "Milton Vasconcelos (mvgn :: miltongneto); Ot&aacute;vio Vera Cruz (ovcg :: ovcg)"     # AddStudentsSteps.groovy:88
     Then I can see the name of "Milton Vasconcelos" and the login "mvgn" in the list of students        # AddStudentsSteps.groovy:40
-    And I can see the name of "Ot&Atilde;&iexcl;vio Vera Cruz" and the login "ovcg" in the list of students only once # AddStudentsSteps.groovy:61
+    And I can see the name of "Ot&aacute;vio Vera Cruz" and the login "ovcg" in the list of students only once # AddStudentsSteps.groovy:61
 </pre>
 </div>
 <div class="syserr">

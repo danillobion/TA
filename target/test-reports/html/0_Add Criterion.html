@@ -40,7 +40,7 @@
 <h2>Add Criterion</h2>
 <h3>
                         Executed
-                        3
+                        5
                         tests
                     
                         without a single error or failure!
@@ -51,7 +51,7 @@
 <p>
 <span class="icon success"></span><b class="testname message success">Register a criterion that does not exist</b>
 </p>
-<p class="summary">Executed in 2.402 seconds.</p>
+<p class="summary">Executed in 2.998 seconds.</p>
 </div>
 <div class="grid_5 omega outputinfo"></div>
 <div class="clear"></div>
@@ -61,7 +61,7 @@
 <p>
 <span class="icon success"></span><b class="testname message success">Register a criterion that already exists</b>
 </p>
-<p class="summary">Executed in 0.092 seconds.</p>
+<p class="summary">Executed in 0.106 seconds.</p>
 </div>
 <div class="grid_5 omega outputinfo"></div>
 <div class="clear"></div>
@@ -71,7 +71,27 @@
 <p>
 <span class="icon success"></span><b class="testname message success">Error when registering a criterion that already exists</b>
 </p>
-<p class="summary">Executed in 11.226 seconds.</p>
+<p class="summary">Executed in 19.225 seconds.</p>
+</div>
+<div class="grid_5 omega outputinfo"></div>
+<div class="clear"></div>
+</div>
+<div class="testcase clearfix success grid_8 alpha omega" data-name="Register a criterion with null description">
+<div class="grid_3 alpha">
+<p>
+<span class="icon success"></span><b class="testname message success">Register a criterion with null description</b>
+</p>
+<p class="summary">Executed in 0.139 seconds.</p>
+</div>
+<div class="grid_5 omega outputinfo"></div>
+<div class="clear"></div>
+</div>
+<div class="testcase clearfix success grid_8 alpha omega" data-name="Error when registering a criterion with null description">
+<div class="grid_3 alpha">
+<p>
+<span class="icon success"></span><b class="testname message success">Error when registering a criterion with null description</b>
+</p>
+<p class="summary">Executed in 1.621 seconds.</p>
 </div>
 <div class="grid_5 omega outputinfo"></div>
 <div class="clear"></div>
@@ -79,8 +99,8 @@
 <div class="clearfix output footer">
 <div class="sysout">
 <h2>Standard output</h2>
-<pre class="stdout">#Esta feature &Atilde;&copy; a feature inicial, idealizada antes da itera&Atilde;&sect;&Atilde;&pound;o de imlementar features.
-#Portanto, ser&Atilde;&iexcl; descartada dos testes finais visto que n&Atilde;&pound;o faz uso de m&Atilde;&copy;todos de controlador que n&Atilde;&pound;o sejam
+<pre class="stdout">#Esta feature &eacute; a feature inicial, idealizada antes da itera&ccedil;&atilde;o de imlementar features.
+#Portanto, ser&aacute; descartada dos testes finais visto que n&atilde;o faz uso de m&eacute;todos de controlador que n&atilde;o sejam
 #Gerados automaticamente.
 #Arthur Lapprand
 Feature: Add Criterion
@@ -103,12 +123,26 @@ Feature: Add Criterion
     When I create the criterion with description "P2"           # AddCriterionSteps.groovy:66
     Then the system does nothing                                # AddCriterionSteps.groovy:70
 
+--Output from Register a criterion with null description--
   #GUI Scenario
   Scenario: Error when registering a criterion that already exists            # AddCriterion.feature:24
     Given the criterion "P3" already exists                                   # AddCriterionSteps.groovy:82
     And I am on the Add Criterion page                                        # AddCriterionSteps.groovy:90
     When I add the criterion "P3"                                             # AddCriterionSteps.groovy:95
     Then I should see a message related to the criterion registration failure # AddCriterionSteps.groovy:101
+
+--Output from Error when registering a criterion with null description--
+  #Controller Scenario
+  Scenario: Register a criterion with null description                 # AddCriterion.feature:31
+    Given the criterion named " " is not on the system                 # AddCriterionSteps.groovy:114
+    When I create the criterion with description " "                   # AddCriterionSteps.groovy:66
+    Then the system does not create the criterion with description " " # AddCriterionSteps.groovy:118
+
+  #GUI Scenario
+  Scenario: Error when registering a criterion with null description   # AddCriterion.feature:37
+    Given I am on the Add Criterion page                               # AddCriterionSteps.groovy:90
+    When I add the criterion with description " "                      # AddCriterionSteps.groovy:130
+    Then I see a message related to the criterion registration failure # AddCriterionSteps.groovy:135
 </pre>
 </div>
 <div class="syserr">
@@ -116,7 +150,9 @@ Feature: Add Criterion
 <pre class="syserr">
 --Output from Register a criterion that does not exist--
 --Output from Register a criterion that already exists--
---Output from Error when registering a criterion that already exists--</pre>
+--Output from Error when registering a criterion that already exists--
+--Output from Register a criterion with null description--
+--Output from Error when registering a criterion with null description--</pre>
 </div>
 </div>
 <div class="clear"></div>

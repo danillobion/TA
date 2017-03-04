@@ -22,9 +22,23 @@ Feature: Add Criterion
     When I create the criterion with description "P2"           # AddCriterionSteps.groovy:66
     Then the system does nothing                                # AddCriterionSteps.groovy:70
 
+--Output from Register a criterion with null description--
   #GUI Scenario
   Scenario: Error when registering a criterion that already exists            # AddCriterion.feature:24
     Given the criterion "P3" already exists                                   # AddCriterionSteps.groovy:82
     And I am on the Add Criterion page                                        # AddCriterionSteps.groovy:90
     When I add the criterion "P3"                                             # AddCriterionSteps.groovy:95
     Then I should see a message related to the criterion registration failure # AddCriterionSteps.groovy:101
+
+--Output from Error when registering a criterion with null description--
+  #Controller Scenario
+  Scenario: Register a criterion with null description                 # AddCriterion.feature:31
+    Given the criterion named " " is not on the system                 # AddCriterionSteps.groovy:114
+    When I create the criterion with description " "                   # AddCriterionSteps.groovy:66
+    Then the system does not create the criterion with description " " # AddCriterionSteps.groovy:118
+
+  #GUI Scenario
+  Scenario: Error when registering a criterion with null description   # AddCriterion.feature:37
+    Given I am on the Add Criterion page                               # AddCriterionSteps.groovy:90
+    When I add the criterion with description " "                      # AddCriterionSteps.groovy:130
+    Then I see a message related to the criterion registration failure # AddCriterionSteps.groovy:135

@@ -1,5 +1,5 @@
 Testsuite: Add Group Criterion
-Tests run: 4, Failures: 0, Errors: 0, Time elapsed: 14,938 sec
+Tests run: 4, Failures: 0, Errors: 0, Time elapsed: 14,629 sec
 ------------- Standard Output ---------------
 #Thiago Bastos
 Feature: Add Group Criterion
@@ -54,7 +54,7 @@ Feature: Add Group Criterion
 --Output from Register a group of criteria that some of them already exists--
 --Output from Register a group of criteria that some elements of it already exists--------------- ---------------- ---------------
 
-Testcase: Register a group of criteria that does not exist took 0,205 sec
-Testcase: Register a non-existent group of criteria took 8,114 sec
-Testcase: Register a group of criteria that some of them already exists took 0,089 sec
-Testcase: Register a group of criteria that some elements of it already exists took 6,458 sec
+Testcase: Register a group of criteria that does not exist took 0,084 sec
+Testcase: Register a non-existent group of criteria took 8,511 sec
+Testcase: Register a group of criteria that some of them already exists took 0,086 sec
+Testcase: Register a group of criteria that some elements of it already exists took 5,892 sec

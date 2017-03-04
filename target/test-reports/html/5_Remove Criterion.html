@@ -35,7 +35,7 @@
 </nav>
 </div>
 <div class="clear"></div>
-<div class="testsuite failure">
+<div class="testsuite success">
 <div class="header">
 <h2>Remove Criterion</h2>
 <h3>
@@ -43,38 +43,17 @@
                         2
                         tests
                     
-                        with
-                        one failure
-                        .
+                        without a single error or failure!
                     </h3>
 </div>
-<div class="testcase clearfix failure grid_8 alpha omega" data-name="Remove a criterion with students and evaluations using it">
+<div class="testcase clearfix success grid_8 alpha omega" data-name="Remove a criterion with students and evaluations using it">
 <div class="grid_3 alpha">
 <p>
-<span class="icon failure"></span><b class="testname message failure">Remove a criterion with students and evaluations using it</b>
+<span class="icon success"></span><b class="testname message success">Remove a criterion with students and evaluations using it</b>
 </p>
-<p class="summary">Executed in 10.104 seconds.</p>
+<p class="summary">Executed in 12.834 seconds.</p>
 </div>
-<div class="grid_5 omega outputinfo">
-<div class="details">
-<p>
-<b class="message">assert page.selectDeleteCriterion()
-       |    |
-       |    false
-       pages.ShowCriterionPage</b>
-</p>
-<pre>Assertion failed: 
-
-assert page.selectDeleteCriterion()
-       |    |
-       |    false
-       pages.ShowCriterionPage
-
-	at steps.RemoveCriterionSteps$_run_closure3.doCall(RemoveCriterionSteps.groovy:51)
-	at ✽.When I remove the criterion "TEORICA"(RemoveCriterion.feature:12)
-</pre>
-</div>
-</div>
+<div class="grid_5 omega outputinfo"></div>
 <div class="clear"></div>
 </div>
 <div class="testcase clearfix success grid_8 alpha omega" data-name="Remove a criterion from the system">
@@ -82,7 +61,7 @@ assert page.selectDeleteCriterion()
 <p>
 <span class="icon success"></span><b class="testname message success">Remove a criterion from the system</b>
 </p>
-<p class="summary">Executed in 0.132 seconds.</p>
+<p class="summary">Executed in 0.109 seconds.</p>
 </div>
 <div class="grid_5 omega outputinfo"></div>
 <div class="clear"></div>
@@ -103,16 +82,6 @@ Feature: Remove Criterion
     Given a student with name "Zeca" and login "zc" is already on the system            # RemoveCriterionSteps.groovy:25
     And this student has an evaluation in criterion "TEORICA"                           # RemoveCriterionSteps.groovy:33
     When I remove the criterion "TEORICA"                                               # RemoveCriterionSteps.groovy:45
-      Assertion failed: 
-      
-      assert page.selectDeleteCriterion()
-             |    |
-             |    false
-             pages.ShowCriterionPage
-      
-      	at steps.RemoveCriterionSteps$_run_closure3.doCall(RemoveCriterionSteps.groovy:51)
-      	at &acirc;œ&frac12;.When I remove the criterion "TEORICA"(RemoveCriterion.feature:12)
-
     Then I should not see the criterion "TEORICA" listed in the student with login "zc" # RemoveCriterionSteps.groovy:54
 
   #Controller Scenario
