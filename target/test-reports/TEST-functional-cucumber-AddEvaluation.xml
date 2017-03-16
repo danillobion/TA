@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuite errors="0" failures="0" hostname="DESKTOP-N49IB15" name="AddEvaluation" tests="3" time="0.507" timestamp="2016-10-01T18:50:26">
+<testsuite errors="0" failures="0" hostname="DESKTOP-S5990V7" name="AddEvaluation" tests="3" time="0.837" timestamp="2017-03-04T00:59:41">
   <properties />
-  <testcase classname="grails.plugin.cucumber.CucumberTest" name="Add evaluation to a criteria" time="0.273" />
-  <testcase classname="grails.plugin.cucumber.CucumberTest" name="Add evaluations using incomplete data" time="0.071" />
-  <testcase classname="grails.plugin.cucumber.CucumberTest" name="Add evaluation more than once with same origin" time="0.131" />
+  <testcase classname="grails.plugin.cucumber.CucumberTest" name="Add evaluation to a criteria" time="0.54" />
+  <testcase classname="grails.plugin.cucumber.CucumberTest" name="Add evaluations using incomplete data" time="0.106" />
+  <testcase classname="grails.plugin.cucumber.CucumberTest" name="Add evaluation more than once with same origin" time="0.116" />
   <system-out><![CDATA[Feature: AddEvaluation
   As a teacher
   I want to evaluate each student by criteria

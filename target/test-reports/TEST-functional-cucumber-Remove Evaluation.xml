@@ -1,25 +1,14 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuite errors="0" failures="1" hostname="DESKTOP-N49IB15" name="Remove Evaluation" tests="2" time="4.435" timestamp="2016-10-01T18:50:43">
+<testsuite errors="1" failures="0" hostname="DESKTOP-S5990V7" name="Remove Evaluation" tests="2" time="4.933" timestamp="2017-03-04T01:00:55">
   <properties />
-  <testcase classname="grails.plugin.cucumber.CucumberTest" name="Remove evaluations in different criterion from a student" time="4.323">
-    <failure message="title ==~ /Show EvaluationsByCriterion/&#xa;|     |&#xa;|     false&#xa;Show Student" type="grails.plugin.cucumber.FakeAssertionFailedError">Assertion failed: 
-
-title ==~ /Show EvaluationsByCriterion/
-|     |
-|     false
-Show Student
-
-	at pages.ShowEvaluationByCriterionPage$__clinit__closure1.doCall(ShowEvaluationByCriterionPage.groovy:12)
-	at geb.Page.verifyThisPageAtOnly(Page.groovy:228)
-	at geb.Page.verifyAt(Page.groovy:182)
-	at geb.Browser.doAt(Browser.groovy:454)
-	at geb.Browser.at(Browser.groovy:336)
-	at geb.binding.BindingUpdater$InvocationForwarding.doCall(BindingUpdater.groovy:73)
-	at steps.RemoveEvaluationSteps$_run_closure4.doCall(RemoveEvaluationSteps.groovy:75)
-	at ✽.When I remove the evaluation &quot;MA&quot;(RemoveEvaluation.feature:13)
-</failure>
+  <testcase classname="grails.plugin.cucumber.CucumberTest" name="Remove evaluations in different criterion from a student" time="4.673">
+    <error message="Cannot invoke method click() on null object" type="java.lang.NullPointerException">java.lang.NullPointerException: Cannot invoke method click() on null object
+	at pages.AddEvaluationPage.chooseValue(AddEvaluationPage.groovy:28)
+	at steps.RemoveEvaluationSteps.addEvaluationToCriterion(RemoveEvaluationSteps.groovy:61)
+	at ✽.And this student has &quot;MA&quot; evaluation in criterion &quot;SI&quot;(RemoveEvaluation.feature:11)
+</error>
   </testcase>
-  <testcase classname="grails.plugin.cucumber.CucumberTest" name="Remove an Evaluation from a Student" time="0.082" />
+  <testcase classname="grails.plugin.cucumber.CucumberTest" name="Remove an Evaluation from a Student" time="0.21" />
   <system-out><![CDATA[#Arthur Lapprand
 Feature: Remove Evaluation
   As the teacher
@@ -32,27 +21,14 @@ Feature: Remove Evaluation
   Scenario: Remove evaluations in different criterion from a student            # RemoveEvaluation.feature:9
     Given the system already has a student with name "Student 1" and login "s1" # RemoveEvaluationSteps.groovy:25
     And this student has "MA" evaluation in criterion "SI"                      # RemoveEvaluationSteps.groovy:34
+      java.lang.NullPointerException: Cannot invoke method click() on null object
+      	at pages.AddEvaluationPage.chooseValue(AddEvaluationPage.groovy:28)
+      	at pages.AddEvaluationPage$chooseValue$1.call(Unknown Source)
+      	at steps.RemoveEvaluationSteps.addEvaluationToCriterion(RemoveEvaluationSteps.groovy:61)
+      	at ✽.And this student has "MA" evaluation in criterion "SI"(RemoveEvaluation.feature:11)
+
     And has a "MANA" evaluation in criterion "PLC"                              # RemoveEvaluationSteps.groovy:47
     When I remove the evaluation "MA"                                           # RemoveEvaluationSteps.groovy:67
-      Assertion failed: 
-      
-      title ==~ /Show EvaluationsByCriterion/
-      |     |
-      |     false
-      Show Student
-      
-      	at pages.ShowEvaluationByCriterionPage$__clinit__closure1.doCall(ShowEvaluationByCriterionPage.groovy:12)
-      	at pages.ShowEvaluationByCriterionPage$__clinit__closure1.doCall(ShowEvaluationByCriterionPage.groovy)
-      	at geb.Page.verifyThisPageAtOnly(Page.groovy:228)
-      	at geb.Page.verifyAt(Page.groovy:182)
-      	at geb.Page$verifyAt$4.call(Unknown Source)
-      	at geb.Page$verifyAt$4.call(Unknown Source)
-      	at geb.Browser.doAt(Browser.groovy:454)
-      	at geb.Browser.at(Browser.groovy:336)
-      	at geb.binding.BindingUpdater$InvocationForwarding.doCall(BindingUpdater.groovy:73)
-      	at steps.RemoveEvaluationSteps$_run_closure4.doCall(RemoveEvaluationSteps.groovy:75)
-      	at âœ½.When I remove the evaluation "MA"(RemoveEvaluation.feature:13)
-
     Then I should not see it listed in the student                              # RemoveEvaluationSteps.groovy:81
 
   #Controller Scenario

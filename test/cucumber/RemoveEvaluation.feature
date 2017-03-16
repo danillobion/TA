@@ -8,9 +8,9 @@ Feature: Remove Evaluation
 #GUI Scenario
 Scenario: Remove evaluations in different criterion from a student
   Given the system already has a student with name "Student 1" and login "s1"
-  And this student has "MA" evaluation in criterion "SI"
+  And this student has "MPA" evaluation in criterion "SI"
   And has a "MANA" evaluation in criterion "PLC"
-  When I remove the evaluation "MA"
+  When I remove the evaluation "MPA"
   Then I should not see it listed in the student
 
 #Controller Scenario

@@ -1,4 +1,4 @@
-#Esta feature é a feature inicial, idealizada antes da iteração de imlementar features.
+﻿#Esta feature é a feature inicial, idealizada antes da iteração de imlementar features.
 #Portanto, será descartada dos testes finais visto que não faz uso de métodos de controlador que não sejam
 #Gerados automaticamente.
 
@@ -26,3 +26,15 @@ Feature: Add Criterion
     And I am on the Add Criterion page
     When I add the criterion "P3"
     Then I should see a message related to the criterion registration failure
+    
+#Controller Scenario
+  Scenario: Register a criterion with null description
+    Given the criterion named " " is not on the system
+    When I create the criterion with description " "
+    Then the system does not create the criterion with description " "
+
+#GUI Scenario
+  Scenario: Error when registering a criterion with null description
+    Given I am on the Add Criterion page
+    When I add the criterion with description " "
+    Then I see a message related to the criterion registration failure

@@ -1,5 +1,5 @@
 Testsuite: Remove Evaluation
-Tests run: 2, Failures: 1, Errors: 0, Time elapsed: 4.435 sec
+Tests run: 2, Failures: 0, Errors: 1, Time elapsed: 4,933 sec
 ------------- Standard Output ---------------
 #Arthur Lapprand
 Feature: Remove Evaluation
@@ -13,27 +13,14 @@ Feature: Remove Evaluation
   Scenario: Remove evaluations in different criterion from a student            # RemoveEvaluation.feature:9
     Given the system already has a student with name "Student 1" and login "s1" # RemoveEvaluationSteps.groovy:25
     And this student has "MA" evaluation in criterion "SI"                      # RemoveEvaluationSteps.groovy:34
+      java.lang.NullPointerException: Cannot invoke method click() on null object
+      	at pages.AddEvaluationPage.chooseValue(AddEvaluationPage.groovy:28)
+      	at pages.AddEvaluationPage$chooseValue$1.call(Unknown Source)
+      	at steps.RemoveEvaluationSteps.addEvaluationToCriterion(RemoveEvaluationSteps.groovy:61)
+      	at ✽.And this student has "MA" evaluation in criterion "SI"(RemoveEvaluation.feature:11)
+
     And has a "MANA" evaluation in criterion "PLC"                              # RemoveEvaluationSteps.groovy:47
     When I remove the evaluation "MA"                                           # RemoveEvaluationSteps.groovy:67
-      Assertion failed: 
-      
-      title ==~ /Show EvaluationsByCriterion/
-      |     |
-      |     false
-      Show Student
-      
-      	at pages.ShowEvaluationByCriterionPage$__clinit__closure1.doCall(ShowEvaluationByCriterionPage.groovy:12)
-      	at pages.ShowEvaluationByCriterionPage$__clinit__closure1.doCall(ShowEvaluationByCriterionPage.groovy)
-      	at geb.Page.verifyThisPageAtOnly(Page.groovy:228)
-      	at geb.Page.verifyAt(Page.groovy:182)
-      	at geb.Page$verifyAt$4.call(Unknown Source)
-      	at geb.Page$verifyAt$4.call(Unknown Source)
-      	at geb.Browser.doAt(Browser.groovy:454)
-      	at geb.Browser.at(Browser.groovy:336)
-      	at geb.binding.BindingUpdater$InvocationForwarding.doCall(BindingUpdater.groovy:73)
-      	at steps.RemoveEvaluationSteps$_run_closure4.doCall(RemoveEvaluationSteps.groovy:75)
-      	at ✽.When I remove the evaluation "MA"(RemoveEvaluation.feature:13)
-
     Then I should not see it listed in the student                              # RemoveEvaluationSteps.groovy:81
 
   #Controller Scenario
@@ -48,26 +35,12 @@ Feature: Remove Evaluation
 --Output from Remove evaluations in different criterion from a student--
 --Output from Remove an Evaluation from a Student--------------- ---------------- ---------------
 
-Testcase: Remove evaluations in different criterion from a student took 4.274 sec
-	FAILED
-title ==~ /Show EvaluationsByCriterion/
-|     |
-|     false
-Show Student
-Assertion failed: 
+Testcase: Remove evaluations in different criterion from a student took 4,618 sec
+	Caused an ERROR
+Cannot invoke method click() on null object
+java.lang.NullPointerException: Cannot invoke method click() on null object
+	at pages.AddEvaluationPage.chooseValue(AddEvaluationPage.groovy:28)
+	at steps.RemoveEvaluationSteps.addEvaluationToCriterion(RemoveEvaluationSteps.groovy:61)
+	at ✽.And this student has "MA" evaluation in criterion "SI"(RemoveEvaluation.feature:11)
 
-title ==~ /Show EvaluationsByCriterion/
-|     |
-|     false
-Show Student
-
-	at pages.ShowEvaluationByCriterionPage$__clinit__closure1.doCall(ShowEvaluationByCriterionPage.groovy:12)
-	at geb.Page.verifyThisPageAtOnly(Page.groovy:228)
-	at geb.Page.verifyAt(Page.groovy:182)
-	at geb.Browser.doAt(Browser.groovy:454)
-	at geb.Browser.at(Browser.groovy:336)
-	at geb.binding.BindingUpdater$InvocationForwarding.doCall(BindingUpdater.groovy:73)
-	at steps.RemoveEvaluationSteps$_run_closure4.doCall(RemoveEvaluationSteps.groovy:75)
-	at ?.When I remove the evaluation "MA"(RemoveEvaluation.feature:13)
-
-Testcase: Remove an Evaluation from a Student took 0.082 sec
+Testcase: Remove an Evaluation from a Student took 0,21 sec

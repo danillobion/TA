@@ -1,11 +1,13 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuite errors="0" failures="0" hostname="DESKTOP-N49IB15" name="Add Criterion" tests="3" time="10.493" timestamp="2016-10-01T18:50:15">
+<testsuite errors="0" failures="0" hostname="DESKTOP-S5990V7" name="Add Criterion" tests="5" time="50.577" timestamp="2017-03-04T00:58:50">
   <properties />
-  <testcase classname="grails.plugin.cucumber.CucumberTest" name="Register a criterion that does not exist" time="0.669" />
-  <testcase classname="grails.plugin.cucumber.CucumberTest" name="Register a criterion that already exists" time="0.052" />
-  <testcase classname="grails.plugin.cucumber.CucumberTest" name="Error when registering a criterion that already exists" time="5.736" />
-  <system-out><![CDATA[#Esta feature Ã© a feature inicial, idealizada antes da iteraÃ§Ã£o de imlementar features.
-#Portanto, serÃ¡ descartada dos testes finais visto que nÃ£o faz uso de mÃ©todos de controlador que nÃ£o sejam
+  <testcase classname="grails.plugin.cucumber.CucumberTest" name="Register a criterion that does not exist" time="2.998" />
+  <testcase classname="grails.plugin.cucumber.CucumberTest" name="Register a criterion that already exists" time="0.106" />
+  <testcase classname="grails.plugin.cucumber.CucumberTest" name="Error when registering a criterion that already exists" time="19.225" />
+  <testcase classname="grails.plugin.cucumber.CucumberTest" name="Register a criterion with null description" time="0.139" />
+  <testcase classname="grails.plugin.cucumber.CucumberTest" name="Error when registering a criterion with null description" time="1.621" />
+  <system-out><![CDATA[#Esta feature é a feature inicial, idealizada antes da iteração de imlementar features.
+#Portanto, será descartada dos testes finais visto que não faz uso de métodos de controlador que não sejam
 #Gerados automaticamente.
 #Arthur Lapprand
 Feature: Add Criterion
@@ -28,15 +30,31 @@ Feature: Add Criterion
     When I create the criterion with description "P2"           # AddCriterionSteps.groovy:66
     Then the system does nothing                                # AddCriterionSteps.groovy:70
 
+--Output from Register a criterion with null description--
   #GUI Scenario
   Scenario: Error when registering a criterion that already exists            # AddCriterion.feature:24
     Given the criterion "P3" already exists                                   # AddCriterionSteps.groovy:82
     And I am on the Add Criterion page                                        # AddCriterionSteps.groovy:90
     When I add the criterion "P3"                                             # AddCriterionSteps.groovy:95
     Then I should see a message related to the criterion registration failure # AddCriterionSteps.groovy:101
+
+--Output from Error when registering a criterion with null description--
+  #Controller Scenario
+  Scenario: Register a criterion with null description                 # AddCriterion.feature:31
+    Given the criterion named " " is not on the system                 # AddCriterionSteps.groovy:114
+    When I create the criterion with description " "                   # AddCriterionSteps.groovy:66
+    Then the system does not create the criterion with description " " # AddCriterionSteps.groovy:118
+
+  #GUI Scenario
+  Scenario: Error when registering a criterion with null description   # AddCriterion.feature:37
+    Given I am on the Add Criterion page                               # AddCriterionSteps.groovy:90
+    When I add the criterion with description " "                      # AddCriterionSteps.groovy:130
+    Then I see a message related to the criterion registration failure # AddCriterionSteps.groovy:135
 ]]></system-out>
   <system-err><![CDATA[
 --Output from Register a criterion that does not exist--
 --Output from Register a criterion that already exists--
---Output from Error when registering a criterion that already exists--]]></system-err>
+--Output from Error when registering a criterion that already exists--
+--Output from Register a criterion with null description--
+--Output from Error when registering a criterion with null description--]]></system-err>
 </testsuite>
