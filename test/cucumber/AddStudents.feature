@@ -1,8 +1,16 @@
 @ignore
+
 Feature: Add Student
   As a professor
   I want to register students in the system
   So I can evaluate the students with respect to various criteria
+
+#Cotroller Scenario
+	Scenario: Register a student with null name
+		Given the student with name " " with login "banana" is not registered in the system
+		When I register " " with login "banana"
+		Then the student "  " with login "banana" is not registered in the system
+		
 
 #Cenário Controler
   Scenario: Register a new student

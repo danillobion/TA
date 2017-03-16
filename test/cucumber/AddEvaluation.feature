@@ -13,13 +13,22 @@ Feature: AddEvaluation
     When I want to evaluate all students to a the "Y" criteria, without a specific origin and dated from "28/03/2016".
     Then all evaluations will not be stored in on the "Y" criterion history of each student
 
-  Scenario: Add evaluation more than once with same origin
-    Given evaluations for every student on the "X" criteria, originated from "Test" and dated from "28/03/2016" are already in the system
-    When I want to add a mark to all students to a the "X" criteria, originated from "Test" and dated from "28/03/2016"
-    Then all the marks will not be stored in on the "X" criteria's history of each student
+  Scenario: Add evaluation with blank criterion
+#  	Given there are no evaluations to all students to the "  " criterion, originated from a "Test" and dated from "28/03/2016"
+#  	When I want to evaluate all students to the "  " criterion, originated from a "Test" and dated from "28/03/2016".
+#   Then the system does not store the evaluation with criterion "  ", originated from a "Test" and dated from "28/03/2016"
+    
 ##GUI
 #  Scenario: Add evaluation to all students
 #    Given I see the student "Rodrigo", login "rcac" and the criterion "W"
 #    When I request the system to add the evaluation valued "MANA" in the criterion "W", from "Test", date "28/03/2016"
 #    Then I can see the evaluation valued "MANA" in the criterion "W", from "Test", date "28/03/2016" in the evaluation screen
 #
+
+##GUI
+  Scenario: Add evaluation with blank criterion
+    Given I am on the add evaluation page
+    When I fill the evaluation data with " " criterion, originated from a "Test" and dated from "28/03/2016".
+    Then I should see a message related to the evaluation registration error
+
+

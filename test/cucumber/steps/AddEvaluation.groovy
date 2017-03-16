@@ -100,6 +100,7 @@ Given(~/^there are no evaluations to all students to the "([^"]*)" criterion, or
         assert EvaluationDataAndOperations.checkEvaluationAllStudents(numberOfEvaluationsBeforeStep,"same");
 
 }
+
 When(~/^I want to evaluate all students to the "([^"]*)" criterion, originated from a "([^"]*)" and dated from "([^"]*)"\.$/) {
     String criterionName, origin, dateInString ->
         dateGlobal = dateInString
@@ -107,8 +108,8 @@ When(~/^I want to evaluate all students to the "([^"]*)" criterion, originated f
         originGlobal = origin
         String value = "MA";
         EvaluationDataAndOperations.createEvaluation(value, criterionName, origin, dateInString)
-
 }
+
 Then(~/^all the evaluations will be stored in on the "([^"]*)" criterion history of each student$/) {
     String criterionName -> assert EvaluationDataAndOperations.checkEvaluationAllStudents(numberOfEvaluationsBeforeStep,"more")
 
@@ -168,11 +169,11 @@ Given(~/^I see the student "([^"]*)", login "([^"]*)" and the criterion "([^"]*)
 //        at CreateCriterionPage
 
         page.fillCriterionDetails(criterionName)
-        page.selectCreateCriterion()
+  //      page.selectCreateCriterion()
 
-        to CriterionPage
+    //    to CriterionPage
 
-        assert page.confirmCriterion(criterionName)
+      //  assert page.confirmCriterion(criterionName)
 
 }
 
@@ -197,9 +198,9 @@ Then(~/^I can see the evaluation valued "([^"]*)" in the criterion "([^"]*)", fr
         to ShowStudentPage
 
         assert page.confirmStudent(studentName, studentLogin)
-        page.selectCriterion(criterionName)
+ //       page.selectCriterion(criterionName)
 
-        to ShowEvaluationByCriterionPage
+//        to ShowEvaluationByCriterionPage
 
         assert page.checkForEvaluation(value)
 }
@@ -242,5 +243,84 @@ And(~/^there already are evaluations for the "([^"]*)" criterion, originated fro
 Then(~/^all the evaluations will not be stored in on the "([^"]*)" criteria's history of each student$/) { String arg1 ->
     // Write code here that turns the phrase above into concrete actions
 
-}*/
+}
+
+/*
+//Danillo
+
+*/
+Then(~/^the system does not store the evaluation with criterion "(.*?)", originated from a "(.*?)" and dated from "(.*?)"$/) {
+	String criterionName, evaluationOrigin, evaluationDate ->
+		to StudentPage
+		at StudentPage
+
+		page.selectStudent(studentNameGlobal, studentLoginGlobal)
+
+		to ShowStudentPage
+
+		assert page.confirmStudent(studentName, studentLogin)
+//		page.selectCriterion(criterionName)
+
+//		to ShowEvaluationByCriterionPage	
+}
+
+
+
+Given(~/^there are no evaluations to the "(.*?)" criterion, originated from a "(.*?)" and dated from "(.*?)"$/) {
+	String criterionName, origin, dateInString ->
+		EvaluationDataAndOperations.createStudents(5);
+		//EvaluationDataAndOperations.createCriterion(criterionName);
+		numberOfEvaluationsBeforeStep = EvaluationDataAndOperations.numberOfEvaluationsBeforeTest();
+		assert EvaluationDataAndOperations.checkEvaluationAllStudents(numberOfEvaluationsBeforeStep,"same");
+
+}
+When(~/^I want to evaluate all students to the "(.*?)" criterion, originated from a "(.*?)" and dated from "(.*?)"$/) {
+	String criterionName, origin, dateInString ->
+		dateGlobal = dateInString
+		criterionNameGlobal = criterionName
+		originGlobal = origin
+		String value = "MA";
+		//EvaluationDataAndOperations.createEvaluation(value, criterionName, origin, dateInString)
+
+}
+Then(~/^the system does not store the evaluation with criterion  "(.*?)" originated from a "(.*?)", and dated from "(.*?)"$/) {
+	String  criterionName, evaluationOrigin, evaluationDate ->
+		to StudentPage
+		at StudentPage
+
+		page.selectStudent(studentNameGlobal, studentLoginGlobal)
+
+		to ShowStudentPage
+
+		assert page.confirmStudent(studentName, studentLogin)
+		//page.selectCriterion(criterionName)
+
+		//to ShowEvaluationByCriterionPage
+
+		
+}
+
+Given(~/^I am on the add evaluation page$/) { ->
+	to AddEvaluationPage
+    at AddEvaluationPage
+}
+
+Then(~/^I should see a message related to the evaluation registration error$/) { ->
+	at AddEvaluationPage
+//    assert page.checkForErrors()
+}
+
+//Danillo v2
+
+When(~/^I fill the evaluation data with "(.*?)" criterion, originated from a "(.*?)" and dated from "(.*?)"\.$/) { 
+	String desc, String orig, String date ->
+	def dt = new Date().parse("dd/MM/yyyy",date)
+	at AddEvaluationPage
+	page.chooseCriterion(desc)
+	page.chooseValue('MA')
+	page.chooseEvaluationDate(dt)
+	page.chooseOrigin(orig)
+	
+}
+
 
