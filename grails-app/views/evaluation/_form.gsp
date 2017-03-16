@@ -22,10 +22,10 @@
 
 <div class="fieldcontain ${hasErrors(bean: evaluationInstance, field: 'applicationDate', 'error')} required">
 	<label for="applicationDate">
-		<g:message code="evaluation.applicationDate.label" default="Application Date" />
+		<g:message code="evaluation.applicationDate.label" default="Application Date and Hour" />
 		<span class="required-indicator">*</span>
 	</label>
-	<g:datePicker name="applicationDate" precision="day"  value="${evaluationInstance?.applicationDate}"  />
+	<g:datePicker name="applicationDate" precision="minute"  value="${evaluationInstance?.applicationDate}"  />
 
 </div>
 
