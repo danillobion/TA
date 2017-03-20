@@ -3,6 +3,7 @@ package ta
 class Student {
     String name;
     String login;
+	String password;
     double average;
     List criteriaAndEvaluations
     static hasMany = [criteriaAndEvaluations:EvaluationsByCriterion]
@@ -11,6 +12,7 @@ class Student {
         name blank : false
 		name (matches:'[A-Za-zÀ-ú\\s]+$') 
         login unique : true, blank:false;
+		password nullable: false, blank: false
     }
 
     static mapping = {
@@ -18,9 +20,10 @@ class Student {
         sort login: "asc"
     }
 
-    public Student(String name, String login){
+    public Student(String name, String login, String password = "senha"){
         this.name = name;
         this.login = login;
+		this.password = password;
         this.criteriaAndEvaluations = [];
     }
 
@@ -93,4 +96,23 @@ class Student {
             this.addToCriteriaAndEvaluations(evCriterion);
         }
     }
+	
+<<<<<<< HEAD
+=======
+	@Override
+	public boolean equals(Object obj){
+		
+		if(obj instanceof Student && this.getName() == student.getName() && this.getLogin() == student.getLogin()){
+			return true;	
+		}else{
+			return false;
+		}
+	}
+	
+	@Override
+	public int hashCode(){
+		return this.name.charAt(0);
+	}
+
+>>>>>>> edilberto/master
 }

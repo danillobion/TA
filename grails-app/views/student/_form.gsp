@@ -20,3 +20,12 @@
 
 </div>
 
+<div
+	class="fieldcontain ${hasErrors(bean: studentInstance, field: 'password', 'error')} required">
+	<label for="password"> <g:message code="student.password.label"
+			default="password" /> <span class="required-indicator">*</span>
+	</label>
+	<g:textField name="password" required="" value="${studentInstance?.password}" />
+
+</div>
+

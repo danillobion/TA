@@ -1,3 +1,0 @@
-
---Output from Remove a criterion with students and evaluations using it--
---Output from Remove a criterion from the system--

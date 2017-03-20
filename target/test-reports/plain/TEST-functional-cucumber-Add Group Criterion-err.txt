@@ -1,5 +1,0 @@
-
---Output from Register a group of criteria that does not exist--
---Output from Register a non-existent group of criteria--
---Output from Register a group of criteria that some of them already exists--
---Output from Register a group of criteria that some elements of it already exists--

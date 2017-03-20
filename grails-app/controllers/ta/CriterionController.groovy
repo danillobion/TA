@@ -15,7 +15,7 @@ class CriterionController {
 
     public createCriterion(){
         Criterion criterion = new Criterion(params)
-        criterion.save flush : true
+		criterion.save flush : true
     }
 
     def show(Criterion criterionInstance) {

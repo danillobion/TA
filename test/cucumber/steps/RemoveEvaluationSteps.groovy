@@ -22,12 +22,12 @@ this.metaClass.mixin(cucumber.api.groovy.EN)
 // GUI Scenario
 String tempLogin, tempCrit
 
-Given(~'^the system already has a student with name "([^"]*)" and login "([^"]*)"$') {
-    String name, String login ->
+Given(~'^the system already has a student with name "([^"]*)" and login "([^"]*)" and password "([^"]*)"$') {
+    String name, String login, String password ->
         tempLogin = login
         to AddStudentsPage
         at AddStudentsPage
-        page.fillStudentDetails(name, login)
+        page.fillStudentDetails(name, login, password)
         page.selectAddStudent()
 }
 
@@ -91,8 +91,8 @@ Then(~'^I should not see it listed in the student$') { ->
 // Controller Scenario
 Student studentToCheck
 
-Given(~'^the system has a student registered with name "([^"]*)" and login "([^"]*)"$') { String name, String login->
-    AddStudentsTestDataAndOperations.createStudent(name, login)
+Given(~'^the system has a student registered with name "([^"]*)" and login "([^"]*)" and password "([^"]*)"$') { String name, String login, String password->
+    AddStudentsTestDataAndOperations.createStudent(name, login, password)
     studentToCheck = Student.findByLogin(login)
     assert studentToCheck.login.equals(login)
     assert studentToCheck.name.equals(name)
@@ -108,7 +108,9 @@ def date
 
 When(~'^I remove the evaluation "([^"]*)" in criterion "([^"]*)" with origin "([^"]*)" and applicationDate "([^"]*)" from the student "([^"]*)" with login "([^"]*)"$') {
     String evaluationValue, String criterionDescription, String origin, String evaluationDate, String name, String login ->
-        tempEvaluationValue = evaluationValue
+        
+	
+		tempEvaluationValue = evaluationValue
         tempCriterionDescription = criterionDescription
         tempOrigin = origin
         tempName = name
@@ -134,7 +136,10 @@ When(~'^I remove the evaluation "([^"]*)" in criterion "([^"]*)" with origin "([
 
 Then(~'^the system correctly removes the evaluation$') { ->
     boolean bool = true
-
+	
+	to ShowStudentPage
+	at ShowStudentPage
+	
     Student s = Student.findByLogin(tempLogin)
     List<EvaluationsByCriterion> ebcList = s.criteriaAndEvaluations
     for (int i = 0; i < ebcList.size(); i++) {

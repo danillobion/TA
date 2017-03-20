@@ -37,14 +37,18 @@
 
 </div>
 
-<div
-	class="fieldcontain ${hasErrors(bean: evaluationInstance, field: 'value', 'error')} required">
-	<label for="value"> <g:message code="evaluation.value.label"
-			default="Value" /> <span class="required-indicator">*</span>
-	</label>
-	<g:select name="value"
-		from="${evaluationInstance.constraints.value.inList}" required=""
-		value="${evaluationInstance?.value}"
-		valueMessagePrefix="evaluation.value" />
+<div class="fieldcontain ${hasErrors(bean: evaluationInstance, field: 'value', 'error')} required">
+    <label for="value">
+        <g:message code="evaluation.value.label" default="Value" />
+        <span class="required-indicator">*</span>
+    </label>
+    <g:select name="value" from="${evaluationInstance.constraints.value.inList}" required="" value="${evaluationInstance?.value}" valueMessagePrefix="evaluation.value"/>
+</div>
 
+<div class="fieldcontain ${hasErrors(bean: evaluationInstance, field: 'classroom', 'error')} required">
+    <label for="classroom">
+        <g:message code="evaluation.classroom.label" />
+        <span class="required-indicator">*</span>
+    </label>
+    <g:textField name="Classroom" required="" value="${evaluationInstance?.classroom}"/>
 </div>

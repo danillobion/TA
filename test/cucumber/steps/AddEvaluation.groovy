@@ -107,6 +107,7 @@ When(~/^I want to evaluate all students to the "([^"]*)" criterion, originated f
         criterionNameGlobal = criterionName
         originGlobal = origin
         String value = "MA";
+		String classroom = "Lab 11"
         EvaluationDataAndOperations.createEvaluation(value, criterionName, origin, dateInString)
 }
 

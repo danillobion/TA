@@ -1,4 +1,4 @@
-﻿#Esta feature é a feature inicial, idealizada antes da iteração de imlementar features.
+#Esta feature é a feature inicial, idealizada antes da iteração de imlementar features.
 #Portanto, será descartada dos testes finais visto que não faz uso de métodos de controlador que não sejam
 #Gerados automaticamente.
 

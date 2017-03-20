@@ -9,9 +9,9 @@ import ta.StudentController
 
 class AddStudentsTestDataAndOperations {
 
-    static public void createStudent(String name, String login){
+    static public void createStudent(String name, String login, String password){
         def cont = new StudentController()
-        cont.params << [name: name, login: login]
+        cont.params << [name: name, login: login, password: password]
         cont.createAndSaveStudent()
         cont.response.reset()
     }

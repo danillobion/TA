@@ -31,14 +31,12 @@ class Report {
     }
 
     static constraints = {
-        name unique : true
-        name nullable : false
+        name unique : true, nullable: false
         tipo inList: ["Porcentagem","Media"], nullable: false
         avaliacao inList: ["MA", "MPA", "MANA"]
     }
 
     static mapping ={
-        sort "name"
-        sort name:"asc"
+        sort "name":"asc"
     }
 }

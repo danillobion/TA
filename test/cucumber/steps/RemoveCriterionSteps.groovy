@@ -22,11 +22,11 @@ this.metaClass.mixin(cucumber.api.groovy.EN)
 
 // GUI Scenario
 
-Given(~'^a student with name "([^"]*)" and login "([^"]*)" is already on the system$') {
-    String name, String login ->
+Given(~'^a student with name "([^"]*)" and login "([^"]*)" and password "([^"]*)" is already on the system$') {
+    String name, String login, String password ->
         to AddStudentsPage
         at AddStudentsPage
-        page.fillStudentDetails(name, login)
+        page.fillStudentDetails(name, login, password)
         page.selectAddStudent()
 }
 
@@ -64,8 +64,8 @@ Then(~'^I should not see the criterion "([^"]*)" listed in the student with logi
 
 Student studentToCheck
 
-Given(~'^the system has a student with name "([^"]*)" and login "([^"]*)"$') { String name, String login->
-    AddStudentsTestDataAndOperations.createStudent(name, login)
+Given(~'^the system has a student with name "([^"]*)" and login "([^"]*)" and password "([^"]*)"$') { String name, String login, String password->
+    AddStudentsTestDataAndOperations.createStudent(name, login, password)
     studentToCheck = Student.findByLogin(login)
     assert studentToCheck.login.equals(login)
     assert studentToCheck.name.equals(name)

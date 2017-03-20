@@ -1,7 +1,5 @@
 <%@ page import="ta.Criterion"%>
 
-
-
 <div
 	class="fieldcontain ${hasErrors(bean: criterionInstance, field: 'description', 'error')} required">
 	<label for="description"> <g:message

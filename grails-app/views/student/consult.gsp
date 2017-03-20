@@ -47,6 +47,14 @@
 					aria-labelledby="login-label"><g:fieldValue
 							bean="${studentInstance}" field="login" /></span></li>
 			</g:if>
+			
+			<g:if test="${studentInstance?.password}">
+				<li class="fieldcontain"><span id="password-label"
+					class="property-label"><g:message code="student.password.label"
+							default="password" /></span> <span class="property-value"
+					aria-labelledby="password-label"><g:fieldValue
+							bean="${studentInstance}" field="password" /></span></li>
+			</g:if>
 
 			<g:if test="${studentInstance?.name}">
 				<li class="fieldcontain"><span id="name-label"

@@ -104,12 +104,14 @@ class EvaluationController {
     @Transactional
     def saveAll() {
         def allValues = params.list('value')
-        List<Evaluation> listEvaluation = new LinkedList<Evaluation>()
+        List<Evaluation> listEvaluation = new LinkedList<
+		Evaluation>()
 
         StudentController student = new StudentController()
         def list = Student.list()
         for(int i = 0; i < allValues.size(); i++){
-            Evaluation newEvaluation = new Evaluation(params.origin, allValues.get(i), params.applicationDate,(String)params.criterion.id)
+            Evaluation newEvaluation = new Evaluation(params.origin, allValues.get(i), 
+				params.applicationDate,(String)params.criterion.id)
             if(list.get(i).findEvaluationByCriterion(newEvaluation.criterion.description) != null) {
                 if (list.get(i).findEvaluationByCriterion(newEvaluation.criterion.description).findSpecificEvaluation(newEvaluation)) return
             }

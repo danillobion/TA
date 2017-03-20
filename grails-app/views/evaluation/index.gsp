@@ -31,42 +31,32 @@
 		</g:if>
 		<table>
 			<thead>
-				<tr>
+					<tr>
 
-					<g:sortableColumn property="origin"
-						title="${message(code: 'evaluation.origin.label', default: 'Origin')}" />
-
-					<g:sortableColumn property="value"
-						title="${message(code: 'evaluation.value.label', default: 'Value')}" />
-
-					<th><g:message code="evaluation.criterion.label"
-							default="Criterion" /></th>
-
-					<g:sortableColumn property="applicationDate"
-						title="${message(code: 'evaluation.applicationDate.label', default: 'Application Date')}" />
-
-				</tr>
-			</thead>
-			<tbody>
-				<g:each in="${evaluationInstanceList}" status="i"
-					var="evaluationInstance">
+						<g:sortableColumn property="origin" title="${message(code: 'evaluation.origin.label', default: 'Origin')}" />
+					
+						<g:sortableColumn property="value" title="${message(code: 'evaluation.value.label', default: 'Value')}" />
+					
+						<th><g:message code="evaluation.criterion.label" default="Criterion" /></th>
+					
+						<g:sortableColumn property="applicationDate" title="${message(code: 'evaluation.applicationDate.label', default: 'Application Date')}" />
+						
+						<g:sortableColumn property="classroom" title="${message(code: 'evaluation.classroom.label', default: 'Classroom')}" />
+					</tr>
+				</thead>
+				<tbody>
+				<g:each in="${evaluationInstanceList}" status="i" var="evaluationInstance">
 					<tr class="${(i % 2) == 0 ? 'even' : 'odd'}">
-
-						<td><g:link action="show" id="${evaluationInstance.id}">
-								${fieldValue(bean: evaluationInstance, field: "origin")}
-							</g:link></td>
-
-						<td>
-							${fieldValue(bean: evaluationInstance, field: "value")}
-						</td>
-
-						<td>
-							${fieldValue(bean: evaluationInstance, field: "criterion.description")}
-						</td>
-
-						<td><g:formatDate
-								date="${evaluationInstance.applicationDate}" /></td>
-
+					
+						<td><g:link action="show" id="${evaluationInstance.id}">${fieldValue(bean: evaluationInstance, field: "origin")}</g:link></td>
+					
+						<td>${fieldValue(bean: evaluationInstance, field: "value")}</td>
+					
+						<td>${fieldValue(bean: evaluationInstance, field: "criterion.description")}</td>
+					
+						<td><g:formatDate date="${evaluationInstance.applicationDate}" /></td>
+						
+						<td>${ fieldValue(bean: evaluationInstance, field: "classroom")}</td>
 					</tr>
 				</g:each>
 			</tbody>

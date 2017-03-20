@@ -1,3 +1,0 @@
-
---Output from Update a report--
---Output from Show the students list in the "70% of evaluations are over the class average" report--

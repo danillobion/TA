@@ -131,8 +131,8 @@ When(~/^I add the criterion with description "(.*?)"$/) { String arg1 ->
         at CreateCriterionPage
         page.createCriterion(arg1)
 }
-
 Then(~/^I see a message related to the criterion registration failure$/) { ->
 	at CreateCriterionPage
     assert page.checkForErrors()
 }
+ 

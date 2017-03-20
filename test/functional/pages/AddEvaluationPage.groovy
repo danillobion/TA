@@ -22,6 +22,12 @@ class AddEvaluationPage extends Page {
         def la = (String) Criterion.findByDescription(desc).id
         $("select", id: "criterion").value(la)
     }
+	
+	def addClassroom(String classroom){
+		$("form").classroom = classroom
+		$("input", name: "create").click()
+		
+	}
 
     def chooseValue(String value) {
         $("select", name: "value").click()
@@ -37,7 +43,7 @@ class AddEvaluationPage extends Page {
     def chooseOrigin(String origin){
         $("select", name:"origin").click()
         $("select", name: "origin").find("option").find{it.value().equals(origin)}.click()
-    }
+	}
 
 
 }

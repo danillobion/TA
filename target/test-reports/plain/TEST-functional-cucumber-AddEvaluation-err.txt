@@ -1,4 +1,0 @@
-
---Output from Add evaluation to a criteria--
---Output from Add evaluations using incomplete data--
---Output from Add evaluation more than once with same origin--

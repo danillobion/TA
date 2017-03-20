@@ -49,7 +49,7 @@ grails.project.dependency.resolution = {
 
         // Dependencias adicionadas
         compile "org.spockframework:spock-grails-support:0.7-groovy-1.8"
-        test "org.gebish:geb-junit4:$gebVersion"
+		test "org.gebish:geb-junit4:$gebVersion"
         test "org.seleniumhq.selenium:selenium-support:$seleniumVersion"
         test "org.seleniumhq.selenium:selenium-firefox-driver:$seleniumVersion"
     }
@@ -63,7 +63,6 @@ grails.project.dependency.resolution = {
         compile ':cache:1.1.7'
         compile ":asset-pipeline:1.9.6"
 		compile "org.grails.plugins:codenarc:0.26.0"
-		
 
         // plugins needed at runtime but not for compilation
         runtime ":hibernate4:4.3.5.5" // or ":hibernate:3.6.10.17"

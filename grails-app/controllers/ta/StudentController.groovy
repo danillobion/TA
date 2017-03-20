@@ -3,7 +3,7 @@ package ta
 import org.apache.ivy.core.settings.Validatable
 
 import java.text.SimpleDateFormat
-import java.lang.*
+import java.lang.* 
 import ta.Evaluation
 import ta.EvaluationsByCriterion
 
@@ -79,16 +79,20 @@ class StudentController {
                     flush: true,
                     failOnError: true
             )
-            for (Report report : Report.list()) {
-                if (report.tipo.equalsIgnoreCase("Porcentagem")) {
-                    checkConditionPercentage(Student.list().get(i).login, report)
-                } else {
-                    checkConditionAverage(Student.list().get(i), report)
-                }
-            }
+            checkConditionListReport(i)
         }
         return true
     }
+
+	def checkConditionListReport(int i) {
+		for (Report report : Report.list()) {
+			if (report.tipo.equalsIgnoreCase("Porcentagem")) {
+				checkConditionPercentage(Student.list().get(i).login, report)
+			} else {
+				checkConditionAverage(Student.list().get(i), report)
+			}
+		}
+	}
 
     public void addEvaluationsToStudentTests(String studentLogin, LinkedList<Evaluation> evaluationList){
         for (int i = 0; i < Student.list().size(); i++) {
@@ -320,16 +324,17 @@ class StudentController {
     }
 
     public String espacoBranco(String texto){
-        for (int i = 0; i < texto.length(); i++){
+		int tamanho = texto.length(); //Assim o algorítmo fica mais claro (Substitute Algorithm)
+        for (int i = 0; i < tamanho; i++){
             if(texto.charAt(i) == 160) {
                 texto = texto.substring(i+1)
             }else{
                 break
             }
         }
-        for (int i = texto.length()-1; i > 0; i--){
+        for (int i = tamanho-1; i > 0; i--){
             if(texto.charAt(i) == 32) {
-                texto = texto.substring(0, texto.length()-1)
+                texto = texto.substring(0, tamanho-1)
             }else{
                 break
             }
