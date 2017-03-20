@@ -1,0 +1,9 @@
+<plugin name='codenarc' version='0.26.0' grailsVersion='2.0 &gt; *'>
+  <author>Chris Mair</author>
+  <authorEmail>chrismair@users.sourceforge.net</authorEmail>
+  <title>CodeNarc plugin</title>
+  <description>Runs CodeNarc static analysis rules for Groovy source.</description>
+  <documentation>http://grails.org/plugin/codenarc</documentation>
+  <type>CodenarcGrailsPlugin</type>
+  <resources />
+</plugin>

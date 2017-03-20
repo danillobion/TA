@@ -53,7 +53,7 @@ class CriterionController {
             redirect(action: "show", id: criterionInstance.id)
         }
     }
-    public Criterion createAndSaveCriterion2() {
+    public Criterion createAndSaveCriterionNoView() {
         Criterion crit = new Criterion(params)
         if(Criterion.findByDescription(crit.description) == null) {
             crit.save(flush: true)
@@ -86,7 +86,7 @@ class CriterionController {
     }
 
     @Transactional
-    def save(Criterion criterionInstance) {
+    def saveCriterion(Criterion criterionInstance) {
         if (criterionInstance == null) {
             notFound()
             return
